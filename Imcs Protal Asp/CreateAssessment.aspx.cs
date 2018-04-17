@@ -15,7 +15,7 @@ namespace Imcs_Protal_Asp
     public partial class CreateAssessment : System.Web.UI.Page
     {
         List<AssessmentInfo> AssessList = new List<AssessmentInfo>();
-        SQLHelper sqlHelper = new SQLHelper();
+        DAL sqlHelper = new DAL();
 
         protected void Page_Load(object sender, EventArgs e)
         {
