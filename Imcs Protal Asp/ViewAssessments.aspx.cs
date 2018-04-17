@@ -14,7 +14,7 @@ namespace Imcs_Protal_Asp
 {
     public partial class ViewAssessments : System.Web.UI.Page
     {
-        SQLHelper sqlHelper = new SQLHelper();
+        DAL sqlHelper = new DAL();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
