@@ -1,0 +1,37 @@
+C:\Users\kishore\Source\Repos\Imcs Protal Asp\Imcs Protal Asp\bin\ApplicationInsights.config
+C:\Users\kishore\Source\Repos\Imcs Protal Asp\Imcs Protal Asp\bin\Imcs Protal Asp.dll.config
+C:\Users\kishore\Source\Repos\Imcs Protal Asp\Imcs Protal Asp\bin\Imcs Protal Asp.dll
+C:\Users\kishore\Source\Repos\Imcs Protal Asp\Imcs Protal Asp\bin\Imcs Protal Asp.pdb
+C:\Users\kishore\Source\Repos\Imcs Protal Asp\Imcs Protal Asp\bin\Antlr3.Runtime.dll
+C:\Users\kishore\Source\Repos\Imcs Protal Asp\Imcs Protal Asp\bin\AspNet.ScriptManager.bootstrap.dll
+C:\Users\kishore\Source\Repos\Imcs Protal Asp\Imcs Protal Asp\bin\AspNet.ScriptManager.jQuery.dll
+C:\Users\kishore\Source\Repos\Imcs Protal Asp\Imcs Protal Asp\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\kishore\Source\Repos\Imcs Protal Asp\Imcs Protal Asp\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\kishore\Source\Repos\Imcs Protal Asp\Imcs Protal Asp\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\kishore\Source\Repos\Imcs Protal Asp\Imcs Protal Asp\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\kishore\Source\Repos\Imcs Protal Asp\Imcs Protal Asp\bin\Microsoft.AI.Web.dll
+C:\Users\kishore\Source\Repos\Imcs Protal Asp\Imcs Protal Asp\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\kishore\Source\Repos\Imcs Protal Asp\Imcs Protal Asp\bin\Microsoft.ApplicationInsights.dll
+C:\Users\kishore\Source\Repos\Imcs Protal Asp\Imcs Protal Asp\bin\Microsoft.AspNet.FriendlyUrls.dll
+C:\Users\kishore\Source\Repos\Imcs Protal Asp\Imcs Protal Asp\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+C:\Users\kishore\Source\Repos\Imcs Protal Asp\Imcs Protal Asp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\kishore\Source\Repos\Imcs Protal Asp\Imcs Protal Asp\bin\Microsoft.ScriptManager.MSAjax.dll
+C:\Users\kishore\Source\Repos\Imcs Protal Asp\Imcs Protal Asp\bin\Microsoft.ScriptManager.WebForms.dll
+C:\Users\kishore\Source\Repos\Imcs Protal Asp\Imcs Protal Asp\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\kishore\Source\Repos\Imcs Protal Asp\Imcs Protal Asp\bin\Newtonsoft.Json.dll
+C:\Users\kishore\Source\Repos\Imcs Protal Asp\Imcs Protal Asp\bin\System.Web.Optimization.dll
+C:\Users\kishore\Source\Repos\Imcs Protal Asp\Imcs Protal Asp\bin\WebGrease.dll
+C:\Users\kishore\Source\Repos\Imcs Protal Asp\Imcs Protal Asp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\kishore\Source\Repos\Imcs Protal Asp\Imcs Protal Asp\bin\System.Web.Optimization.xml
+C:\Users\kishore\Source\Repos\Imcs Protal Asp\Imcs Protal Asp\bin\Antlr3.Runtime.pdb
+C:\Users\kishore\Source\Repos\Imcs Protal Asp\Imcs Protal Asp\bin\Microsoft.AspNet.FriendlyUrls.xml
+C:\Users\kishore\Source\Repos\Imcs Protal Asp\Imcs Protal Asp\bin\Newtonsoft.Json.xml
+C:\Users\kishore\Source\Repos\Imcs Protal Asp\Imcs Protal Asp\bin\Microsoft.ApplicationInsights.xml
+C:\Users\kishore\Source\Repos\Imcs Protal Asp\Imcs Protal Asp\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\kishore\Source\Repos\Imcs Protal Asp\Imcs Protal Asp\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\kishore\Source\Repos\Imcs Protal Asp\Imcs Protal Asp\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\kishore\Source\Repos\Imcs Protal Asp\Imcs Protal Asp\bin\Microsoft.AI.Web.xml
+C:\Users\kishore\Source\Repos\Imcs Protal Asp\Imcs Protal Asp\obj\Debug\Imcs Protal Asp.csprojResolveAssemblyReference.cache
+C:\Users\kishore\Source\Repos\Imcs Protal Asp\Imcs Protal Asp\obj\Debug\Imcs Protal Asp.csproj.CoreCompileInputs.cache
+C:\Users\kishore\Source\Repos\Imcs Protal Asp\Imcs Protal Asp\obj\Debug\Imcs Protal Asp.dll
+C:\Users\kishore\Source\Repos\Imcs Protal Asp\Imcs Protal Asp\obj\Debug\Imcs Protal Asp.pdb
