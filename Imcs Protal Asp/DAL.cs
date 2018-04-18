@@ -1,12 +1,9 @@
-﻿using System;
+﻿using Imcs_Protal_Asp.Utilities;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Web.Configuration;
-using Imcs_Protal_Asp.Utilities;
 
 namespace Imcs_Protal_Asp
 {
@@ -28,9 +25,9 @@ namespace Imcs_Protal_Asp
             sqlparam[5] = new SqlParameter("@marks", assessList[0].Marks);
             sqlparam[6] = new SqlParameter("@result", 0);
 
-            
+
             int resultValue = sqlHelper.RunSp("usp_CreateAssessment", sqlparam);
-           
+
         }
 
         public DataSet GetAllAssessments()
@@ -48,11 +45,59 @@ namespace Imcs_Protal_Asp
             sqlparam[2] = new SqlParameter("@feedback", fui.Feedback);
             int resultValue = sqlHelper.RunSp("sp_SetFeedback", sqlparam);
         }
-        
+
         //Mitul's code
         public DataSet viewAssignments()
         {
             DataSet ds = sqlHelper.RunSpReturnDs("sp_Submissions_SELECT_Assignments");
+            return ds;
+        }
+
+        //Akhil's code
+        public int ValidateUser(List<UsersInfo> usersinfo)
+        {
+            SqlParameter[] sqlparam = new SqlParameter[3];
+            sqlparam[0] = new SqlParameter("@email", usersinfo[0].Email);
+            sqlparam[1] = new SqlParameter("@pwd", usersinfo[0].Password);
+            sqlparam[2] = new SqlParameter("@uout", SqlDbType.Int);
+            sqlparam[2].Direction = ParameterDirection.Output;
+            int result = sqlHelper.RunSp("sp_users_validate", sqlparam);
+            int output = Convert.ToInt32(sqlparam[2].Value);
+
+            return output;
+
+            //using (SqlCommand cmd = new SqlCommand("sp_users_validate")
+            //{
+            //    cmd.CommandType = CommandType.StoredProcedure;
+            //    cmd.Parameters.Add("@email", SqlDbType.VarChar, 350
+            //    cmd.Parameters.Add("@FruitName", SqlDbType.VarChar, 30);
+            //    cmd.Parameters["@FruitName"].Direction = ParameterDirection.Output;
+            //    con.Open();
+            //    cmd.ExecuteNonQuery();
+            //    con.Close();
+            //    TextBox1.Text = cmd.Parameters["@FruitName"].Value.ToString();
+            //}
+
+
+
+        }
+
+
+        public DataSet getUsers()
+        {
+            DataSet ds = sqlHelper.RunSpReturnDs("sp_users_get_allusers");
+            return ds;
+        }
+
+        public DataSet getRoles()
+        {
+            DataSet ds = sqlHelper.RunSpReturnDs("sp_roles_get_allroles");
+            return ds;
+        }
+
+        public DataSet getCourses()
+        {
+            DataSet ds = sqlHelper.RunSpReturnDs("sp_courses_get_allcourses");
             return ds;
         }
     }
