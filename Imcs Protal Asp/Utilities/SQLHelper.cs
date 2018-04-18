@@ -18,7 +18,7 @@ namespace Imcs_Protal_Asp.Utilities
 
         public SQLHelper()
         {
-            mstrCN = System.Configuration.ConfigurationManager.AppSettings["ConectionString"].ToString();
+            mstrCN = System.Configuration.ConfigurationManager.AppSettings["ConnectionString"].ToString();
         }
 
         // Default Constructor
@@ -494,7 +494,7 @@ namespace Imcs_Protal_Asp.Utilities
             else
                 return "";
         }
-
+        //use for insert
         public int RunSql(string Sql, SqlParameter[] parms)
         {
             InitCommandForSQL(Sql);
