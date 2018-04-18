@@ -34,6 +34,8 @@ function javaScriptValidation() {
 }
 
 function cancellation() {
+    var emailid = document.getElementById('emailid').value;
+    var passwords = document.getElementById('passwords').value;
 
     if (confirm("Do you want to cancel Logging in?")) {
 
