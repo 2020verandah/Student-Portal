@@ -16,23 +16,34 @@ namespace Imcs_Protal_Asp
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //gvAssignments.DataSource = dal.viewAssignments();
-            //gvAssignments.DataBind();
+            gvAssignments.DataSource = dal.viewAssignments();
+            gvAssignments.DataBind();
         }
 
-        protected void MenuAssignment_MenuItemClick(object sender, MenuEventArgs e)
+        protected void gvAssignments_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (MenuAssignment.SelectedItem.Text.Equals("View"))
-            {
-                pnlView.Visible = true;
-                pnlSubmit.Visible = false;
-            }
-
-            if (MenuAssignment.SelectedItem.Text.Equals("Submit"))
-            {
-                pnlSubmit.Visible = true;
-                pnlView.Visible = false;
-            }
+            pnlAssignment.Visible = true;
+            lblAName.Text = gvAssignments.Rows[0].Cells[1].Text;
         }
+
+        protected void btnSubmit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //protected void MenuAssignment_MenuItemClick(object sender, MenuEventArgs e)
+        //{
+        //    if (MenuAssignment.SelectedItem.Text.Equals("View"))
+        //    {
+        //        pnlView.Visible = true;
+        //        pnlSubmit.Visible = false;
+        //    }
+
+        //    if (MenuAssignment.SelectedItem.Text.Equals("Submit"))
+        //    {
+        //        pnlSubmit.Visible = true;
+        //        pnlView.Visible = false;
+        //    }
+        //}
     }
 }
