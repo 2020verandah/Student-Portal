@@ -16,7 +16,7 @@ namespace Imcs_Protal_Asp
         }
         protected void gvbind()
         {
-            DataSet ds = sqlHelper.gvbind();
+            DataSet ds = sqlHelper.GetAllAssessments();
 
             if (ds.Tables[0].Rows.Count > 0)
             {

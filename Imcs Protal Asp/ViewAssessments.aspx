@@ -1,14 +1,8 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ViewAssessments.aspx.cs" Inherits="Imcs_Protal_Asp.ViewAssessments" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ViewAssessments.aspx.cs" Inherits="Imcs_Protal_Asp.ViewAssessments" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div>
+<asp:content id="MainContent" contentplaceholderid="head" runat="server">
+    
+        <div id="viewAssess">
             <br />
             <br />
             <br />
@@ -55,6 +49,4 @@
             <br />
             <br />
         </div>
-    </form>
-</body>
-</html>
+    </asp:content>
