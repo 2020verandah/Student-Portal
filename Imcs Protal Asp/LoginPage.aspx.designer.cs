@@ -10,7 +10,7 @@
 namespace Imcs_Protal_Asp {
     
     
-    public partial class WebForm1 {
+    public partial class LoginPage {
         
         /// <summary>
         /// emailid control.
