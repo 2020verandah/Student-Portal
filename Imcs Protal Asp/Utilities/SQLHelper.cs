@@ -2,6 +2,7 @@ using System;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.Web.Configuration;
 
 namespace Imcs_Protal_Asp.Utilities
 {
@@ -18,7 +19,9 @@ namespace Imcs_Protal_Asp.Utilities
 
         public SQLHelper()
         {
-            mstrCN = System.Configuration.ConfigurationManager.AppSettings["ConnectionString"].ToString();
+            // mstrCN = System.Configuration.ConfigurationManager.AppSettings["ConnectionString"].ToString();
+             mstrCN = WebConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+
         }
 
         // Default Constructor
