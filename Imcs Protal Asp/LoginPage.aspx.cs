@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace Imcs_Protal_Asp
 {
@@ -13,5 +8,17 @@ namespace Imcs_Protal_Asp
         {
 
         }
+
+        protected void Button_LogIn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Button_CancelLogIn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }
