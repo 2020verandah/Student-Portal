@@ -15,6 +15,8 @@ namespace Imcs_Protal_Asp
         string connstring = WebConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
 
         SQLHelper sqlHelper = new SQLHelper();
+
+        //Kishore's code
         public void CreateNewAssessment(List<AssessmentInfo> assessList)
         {
             SqlParameter[] sqlparam = new SqlParameter[7];
@@ -33,13 +35,13 @@ namespace Imcs_Protal_Asp
 
         public DataSet GetAllAssessments()
         {
-            
-                DataSet ds =sqlHelper.RunSpReturnDs("usp_GetallStudentAssessments");
-                return ds;
-            
+            DataSet ds = sqlHelper.RunSpReturnDs("usp_GetallStudentAssessments");
+            return ds;
         }
-            public void SaveFeedback(FeedbackUserInfo fui)
-            {
+
+        //Shashi's code
+        public void SaveFeedback(FeedbackUserInfo fui)
+        {
             SqlParameter[] sqlparam = new SqlParameter[3];
             sqlparam[0] = new SqlParameter("@trainerid", fui.Trainerid);
             sqlparam[1] = new SqlParameter("@questionid", fui.Questionid);
@@ -47,6 +49,12 @@ namespace Imcs_Protal_Asp
             int resultValue = sqlHelper.RunSp("sp_SetFeedback", sqlparam);
         }
         
+        //Mitul's code
+        public DataSet viewAssignments()
+        {
+            DataSet ds = sqlHelper.RunSpReturnDs("sp_Submissions_SELECT_Assignments");
+            return ds;
+        }
     }
 }
 

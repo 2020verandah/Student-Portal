@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 
 namespace Imcs_Protal_Asp.Utilities
 {
-   public sealed class SQLHelper : IDisposable
+    public sealed class SQLHelper : IDisposable
     {
         private const int COMMAND_TIMEOUT = 30;
 
@@ -18,7 +18,7 @@ namespace Imcs_Protal_Asp.Utilities
 
         public SQLHelper()
         {
-            mstrCN = System.Configuration.ConfigurationManager.AppSettings["ConectionString"].ToString();
+            mstrCN = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
         }
 
         // Default Constructor
