@@ -39,3 +39,36 @@ E:\Github_svn projects\Student-Portal.git\trunk\Imcs Protal Asp\obj\Debug\Imcs P
 E:\Github_svn projects\Student-Portal.git\trunk\Imcs Protal Asp\obj\Debug\Imcs Protal Asp.csproj.CoreCompileInputs.cache
 E:\Github_svn projects\Student-Portal.git\trunk\Imcs Protal Asp\obj\Debug\Imcs Protal Asp.dll
 E:\Github_svn projects\Student-Portal.git\trunk\Imcs Protal Asp\obj\Debug\Imcs Protal Asp.pdb
+E:\Github_svn projects\Student-Portal.git\trunk\Imcs Protal Asp\bin\ApplicationInsights.config
+E:\Github_svn projects\Student-Portal.git\trunk\Imcs Protal Asp\bin\Imcs Protal Asp.dll.config
+E:\Github_svn projects\Student-Portal.git\trunk\Imcs Protal Asp\bin\Imcs Protal Asp.dll
+E:\Github_svn projects\Student-Portal.git\trunk\Imcs Protal Asp\bin\Imcs Protal Asp.pdb
+E:\Github_svn projects\Student-Portal.git\trunk\Imcs Protal Asp\bin\Antlr3.Runtime.dll
+E:\Github_svn projects\Student-Portal.git\trunk\Imcs Protal Asp\bin\AspNet.ScriptManager.bootstrap.dll
+E:\Github_svn projects\Student-Portal.git\trunk\Imcs Protal Asp\bin\AspNet.ScriptManager.jQuery.dll
+E:\Github_svn projects\Student-Portal.git\trunk\Imcs Protal Asp\bin\Microsoft.AI.Agent.Intercept.dll
+E:\Github_svn projects\Student-Portal.git\trunk\Imcs Protal Asp\bin\Microsoft.AI.DependencyCollector.dll
+E:\Github_svn projects\Student-Portal.git\trunk\Imcs Protal Asp\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\Github_svn projects\Student-Portal.git\trunk\Imcs Protal Asp\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\Github_svn projects\Student-Portal.git\trunk\Imcs Protal Asp\bin\Microsoft.AI.Web.dll
+E:\Github_svn projects\Student-Portal.git\trunk\Imcs Protal Asp\bin\Microsoft.AI.WindowsServer.dll
+E:\Github_svn projects\Student-Portal.git\trunk\Imcs Protal Asp\bin\Microsoft.ApplicationInsights.dll
+E:\Github_svn projects\Student-Portal.git\trunk\Imcs Protal Asp\bin\Microsoft.AspNet.FriendlyUrls.dll
+E:\Github_svn projects\Student-Portal.git\trunk\Imcs Protal Asp\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+E:\Github_svn projects\Student-Portal.git\trunk\Imcs Protal Asp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Github_svn projects\Student-Portal.git\trunk\Imcs Protal Asp\bin\Microsoft.ScriptManager.MSAjax.dll
+E:\Github_svn projects\Student-Portal.git\trunk\Imcs Protal Asp\bin\Microsoft.ScriptManager.WebForms.dll
+E:\Github_svn projects\Student-Portal.git\trunk\Imcs Protal Asp\bin\Microsoft.Web.Infrastructure.dll
+E:\Github_svn projects\Student-Portal.git\trunk\Imcs Protal Asp\bin\Newtonsoft.Json.dll
+E:\Github_svn projects\Student-Portal.git\trunk\Imcs Protal Asp\bin\System.Web.Optimization.dll
+E:\Github_svn projects\Student-Portal.git\trunk\Imcs Protal Asp\bin\WebGrease.dll
+E:\Github_svn projects\Student-Portal.git\trunk\Imcs Protal Asp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Github_svn projects\Student-Portal.git\trunk\Imcs Protal Asp\bin\System.Web.Optimization.xml
+E:\Github_svn projects\Student-Portal.git\trunk\Imcs Protal Asp\bin\Antlr3.Runtime.pdb
+E:\Github_svn projects\Student-Portal.git\trunk\Imcs Protal Asp\bin\Microsoft.AspNet.FriendlyUrls.xml
+E:\Github_svn projects\Student-Portal.git\trunk\Imcs Protal Asp\bin\Newtonsoft.Json.xml
+E:\Github_svn projects\Student-Portal.git\trunk\Imcs Protal Asp\bin\Microsoft.ApplicationInsights.xml
+E:\Github_svn projects\Student-Portal.git\trunk\Imcs Protal Asp\bin\Microsoft.AI.DependencyCollector.xml
+E:\Github_svn projects\Student-Portal.git\trunk\Imcs Protal Asp\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\Github_svn projects\Student-Portal.git\trunk\Imcs Protal Asp\bin\Microsoft.AI.WindowsServer.xml
+E:\Github_svn projects\Student-Portal.git\trunk\Imcs Protal Asp\bin\Microsoft.AI.Web.xml

@@ -207,6 +207,7 @@
     <Compile Include="CreateAssessment.aspx.designer.cs">
       <DependentUpon>CreateAssessment.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DAL.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

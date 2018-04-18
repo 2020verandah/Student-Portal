@@ -3,7 +3,7 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 
-namespace Plasma.Utilities
+namespace Imcs_Protal_Asp.Utilities
 {
    public sealed class SQLHelper : IDisposable
     {

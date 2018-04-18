@@ -1,14 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using System.Data;
-
-using System.Configuration;
-
-using System.Data.SqlClient;
+using System.Web.UI.WebControls;
 
 namespace Imcs_Protal_Asp
 {
@@ -25,7 +17,7 @@ namespace Imcs_Protal_Asp
         protected void gvbind()
         {
             DataSet ds = sqlHelper.gvbind();
-            
+
             if (ds.Tables[0].Rows.Count > 0)
             {
                 GridView1.DataSource = ds;
