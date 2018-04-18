@@ -31,41 +31,21 @@ namespace Imcs_Protal_Asp
            
         }
 
-        public DataSet gvbind()
+        public DataSet GetAllAssessments()
         {
-            using (SqlConnection conn = new SqlConnection(connstring))
-            {
-                conn.Open();
-                SqlCommand cmd = new SqlCommand("usp_GetallStudentAssessments", conn);
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                DataSet ds = new DataSet();
-                da.Fill(ds);
-                conn.Close();
+            
+                DataSet ds =sqlHelper.RunSpReturnDs("usp_GetallStudentAssessments");
                 return ds;
-            }
-
+            
         }
-
-        
-
-            public void SaveFeedback()
+            public void SaveFeedback(FeedbackUserInfo fui)
             {
-                FeedbackUserInfo fui = new FeedbackUserInfo(); //to get the variables
-                string FdConnstring = WebConfigurationManager.ConnectionStrings["StudentPortal"].ConnectionString;
-                using (SqlConnection con = new SqlConnection(FdConnstring))
-                {
-                    con.Open();
-                    using (SqlCommand setcmd = new SqlCommand("sp_SetFeedback", con))
-                    {
-                        setcmd.CommandType = CommandType.StoredProcedure;
-                        setcmd.Parameters.AddWithValue("@trainerid", fui.Trainerid);
-                        setcmd.Parameters.AddWithValue("@questionid", fui.Questionid);
-                        setcmd.Parameters.AddWithValue("@feedback", fui.Feedback);
-                        setcmd.ExecuteNonQuery();
-                    }
-                }
-
-            }
+            SqlParameter[] sqlparam = new SqlParameter[3];
+            sqlparam[0] = new SqlParameter("@trainerid", fui.Trainerid);
+            sqlparam[1] = new SqlParameter("@questionid", fui.Questionid);
+            sqlparam[2] = new SqlParameter("@feedback", fui.Feedback);
+            int resultValue = sqlHelper.RunSp("sp_SetFeedback", sqlparam);
+        }
         
     }
 }
