@@ -45,6 +45,28 @@ namespace Imcs_Protal_Asp
             }
 
         }
+
+        
+
+            public void SaveFeedback()
+            {
+                FeedbackUserInfo fui = new FeedbackUserInfo(); //to get the variables
+                string FdConnstring = WebConfigurationManager.ConnectionStrings["StudentPortal"].ConnectionString;
+                using (SqlConnection con = new SqlConnection(FdConnstring))
+                {
+                    con.Open();
+                    using (SqlCommand setcmd = new SqlCommand("sp_SetFeedback", con))
+                    {
+                        setcmd.CommandType = CommandType.StoredProcedure;
+                        setcmd.Parameters.AddWithValue("@trainerid", fui.Trainerid);
+                        setcmd.Parameters.AddWithValue("@questionid", fui.Questionid);
+                        setcmd.Parameters.AddWithValue("@feedback", fui.Feedback);
+                        setcmd.ExecuteNonQuery();
+                    }
+                }
+
+            }
+        
     }
 }
 
