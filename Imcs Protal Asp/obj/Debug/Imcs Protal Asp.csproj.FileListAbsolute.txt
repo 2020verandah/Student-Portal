@@ -35,3 +35,7 @@ C:\Users\kishore\Source\Repos\Imcs Protal Asp\Imcs Protal Asp\obj\Debug\Imcs Pro
 C:\Users\kishore\Source\Repos\Imcs Protal Asp\Imcs Protal Asp\obj\Debug\Imcs Protal Asp.csproj.CoreCompileInputs.cache
 C:\Users\kishore\Source\Repos\Imcs Protal Asp\Imcs Protal Asp\obj\Debug\Imcs Protal Asp.dll
 C:\Users\kishore\Source\Repos\Imcs Protal Asp\Imcs Protal Asp\obj\Debug\Imcs Protal Asp.pdb
+E:\Github_svn projects\Student-Portal.git\trunk\Imcs Protal Asp\obj\Debug\Imcs Protal Asp.csprojResolveAssemblyReference.cache
+E:\Github_svn projects\Student-Portal.git\trunk\Imcs Protal Asp\obj\Debug\Imcs Protal Asp.csproj.CoreCompileInputs.cache
+E:\Github_svn projects\Student-Portal.git\trunk\Imcs Protal Asp\obj\Debug\Imcs Protal Asp.dll
+E:\Github_svn projects\Student-Portal.git\trunk\Imcs Protal Asp\obj\Debug\Imcs Protal Asp.pdb
