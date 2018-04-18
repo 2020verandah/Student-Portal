@@ -20,6 +20,7 @@
 
 </head>
 <body>
+
     <header id="header">  
     <h1>Blackboard</h1>  
     </header>  
@@ -28,7 +29,7 @@
         <li><a href="#">Home</a></li>  
         <li><a href="#">About</a></li>  
         <li><a href="#">Contact</a></li>  
-        <li><a href="FeedbackForm.aspx">Feedback</a></li>
+        <li><a href="Feedbackcontentpage.aspx">Feedback</a></li>
         
     </ul>   
     </nav>
@@ -36,6 +37,10 @@
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">  
             
         </asp:ContentPlaceHolder>  
+
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+
+        </asp:ContentPlaceHolder>
     </div>    
     <footer id="footer">  
         copyright @SKMAN  
