@@ -14,6 +14,7 @@ namespace Imcs_Protal_Asp
     
     public partial class CreateAssessment : System.Web.UI.Page
     {
+
         List<AssessmentInfo> AssessList = new List<AssessmentInfo>();
         DAL objDal = new DAL();
 
@@ -62,7 +63,6 @@ namespace Imcs_Protal_Asp
                 Marks = marks,
                 TrainerId = trainerId
             });
-
             objDal.CreateNewAssessment(AssessList);            
             Response.Redirect("~/ViewAssessments.aspx");
         }
