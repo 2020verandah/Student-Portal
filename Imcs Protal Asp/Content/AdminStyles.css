@@ -1,0 +1,116 @@
+﻿
+
+
+#container{
+    height:718px;
+    width:100%;
+    background-color:steelblue;
+}
+#leftdiv {
+    float: left;
+    background-color: white;
+    height: 92%;
+    width:22%;
+    margin:1.25%;
+    padding:0.75%;
+    color:black;
+    color:steelblue;
+ 
+}
+
+#rightdiv {
+    float: right;
+    background-color: white;
+    height: 92%;
+    width: 70%;
+    margin: 1.25%;
+    padding: 0.75%;
+}
+
+.menuheadings {
+background-color:steelblue;
+color:white;
+    width: 22%;
+}
+
+.menuheadings:hover {
+    background-color:black;
+}
+
+.submenuHeadings:hover{
+    background-color:coral;
+
+}
+
+.headings{
+    color:midnightblue
+}
+
+#studentsGrid{
+    display:none;
+    height:80%;
+}
+
+#trainersGrid {
+    display:none;
+    height:80%
+}
+
+#sbox1, #sbox2, #sbox3, #sbox4, #sbox5, #sbox6, #sbox7, #sbox8 {
+    width: 95%;
+    text-align: center;
+}
+
+
+#sbox1,#sbox2,#sbox3,#sbox4,#sbox5,#sbox6,#sbox7,#sbox8,th {
+    border: 1px solid black;
+}
+
+
+#tbox1,#tbox2,#tbox3,#tbox4,#tbox5,#tbox6,#tbox6,#tbox7,#tbox8 {
+    width: 95%;
+    text-align: center;
+}
+
+
+#tbox1, #tbox2, #tbox3, #tbox4, #tbox5, #tbox6, #tbox6, #tbox7, #tbox8, th {
+        border: 1px solid black;
+}
+
+td {
+    border: 1px solid black;
+    padding-left:3.25px;
+}
+
+button{
+    background-color:white;
+    width:50%;
+    color:navy;
+}
+
+#sntable{
+    text-align:center;
+
+}
+
+#tntable {
+    text-align: center;
+}
+
+#satable {
+    text-align: center;
+}
+
+#tatable {
+    text-align: center;
+}
+
+.buttons {
+    background-color: white;
+    width: 10%;
+    color: navy;
+}
+
+.buttons:hover {
+    background-color: coral;
+}
