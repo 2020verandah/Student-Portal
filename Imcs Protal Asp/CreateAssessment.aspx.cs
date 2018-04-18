@@ -15,7 +15,7 @@ namespace Imcs_Protal_Asp
     public partial class CreateAssessment : System.Web.UI.Page
     {
         List<AssessmentInfo> AssessList = new List<AssessmentInfo>();
-        DAL sqlHelper = new DAL();
+        DAL objDal = new DAL();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -63,12 +63,7 @@ namespace Imcs_Protal_Asp
                 TrainerId = trainerId
             });
 
-            sqlHelper.CreateNewAssessment(AssessList);
-            //Get connection string from web.config file  
-            //string strcon = ConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString;
-            ////create new sqlconnection and connection to database by using connection string from web.config file  
-            //SqlConnection con = new SqlConnection(strcon);
-            //con.Open();
+            objDal.CreateNewAssessment(AssessList);            
             Response.Redirect("~/ViewAssessments.aspx");
         }
         
