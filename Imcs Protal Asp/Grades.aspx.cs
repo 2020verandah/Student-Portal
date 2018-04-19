@@ -25,11 +25,15 @@ namespace Imcs_Protal_Asp
             if (menuMain.SelectedItem.Equals("Assignments"))
             {
                 Response.Redirect("Assignments.aspx");
+                gvAssignmentGrades.Visible = true;
+                gvAssessmentGrades.Visible = false;
             }
 
             if (menuMain.SelectedItem.Equals("Grades"))
             {
                 Response.Redirect("Grades");
+                gvAssessmentGrades.Visible = true;
+                gvAssignmentGrades.Visible = false;
             }
         }
     }
