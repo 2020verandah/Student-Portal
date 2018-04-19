@@ -2,42 +2,42 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+    <form runat="server">
       <div id="container">
         <div id="leftdiv">
-            <div>
+                <div>
                 <span class="menuheadings">Overview</span><br />
-                
-                <span> <asp:Button ID="Button1" type="button" class="submenuHeadings"  runat="server" Text="Profile" /></span>
-                <br />
-                <span> <asp:Button ID="Button2" type="button" class="submenuHeadings"  runat="server" Text="View Feedback" /></span>
-            </div>
+                </div>
             <br />
             <br />
-            <br />
-            <br />
-            <br />
-            <div>
-                <span class="menuheadings">Manage User</span><br />
-                <span><asp:Button ID="Button3" type="button" class="submenuHeadings"  runat="server" Text="Manage Users" OnClick="Button3_Click" /></span><br /><br />
-            </div>
-            <br />
-            <br />
+                <div>
+                <span> <asp:Button ID="Button1" type="button" class="submenuHeadings"  runat="server" Text="Profile" /></span><br />
+               </div>
             <br />
             <br />
             <div>
-                <span class="menuheadings">Roles</span><br />
+                <span> <asp:Button ID="Button2" type="button" class="submenuHeadings"  runat="server" Text="View Feedback" /></span><br />
+            </div>
+            <br />
+            <br />
+         
+            <div>
+                <span><asp:Button ID="Button3" type="button" class="submenuHeadings"  runat="server" Text="Manage Users" OnClick="Button3_Click" /></span><br />
+            </div>
+            <br />
+            <br />
+        
+            <div>
                 <span><asp:Button ID="Button4" type="button" class="submenuHeadings"  runat="server" Text="Manage Roles" OnClick="Button4_Click" /></span><br />
             </div>
             <br />
             <br />
-            <br />
-            <br />
+      
             <div>
                 
-                <span class="menuheadings">Course</span><br />
-                <span><asp:Button ID="Button5" type="button" class="submenuHeadings"  runat="server" Text="Manage Courses" OnClick="Button5_Click" /></span>
+                <span><asp:Button ID="Button5" type="button" class="submenuHeadings"  runat="server" Text="Manage Courses" OnClick="Button5_Click" /></span><br />
             </div>
-        </div>
+            </div>
         <div id="rightdiv">
             <div id="admindiv">
                 <h2 style=" color:royalblue">WELCOME ADMIN</h2><hr />
@@ -54,6 +54,13 @@
           
        </div>
     </div>
-    <script src="Scripts/AdminScript.js"></script>
+        </form>
+ 
+
+        <script src="Scripts/AdminScript.js"></script>
     <link href="Content/AdminStyles.css" rel="stylesheet" />
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </asp:Content>
