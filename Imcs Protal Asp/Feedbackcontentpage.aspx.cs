@@ -9,10 +9,12 @@ namespace Imcs_Protal_Asp
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
-        
+        //public object AlertBoxMessage { get; private set; }
+        //public object AlertBox { get; private set; }
+
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Panel2.Visible = false;
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -38,6 +40,39 @@ namespace Imcs_Protal_Asp
                 //fui.ConnectionDB();
                 dAL.SaveFeedback(fui);
             }
+
+            Reset_Click();
+            Panel1.Visible = false;
+            Panel2.Visible = true;
+            //MessageBoxShow("Feedback Submited");
+           
+        }
+
+        //private void MessageBoxShow(string message)
+        //{
+        //    AlertBoxMessage = message;
+
+        //}
+
+        protected void Reset_Click()
+        {
+            
+            DDLtrainer.SelectedValue = "0";
+            RBL1.ClearSelection();
+            RBL2.ClearSelection();
+            RBL3.ClearSelection();
+            RBL4.ClearSelection();
+            RBL5.ClearSelection();
+            RBL6.ClearSelection();
+            RBL7.ClearSelection();
+            RBL8.ClearSelection();
+            RBL9.ClearSelection();
+
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Panel1.Visible = true;
         }
     }
 }
