@@ -40,9 +40,9 @@ namespace Imcs_Protal_Asp
         {
             string name = TxtAssessName.Text;
             string mode = DDLAssessMode.SelectedValue;
-            string date = TextBox1.Text;
-            string link = "asdgzd";
-                //Server.MapPath(FileUploadLink.FileName);
+            string date = txtAssessDate.Text;
+            string link = Server.MapPath(FileUploadLink.FileName);
+
             int marks = Convert.ToInt32(TxtMarks.Text);
             int trainerId = 1;
 

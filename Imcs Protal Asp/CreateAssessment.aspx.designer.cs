@@ -22,6 +22,15 @@ namespace Imcs_Protal_Asp {
         protected global::System.Web.UI.WebControls.Panel Panel1;
         
         /// <summary>
+        /// Assessment control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlForm Assessment;
+        
+        /// <summary>
         /// TxtAssessName control.
         /// </summary>
         /// <remarks>
@@ -40,13 +49,22 @@ namespace Imcs_Protal_Asp {
         protected global::System.Web.UI.WebControls.DropDownList DDLAssessMode;
         
         /// <summary>
-        /// TextBox1 control.
+        /// txtAssessDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox txtAssessDate;
+        
+        /// <summary>
+        /// FileUploadLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload FileUploadLink;
         
         /// <summary>
         /// TxtMarks control.
