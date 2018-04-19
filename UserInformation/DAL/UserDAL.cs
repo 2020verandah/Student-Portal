@@ -102,6 +102,7 @@ namespace Imcs_Protal_Asp
             sqlparam[1].Direction = ParameterDirection.Output;
             DataSet ds = sqlHelper.RunSpReturnDs("sp_courses_get_course", sqlparam);
             return ds;
+
         }
     }
 }
