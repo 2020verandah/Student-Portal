@@ -3,6 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+    <form runat="server">
     <h1 class="text-success text-center">Login Page</h1>
     <br />
     <div class="container">
@@ -19,15 +20,16 @@
 
             </div>
 
-            <div>
-
-                <asp:Label ID="Label1" runat="server" class="text text-danger" Text=""></asp:Label>
-            </div>
-            <br />
+            
+          
 
             <div class="col-xs-4 text-center ">
 
+                <div>
 
+                <asp:Label ID="Label1" runat="server" class="text text-danger" Text="User with provided Email and Password doesn't exist in the database"></asp:Label>
+            </div>
+                <br />
 
                 <asp:Button ID="Button_LogIn" runat="server" type="submit" name="submit" class="btn btn-success" Text="Log In" OnClientClick="return javaScriptValidation()" OnClick="Button_LogIn_Click" />
                 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -37,7 +39,7 @@
             </div>
         </div>
     </div>
-
+    </form>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>

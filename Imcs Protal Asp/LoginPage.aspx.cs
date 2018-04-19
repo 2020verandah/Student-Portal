@@ -8,7 +8,7 @@ namespace Imcs_Protal_Asp
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Label1.Visible = false;
         }
 
         protected void Button_LogIn_Click(object sender, EventArgs e)
@@ -47,7 +47,7 @@ namespace Imcs_Protal_Asp
                     }
                 default:
                     {
-                        Label1.Text = "User with provided Email and Password doesn't exist in the database";
+                        Label1.Visible = true;
                         break;
 
                     }
@@ -66,6 +66,7 @@ namespace Imcs_Protal_Asp
 
         protected void Button_CancelLogIn_Click(object sender, EventArgs e)
         {
+            Label1.Visible = false;
 
         }
     }

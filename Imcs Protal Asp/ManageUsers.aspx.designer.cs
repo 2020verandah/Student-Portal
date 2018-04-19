@@ -13,6 +13,51 @@ namespace Imcs_Protal_Asp {
     public partial class ManageUsers {
         
         /// <summary>
+        /// btn_gau control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_gau;
+        
+        /// <summary>
+        /// btn_gu control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_gu;
+        
+        /// <summary>
+        /// btn_iu control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_iu;
+        
+        /// <summary>
+        /// btn_uu control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_uu;
+        
+        /// <summary>
+        /// btn_du control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_du;
+        
+        /// <summary>
         /// grdUsers control.
         /// </summary>
         /// <remarks>
