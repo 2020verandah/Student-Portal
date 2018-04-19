@@ -59,6 +59,54 @@ namespace Imcs_Protal_Asp
             return ds;
         }
 
+        public int insertUser(UsersInfo usersInfo)
+        {
+            SqlParameter[] sqlparam = new SqlParameter[8];
+            sqlparam[0] = new SqlParameter("@fname", usersInfo.FirstName);
+            sqlparam[1] = new SqlParameter("@lname", usersInfo.LastName);
+            sqlparam[2] = new SqlParameter("@email", usersInfo.Email);
+            sqlparam[3] = new SqlParameter("@pwd", usersInfo.Password);
+            sqlparam[4] = new SqlParameter("@gender", usersInfo.Gender);
+            sqlparam[5] = new SqlParameter("@rid", usersInfo.RoleId);
+            sqlparam[6] = new SqlParameter("@cid", usersInfo.CourseId);
+            sqlparam[7] = new SqlParameter("@uout", SqlDbType.Int);
+            sqlparam[7].Direction = ParameterDirection.Output;
+            int result = sqlHelper.RunSp("sp_users_create_user", sqlparam);
+            int outresult = Convert.ToInt32(sqlparam[7].Value);
+            return outresult;
+        }
+
+
+        public int updateUser(UsersInfo usersInfo)
+        {
+            SqlParameter[] sqlparam = new SqlParameter[9];
+            sqlparam[0] = new SqlParameter("@fname", usersInfo.FirstName);
+            sqlparam[1] = new SqlParameter("@lname", usersInfo.LastName);
+            sqlparam[2] = new SqlParameter("@email", usersInfo.Email);
+            sqlparam[3] = new SqlParameter("@pwd", usersInfo.Password);
+            sqlparam[4] = new SqlParameter("@gender", usersInfo.Gender);
+            sqlparam[5] = new SqlParameter("@rid", usersInfo.RoleId);
+            sqlparam[6] = new SqlParameter("@cid", usersInfo.CourseId);
+            sqlparam[7] = new SqlParameter("@uid", usersInfo.CourseId);
+            sqlparam[8] = new SqlParameter("@uout", SqlDbType.Int);
+            sqlparam[8].Direction = ParameterDirection.Output;
+            int result = sqlHelper.RunSp("sp_users_update_user", sqlparam);
+            int outresult = Convert.ToInt32(sqlparam[8].Value);
+            return outresult;
+        }
+
+
+        public int deleteUser(UsersInfo usersInfo)
+        {
+            SqlParameter[] sqlparam = new SqlParameter[2];
+            sqlparam[0] = new SqlParameter("@uid", usersInfo.UserId);
+            sqlparam[1] = new SqlParameter("@uout", SqlDbType.Int);
+            sqlparam[1].Direction = ParameterDirection.Output;
+            int result = sqlHelper.RunSp("sp_users_delete_user", sqlparam);
+            int outresult = Convert.ToInt32(sqlparam[1].Value);
+            return outresult;
+
+        }
 
 
         public DataSet getAllRoles()
