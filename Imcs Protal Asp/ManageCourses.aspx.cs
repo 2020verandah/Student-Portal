@@ -4,10 +4,10 @@ namespace Imcs_Protal_Asp
 {
     public partial class ManageCourses : System.Web.UI.Page
     {
-        DAL dal = new DAL();
+        UserBLL objuserBLL = new UserBLL();
         protected void Page_Load(object sender, EventArgs e)
         {
-            grdCourses.DataSource = dal.getCourses();
+            grdCourses.DataSource = objuserBLL.getCourses();
             grdCourses.DataBind();
         }
     }
