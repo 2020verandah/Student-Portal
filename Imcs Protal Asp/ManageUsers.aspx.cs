@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Web.UI;
+using System.Web.UI.WebControls;
 
 namespace Imcs_Protal_Asp
 {
@@ -6,10 +8,21 @@ namespace Imcs_Protal_Asp
     {
 
         UserBLL objuserBLL = new UserBLL();
+        UsersInfo usersinfo = new UsersInfo();
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            pnl_getallusers.Visible = false;
             pnl_getuser.Visible = false;
+            pnl_insertuser.Visible = false;
+            pnl_updateuser.Visible = false;
+            pnl_deleteuser.Visible = false;
+            lbl_result_insertuser.Visible = false;
+            lbl_result_deleteuser.Visible = false;
+            lbl_result_updateuser.Visible = false;
+
+
+
 
         }
 
@@ -19,7 +32,10 @@ namespace Imcs_Protal_Asp
             grd_getallusers.DataSource = objuserBLL.getAllUsers();
             grd_getallusers.DataBind();
             pnl_getallusers.Visible = true;
-
+            pnl_getuser.Visible = false;
+            pnl_insertuser.Visible = false;
+            pnl_updateuser.Visible = false;
+            pnl_deleteuser.Visible = false;
 
         }
 
@@ -27,33 +43,180 @@ namespace Imcs_Protal_Asp
         {
             pnl_getallusers.Visible = false;
             pnl_getuser.Visible = true;
-            grd_getuser.Visible = false;
+            pnl_insertuser.Visible = false;
+            pnl_updateuser.Visible = false;
+            pnl_deleteuser.Visible = false;
 
         }
 
         protected void btn_iu_Click(object sender, EventArgs e)
         {
-
+            pnl_getallusers.Visible = false;
+            pnl_getuser.Visible = false;
+            pnl_insertuser.Visible = true;
+            pnl_updateuser.Visible = false;
+            pnl_deleteuser.Visible = false;
         }
 
         protected void btn_uu_Click(object sender, EventArgs e)
         {
-
+            pnl_getallusers.Visible = false;
+            pnl_getuser.Visible = false;
+            pnl_insertuser.Visible = false;
+            pnl_updateuser.Visible = true;
+            pnl_updateuser_update.Visible = false;
+            pnl_updateuser_tboxes.Visible = false;
+            pnl_deleteuser.Visible = false;
         }
 
         protected void btn_du_Click(object sender, EventArgs e)
         {
+            pnl_getallusers.Visible = false;
+            pnl_getuser.Visible = false;
+            pnl_insertuser.Visible = false;
+            pnl_updateuser.Visible = false;
+            pnl_deleteuser.Visible = true;
+            lbl_result_deleteuser.Visible = false;
 
         }
 
-        protected void btn_ok_Click(object sender, EventArgs e)
+        protected void btn_getuser_Click(object sender, EventArgs e)
         {
             pnl_getuser.Visible = true;
-            int userid = Convert.ToInt32(tbox_uid.Text);
+            usersinfo.UserId = Convert.ToInt32(tbox_i_uid.Text);
+            int userid = usersinfo.UserId;
             grd_getuser.DataSource = objuserBLL.getUser(userid);
             grd_getuser.DataBind();
             grd_getuser.Visible = true;
 
         }
+
+        protected void btn_insertuser_Click(object sender, EventArgs e)
+        {
+
+            usersinfo.FirstName = tbox_ifname.Text;
+            usersinfo.LastName = tbox_ilname.Text;
+            usersinfo.Email = tbox_iemail.Text;
+            usersinfo.Password = tbox_ipwd.Text;
+            usersinfo.Gender = tbox_igender.Text;
+            usersinfo.RoleId = Convert.ToInt32(tbox_irid.Text);
+            usersinfo.CourseId = Convert.ToInt32(tbox_icid.Text);
+
+            int outresult = objuserBLL.updateUser(usersinfo);
+            switch (outresult)
+            {
+
+                case 0:
+                    pnl_insertuser.Visible = true;
+                    lbl_result_insertuser.Visible = true;
+                    lbl_result_insertuser.Text = "User not inserted!! Please check the role id";
+                    break;
+                case 1:
+                    pnl_insertuser.Visible = true;
+                    lbl_result_insertuser.Visible = true;
+                    lbl_result_insertuser.Text = "User inserted Succesfully";
+                    ClearInputs(Page.Controls);
+                    break;
+            }
+        }
+
+        protected void btn_cancel_insertuser_Click(object sender, EventArgs e)
+        {
+            ClearInputs(Page.Controls);
+            pnl_insertuser.Visible = true;
+
+        }
+
+        protected void btn_updateuser_get_Click(object sender, EventArgs e)
+        {
+            pnl_updateuser.Visible = true;
+            usersinfo.UserId = Convert.ToInt32(tbox_u_uid.Text);
+            int userid = usersinfo.UserId;
+            grd_updateuser.DataSource = objuserBLL.getUser(userid);
+            grd_updateuser.DataBind();
+            pnl_updateuser_update.Visible = true;
+            pnl_updateuser_tboxes.Visible = true;
+
+        }
+
+        protected void btn_updateuser_Click(object sender, EventArgs e)
+        {
+            usersinfo.UserId = Convert.ToInt32(tbox_u_uid.Text);
+            usersinfo.FirstName = tbox_ufname.Text;
+            usersinfo.LastName = tbox_ulname.Text;
+            usersinfo.Email = tbox_uemail.Text;
+            usersinfo.Password = tbox_upwd.Text;
+            usersinfo.Gender = tbox_ugender.Text;
+            usersinfo.RoleId = Convert.ToInt32(tbox_urid.Text);
+            usersinfo.CourseId = Convert.ToInt32(tbox_ucid.Text);
+
+            int outresult = objuserBLL.insertUser(usersinfo);
+            switch (outresult)
+            {
+
+                case 0:
+                    pnl_updateuser.Visible = true;
+                    lbl_result_updateuser.Visible = true;
+                    lbl_result_updateuser.Text = "User not updated!! Please check the role id";
+                    break;
+                case 1:
+                    pnl_updateuser.Visible = true;
+                    lbl_result_updateuser.Visible = true;
+                    lbl_result_updateuser.Text = "User updated Succesfully";
+                    ClearInputs(Page.Controls);
+                    break;
+            }
+        }
+
+        protected void btn_cancel_updateuser_Click(object sender, EventArgs e)
+        {
+            ClearInputs(Page.Controls);
+            pnl_updateuser.Visible = true;
+        }
+
+        protected void btn_deleteuser_Click(object sender, EventArgs e)
+        {
+            pnl_deleteuser.Visible = true;
+            usersinfo.UserId = Convert.ToInt32(tbox_d_uid.Text);
+            int outresult = objuserBLL.deleteUser(usersinfo);
+
+            switch (outresult)
+            {
+
+                case 0:
+                    pnl_deleteuser.Visible = true;
+                    lbl_result_deleteuser.Visible = true;
+                    lbl_result_deleteuser.Text = "User not deleted!! Please check the user id";
+                    break;
+                case 1:
+                    pnl_deleteuser.Visible = true;
+                    lbl_result_deleteuser.Visible = true;
+                    lbl_result_deleteuser.Text = "User deleted Succesfully";
+                    ClearInputs(Page.Controls);
+                    break;
+            }
+
+        }
+
+        protected void btn_cancel_deleteuser_Click(object sender, EventArgs e)
+        {
+            ClearInputs(Page.Controls);
+            pnl_deleteuser.Visible = true;
+        }
+
+        void ClearInputs(ControlCollection ctrls)
+        {
+            foreach (Control ctrl in ctrls)
+            {
+                if (ctrl is TextBox)
+                {
+                    ((TextBox)ctrl).Text = string.Empty;
+                }
+                ClearInputs(ctrl.Controls);
+            }
+
+        }
+
+
     }
 }
