@@ -13,8 +13,9 @@
 
 </head>
 <body>
-    <%--<form runat="server">--%>
-
+<<<<<<< .mine<%--<form runat="server">--%>
+=======    <%--<form runat="server">--%>
+>>>>>>> .theirs
   <header id="header">  
     <h1>Blackboard</h1>  
     </header>  
@@ -41,12 +42,15 @@
        copyright @SKMAN  
     </footer> 
         
-    </div>     
+<<<<<<< .mine    </div>                 
+     <%--  <asp:ScriptManager runat="server">
+            <Scripts>--%>
+=======    </div>     
     
         <%--<asp:ScriptManager runat="server">
             <Scripts>
-               
-                <asp:ScriptReference Name="MsAjaxBundle" />
+>>>>>>> .theirs               
+                <%--<asp:ScriptReference Name="MsAjaxBundle" />
                 <asp:ScriptReference Name="jquery" />
                 <asp:ScriptReference Name="bootstrap" />
                 <asp:ScriptReference Name="respond" />
@@ -58,15 +62,18 @@
                 <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
                 <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
                 <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
-                <asp:ScriptReference Name="WebFormsBundle" />
+                <asp:ScriptReference Name="WebFormsBundle" />--%>
                 
-            </Scripts>
+<<<<<<< .mine           <%-- </Scripts>
         </asp:ScriptManager>--%>
-       
+=======            </Scripts>
+        </asp:ScriptManager>--%>
+>>>>>>> .theirs       
 
         
 
-   <%-- </form>--%>
-    
+<<<<<<< .mine    <%--</form>--%>
+=======   <%-- </form>--%>
+>>>>>>> .theirs    
 </body>
 </html>
