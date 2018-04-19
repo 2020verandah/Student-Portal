@@ -20,16 +20,38 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <nav id="nav">  
+    <%--<nav id="nav">  
         <ul> 
             <li><a href="Assignments.aspx">Assignments</a></li>
-            <li><a href="Grades.aspx">Grades</a></li>
+            <li><a href="Grades.aspx">Grades</a>
+                <ul>
+                    <li><a href="#">Assignment Grades</a></li>  
+                    <li><a href="#">Assessments Grades</a></li>
+                </ul>
+            </li>
         </ul>
-    </nav>
+    </nav>--%>
     <table style="width:100%;">
             <tr>
                 <td class="auto-style1"></td>
                 <td>
+                    <asp:Menu ID="menuMain" runat="server" BackColor="#B5C7DE" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="Large" ForeColor="#284E98" OnMenuItemClick="MenuMain_MenuItemClick" Orientation="Horizontal" StaticSubMenuIndent="10px">
+                        <DynamicHoverStyle BackColor="#284E98" ForeColor="White" />
+                        <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                        <DynamicMenuStyle BackColor="#B5C7DE" />
+                        <DynamicSelectedStyle BackColor="#507CD1" />
+                        <Items>
+                            <asp:MenuItem Text="Assignments" Value="Assignments"></asp:MenuItem>
+                            <asp:MenuItem Text="Grades" Value="Grades">
+                                <asp:MenuItem Text="Assignments" Value="Assignments">
+                                    <asp:MenuItem Text="Assessments" Value="Assessments"></asp:MenuItem>
+                                </asp:MenuItem>
+                            </asp:MenuItem>
+                        </Items>
+                        <StaticHoverStyle BackColor="#284E98" ForeColor="White" />
+                        <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                        <StaticSelectedStyle BackColor="#507CD1" />
+                    </asp:Menu>
                     <br />
                     <asp:Label ID="lblAssignments" runat="server" Text="Assignments" Font-Size="Large" ForeColor="#284E98" Font-Bold="True"></asp:Label>
                 </td>

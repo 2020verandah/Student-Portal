@@ -31,6 +31,11 @@ namespace Imcs_Protal_Asp
 
         }
 
+        protected void MenuMain_MenuItemClick(object sender, MenuEventArgs e)
+        {
+
+        }
+
         //protected void MenuAssignment_MenuItemClick(object sender, MenuEventArgs e)
         //{
         //    if (MenuAssignment.SelectedItem.Text.Equals("View"))
