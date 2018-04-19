@@ -47,7 +47,9 @@ namespace Imcs_Protal_Asp
                     }
                 default:
                     {
+                        Label1.Text = "User with provided Email and Password doesn't exist in the database";
                         break;
+
                     }
             }
 
@@ -58,30 +60,6 @@ namespace Imcs_Protal_Asp
 
 
 
-
-            //SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString);
-            //con.Open();
-            //SqlCommand cmd = new SqlCommand("select * from UserInformation where UserName =@username and Password=@password", con);
-            //cmd.Parameters.AddWithValue("@username", textBox1.Text);
-            //cmd.Parameters.AddWithValue("@password", textBox2.Text);
-            //SqlDataAdapter da = new SqlDataAdapter(cmd);
-            //DataTable dt = new DataTable();
-            //da.Fill(dt);
-            //if (dt.Rows.Count > 0)
-
-            //{
-
-            //    Response.Redirect("Name of the webpage that validated user can access");
-
-            //}
-
-            //else
-
-            //{
-
-            //    Label3.Visible = true;
-            //    Label3.Text = "Wrong Details";
-            //}
 
 
         }
