@@ -499,7 +499,7 @@ namespace Imcs_Protal_Asp.Utilities
         }
         //use for insert
         public int RunSql(string Sql, SqlParameter[] parms)
-        {
+          {
             InitCommandForSQL(Sql);
             int rtnVal = 0;
 
