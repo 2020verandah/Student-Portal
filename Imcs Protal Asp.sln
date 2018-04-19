@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2036
+VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Imcs Protal Asp", "Imcs Protal Asp\Imcs Protal Asp.csproj", "{7D60ED32-CBB3-474F-8396-1EAD63C64854}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utilities", "Utilities\Utilities.csproj", "{90C34CAF-72E2-42BA-B755-3A79056B85E7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserInformation", "UserInformation\UserInformation.csproj", "{11ADAA9B-F79D-442F-BE92-2AC44E641065}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentAssignments", "StudentAssignments\StudentAssignments.csproj", "{F4E6062F-EB54-4BCD-BECA-8EBA013A9017}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{11ADAA9B-F79D-442F-BE92-2AC44E641065}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11ADAA9B-F79D-442F-BE92-2AC44E641065}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{11ADAA9B-F79D-442F-BE92-2AC44E641065}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4E6062F-EB54-4BCD-BECA-8EBA013A9017}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4E6062F-EB54-4BCD-BECA-8EBA013A9017}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4E6062F-EB54-4BCD-BECA-8EBA013A9017}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4E6062F-EB54-4BCD-BECA-8EBA013A9017}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
