@@ -4,10 +4,10 @@ namespace Imcs_Protal_Asp
 {
     public partial class ManageRoles : System.Web.UI.Page
     {
-        DAL dal = new DAL();
+        UserBLL objuserBLL = new UserBLL();
         protected void Page_Load(object sender, EventArgs e)
         {
-            grdRoles.DataSource = dal.getRoles();
+            grdRoles.DataSource = objuserBLL.getRoles();
             grdRoles.DataBind();
         }
     }
