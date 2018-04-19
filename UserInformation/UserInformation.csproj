@@ -45,8 +45,7 @@
     <Compile Include="BLL\RolesInfo.cs" />
     <Compile Include="BLL\UserBLL.cs" />
     <Compile Include="BLL\UsersInfo.cs" />
-    <Compile Include="Class1.cs" />
-    <Compile Include="DAL\DAL.cs" />
+    <Compile Include="DAL\UserDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
