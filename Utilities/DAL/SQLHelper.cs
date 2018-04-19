@@ -1,12 +1,11 @@
 using System;
-using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 
 
 namespace Imcs_Protal_Asp.Utilities
 {
-   public sealed class SQLHelper : IDisposable
+    public sealed class SQLHelper : IDisposable
     {
         private const int COMMAND_TIMEOUT = 30;
 
@@ -20,7 +19,7 @@ namespace Imcs_Protal_Asp.Utilities
         public SQLHelper()
         {
             // mstrCN = System.Configuration.ConfigurationManager.AppSettings["ConnectionString"].ToString();
-             mstrCN = System.Configuration.ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+            mstrCN = System.Configuration.ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
 
         }
 
@@ -499,7 +498,7 @@ namespace Imcs_Protal_Asp.Utilities
         }
         //use for insert
         public int RunSql(string Sql, SqlParameter[] parms)
-          {
+        {
             InitCommandForSQL(Sql);
             int rtnVal = 0;
 
