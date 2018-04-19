@@ -72,3 +72,46 @@ E:\Github_svn projects\Student-Portal.git\trunk\Imcs Protal Asp\bin\Microsoft.AI
 E:\Github_svn projects\Student-Portal.git\trunk\Imcs Protal Asp\bin\Microsoft.AI.ServerTelemetryChannel.xml
 E:\Github_svn projects\Student-Portal.git\trunk\Imcs Protal Asp\bin\Microsoft.AI.WindowsServer.xml
 E:\Github_svn projects\Student-Portal.git\trunk\Imcs Protal Asp\bin\Microsoft.AI.Web.xml
+E:\MyProject\trunk\Imcs Protal Asp\bin\ApplicationInsights.config
+E:\MyProject\trunk\Imcs Protal Asp\bin\Imcs Protal Asp.dll.config
+E:\MyProject\trunk\Imcs Protal Asp\bin\Imcs Protal Asp.dll
+E:\MyProject\trunk\Imcs Protal Asp\bin\Imcs Protal Asp.pdb
+E:\MyProject\trunk\Imcs Protal Asp\bin\Antlr3.Runtime.dll
+E:\MyProject\trunk\Imcs Protal Asp\bin\AspNet.ScriptManager.bootstrap.dll
+E:\MyProject\trunk\Imcs Protal Asp\bin\AspNet.ScriptManager.jQuery.dll
+E:\MyProject\trunk\Imcs Protal Asp\bin\Assessment.dll
+E:\MyProject\trunk\Imcs Protal Asp\bin\Microsoft.AI.Agent.Intercept.dll
+E:\MyProject\trunk\Imcs Protal Asp\bin\Microsoft.AI.DependencyCollector.dll
+E:\MyProject\trunk\Imcs Protal Asp\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\MyProject\trunk\Imcs Protal Asp\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\MyProject\trunk\Imcs Protal Asp\bin\Microsoft.AI.Web.dll
+E:\MyProject\trunk\Imcs Protal Asp\bin\Microsoft.AI.WindowsServer.dll
+E:\MyProject\trunk\Imcs Protal Asp\bin\Microsoft.ApplicationInsights.dll
+E:\MyProject\trunk\Imcs Protal Asp\bin\Microsoft.AspNet.FriendlyUrls.dll
+E:\MyProject\trunk\Imcs Protal Asp\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+E:\MyProject\trunk\Imcs Protal Asp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\MyProject\trunk\Imcs Protal Asp\bin\Microsoft.ScriptManager.MSAjax.dll
+E:\MyProject\trunk\Imcs Protal Asp\bin\Microsoft.ScriptManager.WebForms.dll
+E:\MyProject\trunk\Imcs Protal Asp\bin\Microsoft.Web.Infrastructure.dll
+E:\MyProject\trunk\Imcs Protal Asp\bin\Newtonsoft.Json.dll
+E:\MyProject\trunk\Imcs Protal Asp\bin\System.Web.Optimization.dll
+E:\MyProject\trunk\Imcs Protal Asp\bin\UserInformation.dll
+E:\MyProject\trunk\Imcs Protal Asp\bin\WebGrease.dll
+E:\MyProject\trunk\Imcs Protal Asp\bin\Utilities.dll
+E:\MyProject\trunk\Imcs Protal Asp\bin\Assessment.pdb
+E:\MyProject\trunk\Imcs Protal Asp\bin\UserInformation.pdb
+E:\MyProject\trunk\Imcs Protal Asp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\MyProject\trunk\Imcs Protal Asp\bin\System.Web.Optimization.xml
+E:\MyProject\trunk\Imcs Protal Asp\bin\Antlr3.Runtime.pdb
+E:\MyProject\trunk\Imcs Protal Asp\bin\Microsoft.AspNet.FriendlyUrls.xml
+E:\MyProject\trunk\Imcs Protal Asp\bin\Newtonsoft.Json.xml
+E:\MyProject\trunk\Imcs Protal Asp\bin\Microsoft.ApplicationInsights.xml
+E:\MyProject\trunk\Imcs Protal Asp\bin\Microsoft.AI.DependencyCollector.xml
+E:\MyProject\trunk\Imcs Protal Asp\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\MyProject\trunk\Imcs Protal Asp\bin\Microsoft.AI.WindowsServer.xml
+E:\MyProject\trunk\Imcs Protal Asp\bin\Microsoft.AI.Web.xml
+E:\MyProject\trunk\Imcs Protal Asp\bin\Utilities.pdb
+E:\MyProject\trunk\Imcs Protal Asp\obj\Debug\Imcs Protal Asp.csprojResolveAssemblyReference.cache
+E:\MyProject\trunk\Imcs Protal Asp\obj\Debug\Imcs Protal Asp.csproj.CoreCompileInputs.cache
+E:\MyProject\trunk\Imcs Protal Asp\obj\Debug\Imcs Protal Asp.dll
+E:\MyProject\trunk\Imcs Protal Asp\obj\Debug\Imcs Protal Asp.pdb
