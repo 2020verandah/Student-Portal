@@ -1,14 +1,20 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Feedbackcontentpage.aspx.cs" Inherits="Imcs_Protal_Asp.WebForm1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style type="text/css">
+        .auto-style17 {
+            font-weight: normal;
+            color: #009933;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <asp:Panel ID="Panel1" runat="server">
-    <form id="form1" runat="server">       
+    
+    <form id="form1" runat="server"> 
+
+        <asp:Panel ID="Panel1" runat="server">
         <div>
            
-                <div class="auto-style3" style="color: #3399FF">
-                    Feedback
-                </div>
+                
                 <table  class="auto-style2">
                     <tr>
                         <td class="auto-style9">
@@ -161,9 +167,39 @@
                     </tr>
                 </table>
                
-            
+            <asp:ScriptManager runat="server">
+            <Scripts>
+               
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="respond" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                
+            </Scripts>
+        </asp:ScriptManager>
 
         </div>
+      </asp:Panel>
+      <asp:Panel ID="Panel2" runat="server">
+          <h3><em>
+              <asp:Label ID="Label2" runat="server" CssClass="auto-style17" Text="Feedback Submitted...."></asp:Label>
+          </em></h3>
+          
+          <h3><em>
+              <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Back" />
+              </em></h3>
+          
+      </asp:Panel>
     </form>
-    </asp:Panel>
+    
+
 </asp:Content>
