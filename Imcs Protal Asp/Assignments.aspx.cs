@@ -40,7 +40,7 @@ namespace Imcs_Protal_Asp
 
             if(menuMain.SelectedItem.Equals("Grades"))
             {
-                Response.Redirect("Grades");
+                Response.Redirect("Grades.aspx");
             }
         }
 
