@@ -7,29 +7,29 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="Content/bootstrap.css" rel="stylesheet" />
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
+
+    <link href="Content/file-upload.css" rel="stylesheet" />
+
+    <script src="Scripts/jquery-1.10.2.js"></script>
+    <script src="Scripts/file-upload.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $('.file-upload').file_upload();
+
+
+
+        })
+    </script>
+
     <style type="text/css">
-        /*.auto-style17 {
-            text-align: center;
-            font-weight: normal;
-            width: 326px;
+        .topspace {
+            margin-top: 46px;
         }
-        .auto-style18 {
-            font-size: large;
-            font-family: Arial, Helvetica, sans-serif;
-            color: #FF9900;
-            width: 326px;
+
+        .txt {
+            width: 70%;
         }
-        .auto-style19 {
-            text-align: center;
-            font-weight: normal;
-            width: 446px;
-        }
-        .auto-style20 {
-            font-size: large;
-            font-family: Arial, Helvetica, sans-serif;
-            color: #FF9900;
-            width: 446px;
-        }*/
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -44,46 +44,58 @@
                 <div class="container">
                     <form class="form-horizontal" role="form">
                         <h2>CREATE ASSESSMENT</h2>
-                        <div class="form-group">
-                            <label for="firstName" class="col-sm-3 control-label">Assessment Name</label>
-
-                            <div class="col-sm-9">
+                        <div class="form-group topspace">
+                            <span style="width: 30%; float: left">
+                                <label class="control-label">Assessment Name</label></span>
+                            <div class="col-sm-9 txt">
                                 <asp:TextBox ID="TxtAssessName" CssClass="form-control" runat="server"></asp:TextBox>
                                 <span class="help-block">eg.: Web API, Database</span>
                             </div>
-                            <asp:RequiredFieldValidator ID="RfvAssessName0" runat="server" ControlToValidate="TxtAssessName" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
                         <div class="form-group">
-                            <asp:Label ID="LblMode" class="col-sm-3 control-label" runat="server" Text="Assessment Mode"></asp:Label>
-
-                            <div class="col-sm-9">
-                                <asp:DropDownList ID="DDLAssessMode" class="form-control" runat="server">
+                            <span style="width: 30%; float: left">
+                                <label id="LblMode" class="control-label">Assessment Mode</label>
+                            </span>
+                            <div class="col-sm-9 txt">
+                                <asp:DropDownList ID="DDLAssessMode" CssClass="form-control " runat="server">
                                 </asp:DropDownList>
+                                <span class="help-block"></span>
                             </div>
                         </div>
                         <div class="form-group">
-                            <asp:Label ID="LblAssessDate" class="col-sm-3 control-label" runat="server" Text="Date"></asp:Label>
-
-                            <div class="col-sm-9">
-                                <asp:Calendar ID="calenderAssessDate" runat="server" OnSelectionChanged="calenderAssessDate_SelectionChanged" Visible="False"></asp:Calendar>
+                            <span style="width: 30%; float: left">
+                                <label id="LblAssessDate" class="control-label">Date</label>
+                            </span>
+                            <div class="col-sm-9 txt">
                                 <asp:TextBox ID="TextBox1" class="form-control" runat="server"></asp:TextBox>
-                                <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click" CausesValidation="False">PickDate...</asp:LinkButton>
+                                 <span class="help-block"></span>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group topspace">
+                            <span style="width: 30%; float: left">
+                                <label id="LblLink" class="control-label">Link</label>
+                            </span>
+                            <div class="col-sm-9 txt">
+                                <label class="file-upload btn btn-primary">
+                                    Browse for file ...
+                                    <input type="file" />
+                                </label>
+                                 <span class="help-block"></span>
                             </div>
                         </div>
                         <div class="form-group">
-                            <asp:Label ID="LblLink" class="col-sm-3 control-label" runat="server" Text="Link"></asp:Label>
-                            <div class="col-sm-9">
-                                <asp:FileUpload ID="FileUploadLink" class="btn btn-primary" runat="server" />
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <asp:Label ID="LblMarks" class="col-sm-3 control-label" runat="server" Text="Marks"></asp:Label>
-                            <div class="col-sm-9">
-                                <asp:TextBox ID="TxtMarks" runat="server"></asp:TextBox>
+                            <span style="width: 30%; float: left">
+                                <label id="LblMarks" class="control-label">Marks</label>
+                            </span>
+                            <div class="col-sm-9 txt">
+                                <asp:TextBox ID="TxtMarks" class="form-control" runat="server"></asp:TextBox>
+                                 <span class="help-block"></span>
                             </div>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group topspace">
                             <div class="col-sm-9 col-sm-offset-3">
                                 <asp:Button ID="BtnCreateAssess" class="btn btn-primary btn-block" runat="server" CausesValidation="False" OnClick="BtnCreateAssess_Click" Text="Create Assessment" />
                             </div>
@@ -91,10 +103,11 @@
                     </form>
 
                 </div>
-            <br />
-            <br />
+                <br />
+                <br />
         </asp:Panel>
     </div>
+
 
 </asp:Content>
 

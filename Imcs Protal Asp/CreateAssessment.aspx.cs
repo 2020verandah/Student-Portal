@@ -31,26 +31,18 @@ namespace Imcs_Protal_Asp
                 DDLAssessMode.DataTextField = "Value";
                 DDLAssessMode.DataBind();
             }
-            calenderAssessDate.Visible = false;
+           
         }
 
-        protected void LinkButton1_Click(object sender, EventArgs e)
-        {
-            calenderAssessDate.Visible = true;
-        }
-
-        protected void calenderAssessDate_SelectionChanged(object sender, EventArgs e)
-        {
-            calenderAssessDate.Visible = false;
-            TextBox1.Text = Convert.ToString(calenderAssessDate.SelectedDate);
-        }
+        
 
         protected void BtnCreateAssess_Click(object sender, EventArgs e)
         {
             string name = TxtAssessName.Text;
             string mode = DDLAssessMode.SelectedValue;
             string date = TextBox1.Text;
-            string link = Server.MapPath(FileUploadLink.FileName);
+            string link = "asdgzd";
+                //Server.MapPath(FileUploadLink.FileName);
             int marks = Convert.ToInt32(TxtMarks.Text);
             int trainerId = 1;
 
@@ -66,6 +58,5 @@ namespace Imcs_Protal_Asp
             objDal.CreateNewAssessment(AssessList);            
             Response.Redirect("~/ViewAssessments.aspx");
         }
-        
     }
 }
