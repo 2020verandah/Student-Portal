@@ -35,6 +35,9 @@
          #pnlAssessment {
              display: none;
          }
+         #pnlAssignment {
+             display: none;
+         }
     </style>
     <script>
         function clickAssignments() {
@@ -52,7 +55,7 @@
             document.getElementById("active1").style.backgroundColor = "cornflowerblue";
             document.getElementById("active1").style.color = "white";
 
-            document.getElementById("pnlassignment").style.display = "none";
+            document.getElementById("pnlAssignment").style.display = "none";
             document.getElementById("active").style.backgroundColor = "white";
             document.getElementById("active").style.color = "black";
         }
@@ -118,7 +121,7 @@
                 <td class="auto-style17">&nbsp;</td>
                 <td>
                     <div id="pnlAssessment">
-                    <asp:Panel ID="pnlAssessments" runat="server" Visible="False">
+                    <asp:Panel ID="pnlAssessments" runat="server" >
                         <asp:GridView ID="gvAssessmentGrades" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
                             <AlternatingRowStyle BackColor="White" />
                             <EditRowStyle BackColor="#2461BF" />
@@ -134,7 +137,6 @@
                         </asp:GridView>
                     </asp:Panel>
                     </div>
-                    <br />
                 </td>
                 <td>&nbsp;</td>
             </tr>
