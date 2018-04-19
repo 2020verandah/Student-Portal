@@ -5,7 +5,7 @@ namespace Imcs_Protal_Asp
 
     public class UserBLL
     {
-        DAL objDal = new DAL();
+        UserDAL objDal = new UserDAL();
         public int ValidateUser(UsersInfo usersinfo)
         {
             return objDal.ValidateUser(usersinfo);
@@ -21,21 +21,37 @@ namespace Imcs_Protal_Asp
 
 
 
-        public DataSet getUsers()
+        public DataSet getUser(int userid)
         {
 
-            return objDal.getUsers();
+            return objDal.getUser(userid);
         }
 
-        public DataSet getRoles()
+        public DataSet getAllUsers()
         {
-
-            return objDal.getRoles();
+            return objDal.getAllUsers();
         }
 
-        public DataSet getCourses()
+        public DataSet getRole(int roleid)
         {
-            return objDal.getCourses();
+
+            return objDal.getRole(roleid);
+        }
+
+        public DataSet getAllRoles()
+        {
+
+            return objDal.getAllRoles();
+        }
+
+        public DataSet getCourse(int courseid)
+        {
+            return objDal.getCourse(courseid);
+        }
+
+        public DataSet getAllCourses()
+        {
+            return objDal.getAllCourses();
         }
     }
 }
