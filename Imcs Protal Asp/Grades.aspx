@@ -32,41 +32,29 @@
              background-color: cornflowerblue;
              color: white;
          }
+         #pnlAssessment {
+             display: none;
+         }
     </style>
     <script>
         function clickAssignments() {
-            document.getElementById("assignment").style.display = "block";
-            document.getElementById("pnl").style.display = "block";
+            document.getElementById("pnlAssignment").style.display = "block";
             document.getElementById("active").style.backgroundColor = "cornflowerblue";
             document.getElementById("active").style.color = "white";
 
-            document.getElementById("grade").style.display = "none";
+            document.getElementById("pnlAssessment").style.display = "none";
             document.getElementById("active1").style.backgroundColor = "white";
             document.getElementById("active1").style.color = "black";
-
-
-            document.getElementById("feedback").style.display = "none";
-            document.getElementById("active2").style.backgroundColor = "white";
-            document.getElementById("active2").style.color = "black";
-
-            document.getElementById("pnlInfo").style.display = "none";
         }
 
         function clickAssessments() {
-            document.getElementById("grade").style.display = "block";
+            document.getElementById("pnlAssessment").style.display = "block";
             document.getElementById("active1").style.backgroundColor = "cornflowerblue";
             document.getElementById("active1").style.color = "white";
 
-            document.getElementById("feedback").style.display = "none";
-            document.getElementById("active2").style.backgroundColor = "white";
-            document.getElementById("active2").style.color = "black";
-
-            document.getElementById("assignment").style.display = "none";
-            document.getElementById("pnl").style.display = "none";
+            document.getElementById("pnlassignment").style.display = "none";
             document.getElementById("active").style.backgroundColor = "white";
             document.getElementById("active").style.color = "black";
-
-            document.getElementById("pnlInfo").style.display = "none";
         }
     </script>
 </asp:Content>
@@ -75,7 +63,7 @@
         <div class="container">
             <div class="navbar">
                 <a id="active" onclick="clickAssignments();">Assignments</a>
-                <a id="active1" onclick="clickGrades();">Assessments</a>
+                <a id="active1" onclick="clickAssessments();">Assessments</a>
             </div>
         </div>
     <table style="width:100%;">
