@@ -6,10 +6,7 @@ namespace Imcs_Protal_Asp
     public class UserBLL
     {
         UserDAL objDal = new UserDAL();
-        public int ValidateUser(UsersInfo usersinfo)
-        {
-            return objDal.ValidateUser(usersinfo);
-        }
+
 
 
         public void SaveFeedback(FeedbackUserInfo fui)
@@ -19,7 +16,11 @@ namespace Imcs_Protal_Asp
 
 
 
-
+        //Akhil's code
+        public int ValidateUser(UsersInfo usersinfo)
+        {
+            return objDal.ValidateUser(usersinfo);
+        }
 
         public DataSet getUser(int userid)
         {
@@ -30,6 +31,22 @@ namespace Imcs_Protal_Asp
         public DataSet getAllUsers()
         {
             return objDal.getAllUsers();
+        }
+
+        public int insertUser(UsersInfo usersinfo)
+        {
+            return objDal.insertUser(usersinfo);
+        }
+
+        public int updateUser(UsersInfo usersinfo)
+        {
+            return objDal.updateUser(usersinfo);
+        }
+
+        public int deleteUser(UsersInfo usersinfo)
+        {
+            return objDal.deleteUser(usersinfo);
+
         }
 
         public DataSet getRole(int roleid)
