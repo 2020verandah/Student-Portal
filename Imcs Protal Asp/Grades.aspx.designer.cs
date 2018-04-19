@@ -13,13 +13,13 @@ namespace Imcs_Protal_Asp {
     public partial class WebForm3 {
         
         /// <summary>
-        /// menuMain control.
+        /// form1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Menu menuMain;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
         /// lblGrades control.
@@ -31,6 +31,15 @@ namespace Imcs_Protal_Asp {
         protected global::System.Web.UI.WebControls.Label lblGrades;
         
         /// <summary>
+        /// pnlAssignments control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlAssignments;
+        
+        /// <summary>
         /// gvAssignmentGrades control.
         /// </summary>
         /// <remarks>
@@ -38,6 +47,15 @@ namespace Imcs_Protal_Asp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView gvAssignmentGrades;
+        
+        /// <summary>
+        /// pnlAssessments control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlAssessments;
         
         /// <summary>
         /// gvAssessmentGrades control.

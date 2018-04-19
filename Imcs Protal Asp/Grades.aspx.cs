@@ -9,32 +9,15 @@ namespace Imcs_Protal_Asp
 {
     public partial class WebForm3 : System.Web.UI.Page
     {
-        DAL dal = new DAL();
+        StudentAssignmentBLL objBLL = new StudentAssignmentBLL();
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            gvAssignmentGrades.DataSource = dal.viewAssignmentGrades();
+            gvAssignmentGrades.DataSource = objBLL.viewAssignmentGrades();
             gvAssignmentGrades.DataBind();
 
-            gvAssessmentGrades.DataSource = dal.viewAssessmentGrades();
+            gvAssessmentGrades.DataSource = objBLL.viewAssessmentGrades();
             gvAssessmentGrades.DataBind();
-        }
-
-        protected void MenuMain_MenuItemClick(object sender, MenuEventArgs e)
-        {
-            if (menuMain.SelectedItem.Equals("Assignments"))
-            {
-                Response.Redirect("Assignments.aspx");
-                gvAssignmentGrades.Visible = true;
-                gvAssessmentGrades.Visible = false;
-            }
-
-            if (menuMain.SelectedItem.Equals("Grades"))
-            {
-                Response.Redirect("Grades.aspx");
-                gvAssessmentGrades.Visible = true;
-                gvAssignmentGrades.Visible = false;
-            }
         }
     }
 }

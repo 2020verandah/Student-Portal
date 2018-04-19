@@ -12,11 +12,11 @@ namespace Imcs_Protal_Asp
 {
     public partial class Assignments : System.Web.UI.Page
     {
-        DAL dal = new DAL();
+        StudentAssignmentBLL objBLL = new StudentAssignmentBLL();
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            gvAssignments.DataSource = dal.viewAssignments();
+            gvAssignments.DataSource = objBLL.viewAssignments();
             gvAssignments.DataBind();
         }
 
@@ -29,19 +29,6 @@ namespace Imcs_Protal_Asp
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
 
-        }
-
-        protected void MenuMain_MenuItemClick(object sender, MenuEventArgs e)
-        {
-            if(menuMain.SelectedItem.Equals("Assignments"))
-            {
-                Response.Redirect("Assignments.aspx");
-            }
-
-            if(menuMain.SelectedItem.Equals("Grades"))
-            {
-                Response.Redirect("Grades.aspx");
-            }
         }
 
         //protected void MenuAssignment_MenuItemClick(object sender, MenuEventArgs e)
