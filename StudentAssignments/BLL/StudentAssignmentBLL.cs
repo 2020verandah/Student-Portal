@@ -8,7 +8,7 @@ using StudentAssignments.DAL;
 
 namespace Imcs_Protal_Asp
 {
-    class StudentAssignmentBLL
+    public class StudentAssignmentBLL
     {
         DAL objDAL = new DAL();
 
