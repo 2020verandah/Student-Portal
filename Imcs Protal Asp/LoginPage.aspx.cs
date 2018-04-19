@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace Imcs_Protal_Asp
 {
@@ -23,24 +22,24 @@ namespace Imcs_Protal_Asp
             usersinfo.Password = pwd;
 
             UserBLL objUser = new UserBLL();
-            int result = objUser.ValidateUser(usersinfo);
+            int roleid = objUser.ValidateUser(usersinfo);
 
 
-            switch (result)
+            switch (roleid)
             {
-                case 11:
+                case 1:
                     {
                         Session["username"] = emailid.Text.Trim();
                         Response.Redirect("~/AdminPage.aspx");
                         break;
                     }
-                case 12:
+                case 2:
                     {
                         Session["username"] = emailid.Text.Trim();
                         Response.Redirect("~/TrainerPage.aspx");
                         break;
                     }
-                case 13:
+                case 3:
                     {
                         Session["username"] = emailid.Text.Trim();
                         Response.Redirect("~/StudentPage.aspx");
