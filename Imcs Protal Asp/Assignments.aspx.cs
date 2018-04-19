@@ -33,7 +33,15 @@ namespace Imcs_Protal_Asp
 
         protected void MenuMain_MenuItemClick(object sender, MenuEventArgs e)
         {
+            if(menuMain.SelectedItem.Equals("Assignments"))
+            {
+                Response.Redirect("Assignments.aspx");
+            }
 
+            if(menuMain.SelectedItem.Equals("Grades"))
+            {
+                Response.Redirect("Grades");
+            }
         }
 
         //protected void MenuAssignment_MenuItemClick(object sender, MenuEventArgs e)
