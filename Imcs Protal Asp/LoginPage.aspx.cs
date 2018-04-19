@@ -5,8 +5,8 @@ namespace Imcs_Protal_Asp
 {
     public partial class LoginPage : System.Web.UI.Page
     {
-        DAL dal = new DAL();
-        List<UsersInfo> usersinfo = new List<UsersInfo>();
+
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -17,30 +17,41 @@ namespace Imcs_Protal_Asp
             string email = emailid.Text;
             string pwd = passwords.Text;
 
+            var usersinfo = new UsersInfo();
 
-            usersinfo.Add(new UsersInfo()
-            {
-                Email = email,
-                Password = pwd,
+            usersinfo.Email = email;
+            usersinfo.Password = pwd;
 
-            });
-            int result = dal.ValidateUser(usersinfo);
-            if (result == 11)
+            UserBLL objUser = new UserBLL();
+            int result = objUser.ValidateUser(usersinfo);
+
+
+            switch (result)
             {
-                Response.Redirect("~/AdminPage.aspx");
+                case 11:
+                    {
+                        Session["username"] = emailid.Text.Trim();
+                        Response.Redirect("~/AdminPage.aspx");
+                        break;
+                    }
+                case 12:
+                    {
+                        Session["username"] = emailid.Text.Trim();
+                        Response.Redirect("~/TrainerPage.aspx");
+                        break;
+                    }
+                case 13:
+                    {
+                        Session["username"] = emailid.Text.Trim();
+                        Response.Redirect("~/StudentPage.aspx");
+                        break;
+                    }
+                default:
+                    {
+                        break;
+                    }
             }
-            else if (result == 12)
-            {
-                Response.Redirect("~/TrainerPage.aspx");
-            }
-            else if (result == 13)
-            {
-                Response.Redirect("~/StudentPage.aspx");
-            }
-            else
-            {
-                Response.Redirect("~/LoginPage.aspx");
-            }
+
 
 
 

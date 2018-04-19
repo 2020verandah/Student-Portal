@@ -16,7 +16,7 @@ namespace Imcs_Protal_Asp
     {
 
         List<AssessmentInfo> AssessList = new List<AssessmentInfo>();
-        DAL objDal = new DAL();
+        AssessmentBLL objDal = new AssessmentBLL();
 
         protected void Page_Load(object sender, EventArgs e)
         {

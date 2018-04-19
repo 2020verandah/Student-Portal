@@ -18,7 +18,7 @@ namespace Imcs_Protal_Asp
         protected void Button1_Click(object sender, EventArgs e)
         {
             FeedbackUserInfo fui = new FeedbackUserInfo();
-            DAL dAL = new DAL();
+            UserBLL dAL = new UserBLL();
 
 
             fui.Answers.Add(int.Parse(HFQ1.Value), int.Parse(RBL1.SelectedValue));
@@ -36,7 +36,7 @@ namespace Imcs_Protal_Asp
                 fui.Questionid = pair.Key;
                 fui.Feedback = pair.Value;
                 //fui.ConnectionDB();
-                dAL.SaveFeedback();
+                dAL.SaveFeedback(fui);
             }
         }
     }

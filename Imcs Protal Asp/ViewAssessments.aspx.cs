@@ -6,7 +6,7 @@ namespace Imcs_Protal_Asp
 {
     public partial class ViewAssessments : System.Web.UI.Page
     {
-        DAL sqlHelper = new DAL();
+      
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -16,6 +16,7 @@ namespace Imcs_Protal_Asp
         }
         protected void gvbind()
         {
+            AssessmentBLL sqlHelper = new AssessmentBLL();
             DataSet ds = sqlHelper.GetAllAssessments();
 
             if (ds.Tables[0].Rows.Count > 0)

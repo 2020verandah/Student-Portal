@@ -22,15 +22,6 @@ namespace Imcs_Protal_Asp {
         protected global::System.Web.UI.WebControls.Panel Panel1;
         
         /// <summary>
-        /// LblAssessName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblAssessName;
-        
-        /// <summary>
         /// TxtAssessName control.
         /// </summary>
         /// <remarks>
@@ -49,15 +40,6 @@ namespace Imcs_Protal_Asp {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RfvAssessName0;
         
         /// <summary>
-        /// RevAssessName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator RevAssessName;
-        
-        /// <summary>
         /// LblMode control.
         /// </summary>
         /// <remarks>
@@ -74,15 +56,6 @@ namespace Imcs_Protal_Asp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList DDLAssessMode;
-        
-        /// <summary>
-        /// RfvAssessMode control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RfvAssessMode;
         
         /// <summary>
         /// LblAssessDate control.
