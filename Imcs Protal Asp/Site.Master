@@ -13,9 +13,7 @@
 
 </head>
 <body>
-<<<<<<< .mine<%--<form runat="server">--%>
-=======    <%--<form runat="server">--%>
->>>>>>> .theirs
+<%--<form runat="server">--%>
   <header id="header">  
     <h1>Blackboard</h1>  
     </header>  
@@ -39,17 +37,15 @@
         </asp:ContentPlaceHolder>
         
     <footer id="footer">  
-       copyright @SKMAN  
+       copyright BlackBoard  
     </footer> 
         
-<<<<<<< .mine    </div>                 
+    </div>                 
      <%--  <asp:ScriptManager runat="server">
             <Scripts>--%>
-=======    </div>     
+  
     
-        <%--<asp:ScriptManager runat="server">
-            <Scripts>
->>>>>>> .theirs               
+               
                 <%--<asp:ScriptReference Name="MsAjaxBundle" />
                 <asp:ScriptReference Name="jquery" />
                 <asp:ScriptReference Name="bootstrap" />
@@ -64,16 +60,12 @@
                 <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
                 <asp:ScriptReference Name="WebFormsBundle" />--%>
                 
-<<<<<<< .mine           <%-- </Scripts>
+          <%-- </Scripts>
         </asp:ScriptManager>--%>
-=======            </Scripts>
-        </asp:ScriptManager>--%>
->>>>>>> .theirs       
 
         
 
-<<<<<<< .mine    <%--</form>--%>
-=======   <%-- </form>--%>
->>>>>>> .theirs    
+   <%--</form>--%>
+    
 </body>
 </html>
