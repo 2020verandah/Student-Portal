@@ -14,9 +14,9 @@ namespace NoteBook
         AssignmentBLL objbll = new AssignmentBLL();
         protected void Page_Load(object sender, EventArgs e)
         {
-            lbl_FacultyID.Text = objbll.BestStudentID().Tables[0].Rows[0]["studentid"].ToString();
-            lbl_FacultyFirstName.Text = objbll.BestStudentName().Tables[0].Rows[0]["firstname"].ToString();
-            lbl_FacultyLastName0.Text = objbll.BestStudentName().Tables[0].Rows[0]["lastname"].ToString();
+            lbl_FacultyID.Text = objbll.BestFacultyID().Tables[0].Rows[0]["trainerid"].ToString();
+            lbl_FacultyFirstName.Text = objbll.BestfacultyName().Tables[0].Rows[0]["firstname"].ToString();
+            lbl_FacultyLastName0.Text = objbll.BestfacultyName().Tables[0].Rows[0]["lastname"].ToString();
 
             if (!IsPostBack)
             {
