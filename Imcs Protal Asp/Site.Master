@@ -20,13 +20,18 @@
     <nav id="nav">
         
     <ul>  
-        <li><a href="#">Home</a></li>  
-        <li><a href="#">About</a></li>  
-        <li><a href="#">Contact</a></li>  
-        <li><a href="Feedbackcontentpage.aspx">Feedback</a></li>
-        <li><a href="LoginPage.aspx">Login</a></li>
+
+        <li><a href="Home.aspx">Home</a></li>  
+        <li><a href="About.aspx">About</a></li>  
+        <li><a href="Contact.aspx">Contact</a></li>  
+         <% if (Session["username"] == null){ %>
+        <li><a href="LoginPage.aspx">Log In</a></li>
+    <% } else  { %>
+        <li><a href="LoginPage.aspx">Log Out</a></li>
+    <%} %>      
         <li><a href="Assignments.aspx">Student Assignments</a></li>
         <li><a href="Grades.aspx">Student Grades</a></li>
+
     </ul>   
     </nav>
     <div id="con"> 
