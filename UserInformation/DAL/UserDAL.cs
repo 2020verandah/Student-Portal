@@ -87,7 +87,7 @@ namespace Imcs_Protal_Asp
             sqlparam[4] = new SqlParameter("@gender", usersInfo.Gender);
             sqlparam[5] = new SqlParameter("@rid", usersInfo.RoleId);
             sqlparam[6] = new SqlParameter("@cid", usersInfo.CourseId);
-            sqlparam[7] = new SqlParameter("@uid", usersInfo.CourseId);
+            sqlparam[7] = new SqlParameter("@uid", usersInfo.UserId);
             sqlparam[8] = new SqlParameter("@uout", SqlDbType.Int);
             sqlparam[8].Direction = ParameterDirection.Output;
             int result = sqlHelper.RunSp("sp_users_update_user", sqlparam);
@@ -131,6 +131,43 @@ namespace Imcs_Protal_Asp
         }
 
 
+        public int insertRole(RolesInfo rolesInfo)
+        {
+            SqlParameter[] sqlparam = new SqlParameter[2];
+            sqlparam[0] = new SqlParameter("@rname", rolesInfo.RoleName);
+            sqlparam[1] = new SqlParameter("@rout", SqlDbType.Int);
+            sqlparam[1].Direction = ParameterDirection.Output;
+            int result = sqlHelper.RunSp("sp_roles_create_role", sqlparam);
+            int outresult = Convert.ToInt32(sqlparam[1].Value);
+            return outresult;
+        }
+
+
+        public int updateRole(RolesInfo rolesInfo)
+        {
+            SqlParameter[] sqlparam = new SqlParameter[3];
+            sqlparam[0] = new SqlParameter("@rname", rolesInfo.RoleName);
+            sqlparam[1] = new SqlParameter("@rid", rolesInfo.RoleId);
+            sqlparam[2] = new SqlParameter("@rout", SqlDbType.Int);
+            sqlparam[2].Direction = ParameterDirection.Output;
+            int result = sqlHelper.RunSp("sp_roles_update_role", sqlparam);
+            int outresult = Convert.ToInt32(sqlparam[2].Value);
+            return outresult;
+        }
+
+
+        public int deleteRole(RolesInfo rolesInfo)
+        {
+            SqlParameter[] sqlparam = new SqlParameter[2];
+            sqlparam[0] = new SqlParameter("@rid", rolesInfo.RoleId);
+            sqlparam[1] = new SqlParameter("@rout", SqlDbType.Int);
+            sqlparam[1].Direction = ParameterDirection.Output;
+            int result = sqlHelper.RunSp("sp_roles_delete_role", sqlparam);
+            int outresult = Convert.ToInt32(sqlparam[1].Value);
+            return outresult;
+        }
+
+
 
 
         public DataSet getAllCourses()
@@ -150,8 +187,45 @@ namespace Imcs_Protal_Asp
             sqlparam[1].Direction = ParameterDirection.Output;
             DataSet ds = sqlHelper.RunSpReturnDs("sp_courses_get_course", sqlparam);
             return ds;
-
         }
+
+        public int insertCourse(CoursesInfo coursesInfo)
+        {
+            SqlParameter[] sqlparam = new SqlParameter[2];
+            sqlparam[0] = new SqlParameter("@cname", coursesInfo.CourseName);
+            sqlparam[1] = new SqlParameter("@cout", SqlDbType.Int);
+            sqlparam[1].Direction = ParameterDirection.Output;
+            int result = sqlHelper.RunSp("sp_courses_create_course", sqlparam);
+            int outresult = Convert.ToInt32(sqlparam[1].Value);
+            return outresult;
+        }
+
+
+        public int updateCourse(CoursesInfo coursesInfo)
+        {
+            SqlParameter[] sqlparam = new SqlParameter[3];
+            sqlparam[0] = new SqlParameter("@cname", coursesInfo.CourseName);
+            sqlparam[1] = new SqlParameter("@cid", coursesInfo.CourseId);
+            sqlparam[2] = new SqlParameter("@cout", SqlDbType.Int);
+            sqlparam[2].Direction = ParameterDirection.Output;
+            int result = sqlHelper.RunSp("sp_courses_update_course", sqlparam);
+            int outresult = Convert.ToInt32(sqlparam[2].Value);
+            return outresult;
+        }
+
+
+        public int deleteCourse(CoursesInfo coursesInfo)
+        {
+            SqlParameter[] sqlparam = new SqlParameter[2];
+            sqlparam[0] = new SqlParameter("@cid", coursesInfo.CourseId);
+            sqlparam[1] = new SqlParameter("@cout", SqlDbType.Int);
+            sqlparam[1].Direction = ParameterDirection.Output;
+            int result = sqlHelper.RunSp("sp_courses_delete_course", sqlparam);
+            int outresult = Convert.ToInt32(sqlparam[1].Value);
+            return outresult;
+        }
+
+
     }
 }
 
