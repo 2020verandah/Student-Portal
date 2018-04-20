@@ -93,11 +93,7 @@
             </tr>
             </table>
         <br />
-        <table style="width:100%;">
-            <tr>
-                <td>&nbsp;</td>
-                <td>
-                    <asp:Panel ID="pnlAssignment" runat="server" Visible="False" CssClass="auto-style31">
+        <asp:Panel ID="pnlAssignment" runat="server" Visible="False" CssClass="auto-style31">
                         <br />
                         <table style="width:100%;">
                             <tr>
@@ -131,6 +127,15 @@
                             </tr>
                             <tr>
                                 <td class="auto-style30">
+                                    <asp:Label ID="lblMarks" runat="server" Font-Bold="True" Font-Size="Medium" ForeColor="#284E98">Total marks</asp:Label>
+                                </td>
+                                <td class="auto-style19">&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <asp:Label ID="lblAMarks" runat="server" Font-Size="Medium" ForeColor="#284E98"></asp:Label>
+                                </td>
+                                <td class="auto-style19">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td class="auto-style30">
                                     <asp:Label ID="lblStatus" runat="server" Font-Bold="True" Font-Size="Medium" ForeColor="#284E98">Status</asp:Label>
                                 </td>
                                 <td>
@@ -141,7 +146,7 @@
                             </tr>
                             <tr>
                                 <td class="auto-style30">
-                                    <asp:Label ID="lblLink" runat="server" Font-Bold="True" Font-Size="Medium" ForeColor="#284E98">Submission Link</asp:Label>
+                                    <asp:Label ID="lblLink" runat="server" Font-Bold="True" Font-Size="Medium" ForeColor="#284E98">Submission link</asp:Label>
                                 </td>
                                 <td>
                                     &nbsp;&nbsp;&nbsp;<asp:TextBox ID="tbALink" runat="server" ValidationGroup="vgSubmit"></asp:TextBox>
@@ -167,20 +172,6 @@
                             </tr>
                         </table>
                     </asp:Panel>
-                </td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-        </table>
     <br />
     </form>
 </asp:Content>

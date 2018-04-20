@@ -28,6 +28,8 @@ namespace Imcs_Protal_Asp
             lblAName.Text = ds.Tables[0].Rows[gvAssignments.SelectedIndex]["Assignment"].ToString();
             lblAInfo.Text = ds.Tables[0].Rows[gvAssignments.SelectedIndex]["Info"].ToString();
             lblADeadline.Text = ds.Tables[0].Rows[gvAssignments.SelectedIndex]["Deadline"].ToString();
+            lblAMarks.Text = ds.Tables[0].Rows[gvAssignments.SelectedIndex]["TotalMarks"].ToString();
+            lblAStatus.Text = ds.Tables[0].Rows[gvAssignments.SelectedIndex]["Status"].ToString();
         }
 
         protected void btnSubmit_Click(object sender, EventArgs e)
