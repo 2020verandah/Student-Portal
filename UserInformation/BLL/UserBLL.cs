@@ -8,6 +8,7 @@ namespace Imcs_Protal_Asp
         UserDAL objDal = new UserDAL();
 
 
+        //Shashi's code
 
         public void SaveFeedback(FeedbackUserInfo fui)
         {
@@ -17,20 +18,25 @@ namespace Imcs_Protal_Asp
 
 
         //Akhil's code
+
+
+        //Users
+
         public int ValidateUser(UsersInfo usersinfo)
         {
             return objDal.ValidateUser(usersinfo);
+        }
+
+
+        public DataSet getAllUsers()
+        {
+            return objDal.getAllUsers();
         }
 
         public DataSet getUser(int userid)
         {
 
             return objDal.getUser(userid);
-        }
-
-        public DataSet getAllUsers()
-        {
-            return objDal.getAllUsers();
         }
 
         public int insertUser(UsersInfo usersinfo)
@@ -49,11 +55,9 @@ namespace Imcs_Protal_Asp
 
         }
 
-        public DataSet getRole(int roleid)
-        {
 
-            return objDal.getRole(roleid);
-        }
+
+        //Roles
 
         public DataSet getAllRoles()
         {
@@ -61,14 +65,56 @@ namespace Imcs_Protal_Asp
             return objDal.getAllRoles();
         }
 
-        public DataSet getCourse(int courseid)
+        public DataSet getRole(int roleid)
         {
-            return objDal.getCourse(courseid);
+
+            return objDal.getRole(roleid);
         }
+
+        public int insertRole(RolesInfo rolesinfo)
+        {
+            return objDal.insertRole(rolesinfo);
+        }
+
+        public int updateRole(RolesInfo rolesinfo)
+        {
+            return objDal.updateRole(rolesinfo);
+        }
+
+        public int deleteRole(RolesInfo rolesinfo)
+        {
+            return objDal.deleteRole(rolesinfo);
+
+        }
+
+
+        //Courses
 
         public DataSet getAllCourses()
         {
             return objDal.getAllCourses();
         }
+
+        public DataSet getCourse(int courseid)
+        {
+            return objDal.getCourse(courseid);
+        }
+
+        public int insertCourse(CoursesInfo coursesinfo)
+        {
+            return objDal.insertCourse(coursesinfo);
+        }
+
+        public int updateCourse(CoursesInfo coursesinfo)
+        {
+            return objDal.updateCourse(coursesinfo);
+        }
+
+        public int deleteCourse(CoursesInfo coursesinfo)
+        {
+            return objDal.deleteCourse(coursesinfo);
+
+        }
+
     }
 }
