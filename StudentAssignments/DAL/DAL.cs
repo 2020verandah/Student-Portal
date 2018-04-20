@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Text;
 using System.Threading.Tasks;
+using Imcs_Protal_Asp;
 using Imcs_Protal_Asp.Utilities;
 
 namespace StudentAssignments.DAL
@@ -45,6 +46,18 @@ namespace StudentAssignments.DAL
             sqlparam[0] = new SqlParameter("@StuID", 2);
             DataSet ds = sqlHelper.RunSpReturnDs("sp_AssessmentGrades_SELECT", sqlparam);
             return ds;
+        }
+        
+        public int UpdateAssignmentLink(List<SubmissionsInfo> subList)
+        {
+            SqlParameter[] sqlparam = new SqlParameter[2];
+            sqlparam[0] = new SqlParameter("@AsgLink", subList[0].AsgLink);
+            sqlparam[1] = new SqlParameter("@result", 0);
+
+
+            int result = sqlHelper.RunSp("sp_Submissions_UPDATE_Link", sqlparam);
+
+            return result;
         }
     }
 }
