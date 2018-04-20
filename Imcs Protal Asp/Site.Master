@@ -24,7 +24,7 @@
         <li><a href="#">About</a></li>  
         <li><a href="#">Contact</a></li>  
         <li><a href="Feedbackcontentpage.aspx">Feedback</a></li>
-        <li><a href="LoginPage.aspx">LogIn</a></li>
+        <li><a href="LoginPage.aspx">Login</a></li>
         <li><a href="Assignments.aspx">Student Assignments</a></li>
         <li><a href="Grades.aspx">Student Grades</a></li>
     </ul>   
