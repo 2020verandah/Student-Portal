@@ -22,8 +22,12 @@ namespace Imcs_Protal_Asp
 
         protected void gvAssignments_SelectedIndexChanged(object sender, EventArgs e)
         {
+            DataSet ds = objBLL.viewAssignments();
             pnlAssignment.Visible = true;
-            lblAName.Text = gvAssignments.Rows[0].Cells[1].Text;
+            //lblAName.Text = gvAssignments.Rows[0].Cells[1].Text;
+            lblAName.Text = ds.Tables[0].Rows[gvAssignments.SelectedIndex]["Assignment"].ToString();
+            lblAInfo.Text = ds.Tables[0].Rows[gvAssignments.SelectedIndex]["Info"].ToString();
+            lblADeadline.Text = ds.Tables[0].Rows[gvAssignments.SelectedIndex]["Deadline"].ToString();
         }
 
         protected void btnSubmit_Click(object sender, EventArgs e)

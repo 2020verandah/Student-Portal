@@ -12,7 +12,7 @@
             text-align: center;
         }
         .auto-style25 {
-            width: 708px;
+            width: 698px;
         }
         .auto-style28 {
             width: 890px;
@@ -24,18 +24,26 @@
             text-align: right;
             width: 219px;
         }
+        .auto-style31 {
+            margin-left: 493px;
+        }
+        .auto-style32 {
+            width: 721px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <form id="form1" runat="server">
-    <table style="width:100%;">
+        <table style="width:100%;">
             <tr>
-                <td class="auto-style25"></td>
-                <td class="auto-style28">
+                <td class="auto-style32">&nbsp;</td>
+                <td>
                     <asp:Label ID="lblAssignments" runat="server" Text="Assignments" Font-Size="Large" ForeColor="#284E98" Font-Bold="True"></asp:Label>
                 </td>
-                <td class="auto-style1"></td>
+                <td>&nbsp;</td>
             </tr>
+        </table>
+    <table style="width:100%;">
             <tr>
                 <td class="auto-style25">&nbsp;</td>
                 <td class="auto-style28">
@@ -83,29 +91,13 @@
                 </td>
                 <td>&nbsp;</td>
             </tr>
+            </table>
+        <br />
+        <table style="width:100%;">
             <tr>
-                <td class="auto-style25">&nbsp;</td>
-                <td class="auto-style28">&nbsp;</td>
                 <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style25">&nbsp;</td>
-                <td class="auto-style28">
-                    <%--<asp:Panel ID="pnlSubmit" runat="server" Visible="False">
-                        <asp:GridView ID="gvSubmit" runat="server" CellPadding="4" ForeColor="Black" GridLines="Vertical" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px">
-                            <AlternatingRowStyle BackColor="White" />
-                            <FooterStyle BackColor="#CCCC99" />
-                            <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
-                            <PagerStyle BackColor="#F7F7DE" ForeColor="Black" HorizontalAlign="Right" />
-                            <RowStyle BackColor="#F7F7DE" />
-                            <SelectedRowStyle BackColor="#CE5D5A" Font-Bold="True" ForeColor="White" />
-                            <SortedAscendingCellStyle BackColor="#FBFBF2" />
-                            <SortedAscendingHeaderStyle BackColor="#848384" />
-                            <SortedDescendingCellStyle BackColor="#EAEAD3" />
-                            <SortedDescendingHeaderStyle BackColor="#575357" />
-                        </asp:GridView>
-                    </asp:Panel>--%>
-                    <asp:Panel ID="pnlAssignment" runat="server" Visible="False">
+                <td>
+                    <asp:Panel ID="pnlAssignment" runat="server" Visible="False" CssClass="auto-style31">
                         <br />
                         <table style="width:100%;">
                             <tr>
@@ -178,7 +170,17 @@
                 </td>
                 <td>&nbsp;</td>
             </tr>
-    </table>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
     <br />
     </form>
 </asp:Content>
