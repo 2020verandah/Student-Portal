@@ -78,7 +78,6 @@
                                 <asp:BoundField DataField="Info" Visible="false" />
                             </Columns>
                         </asp:GridView>
-                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="sp_Submissions_SELECT_Assignments" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
                     </asp:Panel>
                 </td>
                 <td>&nbsp;</td>
