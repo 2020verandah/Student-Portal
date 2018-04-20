@@ -5,13 +5,16 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+using System.Web.Script.Serialization;
+using System.Web.Script.Services;
+using System.Web.Services;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
 
 namespace Imcs_Protal_Asp
 {
-    
+
     public partial class CreateAssessment : System.Web.UI.Page
     {
 
@@ -31,12 +34,12 @@ namespace Imcs_Protal_Asp
                 DDLAssessMode.DataTextField = "Value";
                 DDLAssessMode.DataBind();
             }
-           
+
         }
 
-        
 
-        protected void BtnCreateAssess_Click(object sender, EventArgs e)
+        [WebMethod]
+        public string BtnCreateAssess_Click()//
         {
             string name = TxtAssessName.Text;
             string mode = DDLAssessMode.SelectedValue;
@@ -55,8 +58,36 @@ namespace Imcs_Protal_Asp
                 Marks = marks,
                 TrainerId = trainerId
             });
-            objDal.CreateNewAssessment(AssessList);            
+            objDal.CreateNewAssessment(AssessList);
             Response.Redirect("~/ViewAssessments.aspx");
+            return "";
         }
+        [WebMethod]
+        public static void GetData(AssessmentInfo objAssess)
+
+        {
+            List<AssessmentInfo> AssessList = new List<AssessmentInfo>();
+            AssessmentBLL objDal = new AssessmentBLL();
+            string name = objAssess.Name;
+            string mode = objAssess.Mode;
+            string date = objAssess.Date;
+            string link = objAssess.Link;
+
+            int marks = objAssess.Marks;
+            int trainerId = 1;
+
+            AssessList.Add(new AssessmentInfo()
+            {
+                Name = name,
+                Mode = mode,
+                Date = date,
+                Link = link,
+                Marks = marks,
+                TrainerId = trainerId
+            });
+            objDal.CreateNewAssessment(AssessList);
+           //Response.Redirect("~/ViewAssessments.aspx");
+        }
+
     }
 }

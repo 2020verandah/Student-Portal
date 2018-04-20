@@ -7,56 +7,11 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="Content/bootstrap.css" rel="stylesheet" />
     <link href="Content/file-upload.css" rel="stylesheet" />
-    <script src="Scripts/jquery-1.10.2.js"></script>
-    <script src="Scripts/file-upload.js"></script>
+    <%--<script src="Scripts/jquery-1.10.2.js"></script>
+    <script src="Scripts/file-upload.js"></script>--%>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script type="text/javascript" src="http://ajax.microsoft.com/ajax/jQuery.Validate/1.6/jQuery.Validate.min.js"></script>
-    <script>
-        function clientValidation_Click() {
-
-            if ($.trim($("#MainContent_DDLAssessMode").val()) == -1) {
-                $("#MainContent_DDLAssessMode").css({
-                    "border": "1px solid red",
-                    "background": "#FFCECE"
-                });
-            }
-            else {
-                $("#MainContent_DDLAssessMode").css({
-                    "border": "",
-                    "background": ""
-                });
-            }
-            var isValid = true;
-            $('input[type="text"],input[type="file"]').each(function () {
-                if ($.trim($(this).val()) == '' || $.trim($(this).val()) == -1) {
-                    isValid = false;
-                    $(this).css({
-                        "border": "1px solid red",
-                        "background": "#FFCECE"
-                    });
-                }
-                else {
-                    $(this).css({
-                        "border": "",
-                        "background": ""
-                    });
-                }
-            });
-            if (isValid == false)
-                return false;
-            else
-                alert('Thank you for submitting');
-
-            // emailExp = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([com\co\.\in])+$/;
-        }
-
-        $(document).ready(function () {
-            $(function () {
-                $("#MainContent_txtAssessDate").datepicker();
-            });
-        });
-    </script>
+    <script src="Scripts/Assessments/Assessments.js"></script>
 
     <style type="text/css">
         .topspace {
@@ -79,14 +34,14 @@
 
 
             <div class="container">
-                <form id="Assessment" class="form-horizontal" runat="server" role="form">
-                    <h2 style="color:steelblue">CREATE ASSESSMENT</h2>
+                <form id="Assessment" class="form-horizontal" runat="server" role="form" method="post">
+                    <h2 style="color: steelblue">CREATE ASSESSMENT</h2>
                     <div class="form-group topspace">
                         <span style="width: 30%; float: left">
                             <label class="control-label" style="color: steelblue;">Assessment Name</label></span>
                         <div class="col-sm-9 txt">
-                            <asp:TextBox ID="TxtAssessName" CssClass="form-control" runat="server" onfocusout="clientValidation_Click()"></asp:TextBox>
-                            <span class="help-block">eg.: Web API, Database</span>
+                            <asp:TextBox ID="TxtAssessName" CssClass="form-control" runat="server" ClientIDMode="Static" onfocusout="clientValidation_Click()"></asp:TextBox>
+                            <span class="help-block">eg.: Web API, Database</span><%--ClientIDMode="Static"--%>
                         </div>
                     </div>
                     <div class="form-group">
@@ -94,7 +49,7 @@
                             <label id="LblMode" class="control-label" style="color: steelblue;">Assessment Mode</label>
                         </span>
                         <div class="col-sm-9 txt">
-                            <asp:DropDownList ID="DDLAssessMode" CssClass="form-control " runat="server">
+                            <asp:DropDownList ID="DDLAssessMode" ClientIDMode="Static" CssClass="form-control " runat="server">
                             </asp:DropDownList>
                             <span class="help-block"></span>
                         </div>
@@ -104,7 +59,7 @@
                             <label id="LblAssessDate" class="control-label" style="color: steelblue;">Date</label>
                         </span>
                         <div class="col-sm-9 txt">
-                            <asp:TextBox ID="txtAssessDate" class="form-control" onfocusout="clientValidation_Click()" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txtAssessDate" class="form-control" ClientIDMode="Static" onfocusout="clientValidation_Click()" runat="server"></asp:TextBox>
                             <span class="help-block"></span>
                         </div>
 
@@ -118,7 +73,7 @@
                             <label class="file-upload btn btn-primary">
                                 Browse for file ...
                                     <%--<input type="file" />--%>
-                                <asp:FileUpload ID="FileUploadLink" CssClass="btn-primary" runat="server" />
+                                <asp:FileUpload ID="FileUploadLink" ClientIDMode="Static" CssClass="btn-primary" runat="server" />
                             </label>
                             <span class="help-block"></span>
                         </div>
@@ -128,15 +83,15 @@
                             <label id="LblMarks" class="control-label" style="color: steelblue;">Marks</label>
                         </span>
                         <div class="col-sm-9 txt">
-                            <asp:TextBox ID="TxtMarks" class="form-control" onfocusout="clientValidation_Click()" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="TxtMarks" class="form-control" ClientIDMode="Static" onfocusout="clientValidation_Click()" runat="server"></asp:TextBox>
                             <span class="help-block"></span>
                         </div>
                     </div>
 
                     <div class="form-group topspace">
                         <div class="col-sm-6 col-sm-offset-3">
-                            <asp:Button ID="BtnCreateAssess" class="btn btn-primary btn-block" runat="server"
-                                Text="Create Assessment" OnClientClick="return clientValidation_Click()" />
+                            <asp:Button ID="BtnCreateAssess" class="btn btn-primary btn-block" runat="server" ClientIDMode="Static"
+                                Text="Create Assessment" OnClientClick="CreateAssessmentClient()" />
                             <%--OnClick="BtnCreateAssess_Click" --%>
                         </div>
                     </div>
