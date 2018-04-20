@@ -18,10 +18,10 @@
             width: 540px;
         }
         .auto-style4 {
-            width: 540px;
-            text-align: right;
-            font-size: medium;
-        }
+        width: 540px;
+        text-align: right;
+        font-size: medium;
+    }
         .auto-style6 {
             height: 78px;
         }
@@ -66,68 +66,68 @@
         .auto-style16 {
             height: 29px;
         }
-        .auto-style17 {
-            font-family: "Times New Roman", Times, serif;
-            color: #6600CC;
-        }
-        .auto-style18 {
-            color: #FFFFFF;
-            background-color: #009933;
-        }
-        .auto-style19 {
-            text-align: center;
-            width: 540px;
-            height: 33px;
-        }
-        .auto-style20 {
-            text-align: left;
-            width: 178px;
-            height: 33px;
-        }
-        .auto-style21 {
-            height: 33px;
-        }
-        .auto-style22 {
-            font-size: medium;
-            font-family: "Times New Roman", Times, serif;
-            color: #FF0000;
-        }
-        .auto-style23 {
-            font-size: medium;
-            font-family: "Times New Roman", Times, serif;
-            width: 178px;
-            text-align: left;
-        }
-        .auto-style24 {
-            font-size: medium;
-        }
-        .auto-style25 {
-            text-align: right;
-            font-family: "Times New Roman", Times, serif;
-            font-size: medium;
-            color: #FF9933;
-            width: 540px;
-            height: 29px;
-        }
-        .auto-style26 {
-            text-align: center;
-            width: 540px;
-            font-size: medium;
-        }
-        .auto-style27 {
-            text-align: left;
-            width: 178px;
-            font-size: medium;
-        }
-        .auto-style28 {
-            font-size: medium;
-            font-family: "Times New Roman", Times, serif;
-            color: #FF9900;
-            text-align: left;
-        }
-        .auto-style29 {
-            font-size: x-large;
-        }
+    .auto-style17 {
+        font-family: "Times New Roman", Times, serif;
+        color: #6600CC;
+    }
+    .auto-style18 {
+        color: #FFFFFF;
+        background-color: #009933;
+    }
+    .auto-style19 {
+        text-align: center;
+        width: 540px;
+        height: 33px;
+    }
+    .auto-style20 {
+        text-align: left;
+        width: 178px;
+        height: 33px;
+    }
+    .auto-style21 {
+        height: 33px;
+    }
+    .auto-style22 {
+        font-size: medium;
+        font-family: "Times New Roman", Times, serif;
+        color: #FF0000;
+    }
+    .auto-style23 {
+        font-size: medium;
+        font-family: "Times New Roman", Times, serif;
+        width: 178px;
+        text-align: left;
+    }
+    .auto-style24 {
+        font-size: medium;
+    }
+    .auto-style25 {
+        text-align: right;
+        font-family: "Times New Roman", Times, serif;
+        font-size: medium;
+        color: #FF9933;
+        width: 540px;
+        height: 29px;
+    }
+    .auto-style26 {
+        text-align: center;
+        width: 540px;
+        font-size: medium;
+    }
+    .auto-style27 {
+        text-align: left;
+        width: 178px;
+        font-size: medium;
+    }
+    .auto-style28 {
+        font-size: medium;
+        font-family: "Times New Roman", Times, serif;
+        color: #FF9900;
+        text-align: left;
+    }
+    .auto-style29 {
+        font-size: x-large;
+    }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
