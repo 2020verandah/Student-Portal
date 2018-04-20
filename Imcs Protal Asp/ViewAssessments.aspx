@@ -1,13 +1,14 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ViewAssessments.aspx.cs" Inherits="Imcs_Protal_Asp.ViewAssessments" %>
 
-<asp:content id="MainContent" contentplaceholderid="head" runat="server">
-    
-        <div id="viewAssess">
-            <br />
-            <br />
-            <br />
+<asp:Content ID="MainContent" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+    <div id="viewAssess">
+        <br />
+        <br />
+        <br />
 
-            <%--<asp:GridView ID="GridView1" runat="server" CellPadding="4" EnableSortingAndPagingCallbacks="True" ForeColor="#333333" GridLines="None">
+        <%--<asp:GridView ID="GridView1" runat="server" CellPadding="4" EnableSortingAndPagingCallbacks="True" ForeColor="#333333" GridLines="None">
                 <AlternatingRowStyle BackColor="White" />
                 <Columns>
                     <asp:BoundField />
@@ -26,27 +27,29 @@
                 <SortedDescendingHeaderStyle BackColor="#4870BE" />
             </asp:GridView>--%>
 
-            
 
-<asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="false" DataKeyNames="AssessmentName" 
-    OnPageIndexChanging="GridView1_PageIndexChanging" OnRowCancelingEdit="GridView1_RowCancelingEdit" 
-    
-    OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating">  
-                    <Columns>  
-                        <asp:BoundField DataField="AssessmentName" HeaderText="Exam Name" />  
-                        <asp:BoundField DataField="StudentName" HeaderText="Student Name" />  
-                        <asp:BoundField DataField="Link" HeaderText="Link" />  
-                        <asp:BoundField DataField="AssessmentMarks" HeaderText="Marks" />  
-                        <asp:CommandField ShowEditButton="true" />  
-                        <asp:CommandField ShowDeleteButton="false" /> 
+        <form id="viewAssessment" class="form-horizontal" runat="server" role="form">
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="false" DataKeyNames="AssessmentName"
+                OnPageIndexChanging="GridView1_PageIndexChanging" OnRowCancelingEdit="GridView1_RowCancelingEdit"
+                OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating">
+                <Columns>
+                    <asp:BoundField DataField="AssessmentName" HeaderText="Exam Name" />
+                    <asp:BoundField DataField="StudentName" HeaderText="Student Name" />
+                    <asp:BoundField DataField="Link" HeaderText="Link" />
+                    <asp:BoundField DataField="AssessmentMarks" HeaderText="Marks" />
+                    <asp:CommandField ShowEditButton="true" />
+                    <asp:CommandField ShowDeleteButton="false" />
 
-                    </Columns>  
-                </asp:GridView>
+                </Columns>
+            </asp:GridView>
 
 
             <br />
             <br />
             <br />
             <br />
-        </div>
-    </asp:content>
+        </form>
+
+    </div>
+
+</asp:Content>
