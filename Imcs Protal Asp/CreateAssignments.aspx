@@ -5,6 +5,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script> 
         function clientFunction() {
+            //alert('huuu');
+            //debugger;
             var isValid = true;
             $('#txt_AssignmentID,#txt_AssignmentName,#txt_AssignmentDeadline,#txt_Assignment_Marks,#txt_TrainerID,#FileUpload_SelectAssignmentLink').each(function () {
                 if ($.trim($(this).val()) == '') {
@@ -21,13 +23,18 @@
                     });
                 }
             });
+            //alert('please enter details');
             if (isValid == false) {
-                return false;
+                return false; 
             }
             else {
                 return true;
             }
         }
+            //$(document).ready(function () {
+            //$("#btn_AssignmentView").click(function () {
+            //    $("#GridView_GetAssignmentsData").css("color", "red").slideUp(2000).slideDown(2000);
+            //});
 //$(document).ready(function(){
 
 //    });
@@ -41,10 +48,7 @@
     //    //$("#btn_AssignmentView").click(function () {
     //    //    $("#GridView_GetAssignmentsData").slideDown('50000');
     //    //});
-    //    $(document).ready(function () {
-    //        $("#btn_AssignmentView").click(function () {
-    //            $("#GridView_GetAssignmentsData").css("color", "red").slideUp(2000).slideDown(2000);
-    //        });
+    
     //    });
 
     </script>
@@ -166,6 +170,11 @@
         font-family: Arial, Helvetica, sans-serif;
         color: #FF9900;
     }
+        .auto-style27 {
+            width: 86%;
+            text-align: center;
+            height: 26px;
+        }
     </style>
 </asp:Content>
 
@@ -187,14 +196,14 @@
                     <tr>
                         <td class="auto-style21"></td>
                         <td class="auto-style17"></td>
-                        <td class="auto-style2"></td>
-                        <td class="auto-style2"></td>
+                        <td class="auto-style27"></td>
+                        <td class="auto-style27"></td>
                     </tr>
                     <tr>
                         <td class="auto-style4">&nbsp;</td>
                         <td class="auto-style25">AssignmentID</td>
                         <td>
-                            <asp:TextBox ID="txt_AssignmentID" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txt_AssignmentID" ClientIDMode="Static" runat="server"></asp:TextBox>
                         </td>
                         <td>&nbsp;</td>
                     </tr>
@@ -202,7 +211,7 @@
                         <td class="auto-style22"></td>
                         <td class="auto-style19">Assignment Name</td>
                         <td class="auto-style7">
-                            <asp:TextBox ID="txt_AssignmentName" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txt_AssignmentName" ClientIDMode="Static" runat="server"></asp:TextBox>
                         </td>
                         <td class="auto-style7"></td>
                     </tr>
@@ -210,7 +219,7 @@
                         <td class="auto-style22">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;</td>
                         <td class="auto-style19">Select Assignment Link</td>
                         <td class="auto-style7">
-                            <asp:FileUpload ID="FileUpload_SelectAssignmentLink" runat="server" />
+                            <asp:FileUpload ID="FileUpload_SelectAssignmentLink" ClientIDMode="Static" runat="server" />
                         </td>
                         <td class="auto-style7">&nbsp;</td>
                     </tr>
@@ -218,7 +227,7 @@
                         <td class="auto-style4">&nbsp;</td>
                         <td class="auto-style25">Deadline</td>
                         <td>
-                            <asp:TextBox ID="txt_AssignmentDeadline" runat="server" TextMode="Date"></asp:TextBox>
+                            <asp:TextBox ID="txt_AssignmentDeadline" ClientIDMode="Static" runat="server" TextMode="Date"></asp:TextBox>
                         </td>
                         <td>&nbsp;</td>
                     </tr>
@@ -226,7 +235,7 @@
                         <td class="auto-style22"></td>
                         <td class="auto-style19">Marks</td>
                         <td class="auto-style7">
-                            <asp:TextBox ID="txt_Assignment_Marks" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txt_Assignment_Marks" ClientIDMode="Static" runat="server"></asp:TextBox>
                         </td>
                         <td class="auto-style7"></td>
                     </tr>
@@ -234,7 +243,7 @@
                         <td class="auto-style24"></td>
                         <td class="auto-style25">TrainerID</td>
                         <td class="auto-style26">
-                            <asp:TextBox ID="txt_TrainerID" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txt_TrainerID" ClientIDMode="Static" runat="server"></asp:TextBox>
                         </td>
                         <td class="auto-style26"></td>
                     </tr>

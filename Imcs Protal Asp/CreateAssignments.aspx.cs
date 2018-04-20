@@ -27,7 +27,7 @@ namespace NoteBook
             txt_AssignmentID.Text = "";
             txt_AssignmentName.Text = "";
             txt_Assignment_Marks.Text = "";
-            //FileUpload_SelectAssignmentLink.ToString() = 
+            //FileUpload_SelectAssignmentLink. = 
             txt_TrainerID.Text = "";
         }
         protected void btn_Clear_Click(object sender, EventArgs e)
@@ -63,7 +63,6 @@ namespace NoteBook
         }
         protected void btn_AssignmentUpdate_Click(object sender, EventArgs e)
         {
-
             int AssignmentID = Convert.ToInt32(txt_AssignmentID.Text);
             string AssignmentName = txt_AssignmentName.Text;
             string AssignmentDeadline = txt_AssignmentDeadline.Text;
@@ -81,7 +80,7 @@ namespace NoteBook
                 TrainerID = TrainerID
             });
             objbll.UpdateAssignment(assignmentlist);
-            lbl_AssignmentStatus.Text = "Update Posted";
+            lbl_AssignmentStatus.Text = "Assignment Updated";
             //[SP_UpdateAssignment]
         }
         protected void btn_AssignmentDelete_Click(object sender, EventArgs e)

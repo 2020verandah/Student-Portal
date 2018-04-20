@@ -73,7 +73,8 @@
     .auto-style18 {
         color: #FFFFFF;
         background-color: #009933;
-    }
+            font-weight: bold;
+        }
     .auto-style19 {
         text-align: center;
         width: 540px;
@@ -128,6 +129,10 @@
     .auto-style29 {
         font-size: x-large;
     }
+        .auto-style30 {
+            text-align: center;
+            font-size: medium;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -140,8 +145,7 @@
                     <td class="auto-style28" colspan="2">&nbsp;</td>
                 </tr>
                 <tr>
-                    <td class="auto-style26">&nbsp;</td>
-                    <td class="auto-style28" colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="auto-style29">&nbsp;<strong> </strong></span><span class="auto-style17"><strong><span class="auto-style29">Best Faculty</span></strong></span></td>
+                    <td class="auto-style30" colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="auto-style29">&nbsp;<strong> </strong></span><span class="auto-style17"><strong><span class="auto-style29">Best Faculty</span></strong></span></td>
                 </tr>
                 <tr>
                     <td class="auto-style26">&nbsp;</td>
@@ -204,7 +208,9 @@
                     <td class="auto-style19"></td>
                     <td class="auto-style20"></td>
                     <td class="auto-style21">
-                        <asp:Button ID="btn_SendGreeting" runat="server" CssClass="auto-style18" Height="30px" Text="Send Greetings" Width="150px" />
+                        <strong>
+                        <asp:Button ID="btn_SendGreeting" runat="server" CssClass="auto-style18" Height="40px" Text="Send Greetings" Width="150px" />
+                        </strong>
                     </td>
                 </tr>
                 <tr>
@@ -212,9 +218,57 @@
                     <td class="auto-style9">&nbsp;</td>
                     <td>
                         <strong>
-                        <asp:Label ID="lbl_GreetingStatus" runat="server" CssClass="auto-style12"></asp:Label>
+                        <asp:Label ID="lbl_GreetingStatus" runat="server" CssClass="auto-style22"></asp:Label>
                         </strong>
                     </td>
+                </tr>
+                <tr>
+                    <td class="auto-style3">&nbsp;</td>
+                    <td class="auto-style9">&nbsp;</td>
+                    <td>
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style3">&nbsp;</td>
+                    <td class="auto-style9">&nbsp;</td>
+                    <td>
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style3">&nbsp;</td>
+                    <td class="auto-style9">&nbsp;</td>
+                    <td>
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style3">&nbsp;</td>
+                    <td class="auto-style9">&nbsp;</td>
+                    <td>
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style3">&nbsp;</td>
+                    <td class="auto-style9">&nbsp;</td>
+                    <td>
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style3">&nbsp;</td>
+                    <td class="auto-style9">&nbsp;</td>
+                    <td>
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style3">&nbsp;</td>
+                    <td class="auto-style9">&nbsp;</td>
+                    <td>
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style3">&nbsp;</td>
+                    <td class="auto-style9">&nbsp;</td>
+                    <td>
+                        &nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style3">&nbsp;</td>

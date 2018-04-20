@@ -16,8 +16,9 @@
             width: 178px;
         }
         .auto-style4 {
-            width: 136px;
-            text-align: right;
+            width: 99px;
+            text-align: left;
+            font-size: medium;
         }
         .auto-style6 {
             height: 78px;
@@ -69,113 +70,136 @@
         }
         .auto-style21 {
             text-align: center;
-            width: 136px;
-        }
-        .auto-style22 {
-            font-size: xx-large;
+            width: 99px;
         }
         .auto-style23 {
+        font-size: medium;
+        font-family: "Times New Roman", Times, serif;
+        color: #FFFFFF;
+        font-weight: bold;
+        background-color: #009933;
+    }
+    .auto-style25 {
             font-size: medium;
-            font-family: "Times New Roman", Times, serif;
-            color: #FFFFFF;
-            font-weight: bold;
-            background-color: #339966;
-        }
-        .auto-style25 {
-            font-size: small;
             font-family: Arial, Helvetica, sans-serif;
             color: #FF0000;
+        }
+        .auto-style26 {
+            text-align: center;
+            font-size: x-large;
+            color: #6600CC;
+        }
+        .auto-style27 {
+            width: 467px;
+        }
+        .auto-style28 {
+            font-size: large;
+            font-family: "Times New Roman", Times, serif;
+            color: #FF9900;
         }
         </style>
     </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-<body>
+    <body>
     <form id="form1" runat="server">
         <div>
             <table class="auto-style1">
                 <tr>
                     <td class="auto-style17">&nbsp;</td>
+                    <td class="auto-style17">&nbsp;</td>
                     <td class="auto-style2" colspan="2">&nbsp;</td>
                 </tr>
                 <tr>
-                    <td class="auto-style17">&nbsp;</td>
-                    <td class="auto-style2" colspan="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="auto-style22">&nbsp;&nbsp;&nbsp; </span>Best Student</strong></td>
+                    <td class="auto-style26">&nbsp;</td>
+                    <td class="auto-style26" colspan="3"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Best Student</strong></td>
                 </tr>
                 <tr>
                     <td class="auto-style18">&nbsp;</td>
+                    <td class="auto-style18">&nbsp;</td>
                     <td class="auto-style21">&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style27">&nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style19">&nbsp;</td>
-                    <td class="auto-style4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Student ID&nbsp;&nbsp; </td>
-                    <td>
+                    <td class="auto-style19">&nbsp;</td>
+                    <td class="auto-style4">Student ID&nbsp;&nbsp; </td>
+                    <td class="auto-style27">
                         <asp:Label ID="lbl_StudentID" runat="server" CssClass="auto-style25"></asp:Label>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style19">&nbsp;</td>
+                    <td class="auto-style19">&nbsp;</td>
                     <td class="auto-style4">Student First Name</td>
-                    <td>
+                    <td class="auto-style27">
                         <asp:Label ID="lbl_StudentFirstName" runat="server" CssClass="auto-style25"></asp:Label>
                     </td>
                 </tr>
                 <tr>
+                    <td class="auto-style18">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;</td>
                     <td class="auto-style18">&nbsp;</td>
                     <td class="auto-style4">Student LastName</td>
-                    <td>
+                    <td class="auto-style27">
                         <asp:Label ID="lbl_StudentLastName0" runat="server" CssClass="auto-style25"></asp:Label>
                     </td>
+                    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style18">&nbsp;</td>
+                    <td class="auto-style18">&nbsp;</td>
                     <td class="auto-style4">&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style27">&nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style19">&nbsp;</td>
+                    <td class="auto-style19">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;</td>
                     <td class="auto-style4">Check Your Greetings</td>
-                    <td>
-                        <asp:DropDownList ID="ddl_Greetings" runat="server" Height="25px" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" Width="200px" AutoPostBack="true">
+                    <td class="auto-style27">
+                        <asp:DropDownList ID="ddl_Greetings" runat="server" Height="30px" Width="200px">
                         </asp:DropDownList>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style19">&nbsp;</td>
+                    <td class="auto-style19">&nbsp;</td>
                     <td class="auto-style4">Send Greeting</td>
-                    <td>
+                    <td class="auto-style27">
                         <asp:TextBox ID="txt_Greeting" runat="server" Height="75px" TextMode="MultiLine" Width="200px"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style18">&nbsp;</td>
+                    <td class="auto-style18">&nbsp;</td>
                     <td class="auto-style21">&nbsp;</td>
-                    <td>
+                    <td class="auto-style27">
                         <strong>
-                        <asp:Button ID="btn_SendGreeting" runat="server" OnClick="btn_SendGreeting_Click" Text="Send Greeting" CssClass="auto-style23" Height="30px" Width="150px"/>
+                        <asp:Button ID="btn_SendGreeting" runat="server" OnClick="btn_SendGreeting_Click" Text="Send Greeting" CssClass="auto-style23" Height="40px" Width="150px"/>
                         </strong>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style18">&nbsp;</td>
+                    <td class="auto-style18">&nbsp;</td>
                     <td class="auto-style21">&nbsp;</td>
-                    <td>
+                    <td class="auto-style27">
                         <asp:Label ID="lbl_GreetingStatus" runat="server" CssClass="auto-style25"></asp:Label>
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style18">&nbsp;</td>
-                    <td class="auto-style21">&nbsp;</td>
-                    <td>
-                        &nbsp;</td>
+                    <td class="auto-style28" colspan="4">&nbsp;</td>
                 </tr>
                 <tr>
-                    <td class="auto-style18">&nbsp;</td>
-                    <td class="auto-style21">&nbsp;</td>
-                    <td>
-                        &nbsp;</td>
+                    <td class="auto-style28" colspan="4">&nbsp;</td>
                 </tr>
-            </table>
+                <tr>
+                    <td class="auto-style28" colspan="4">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style28" colspan="4">&nbsp;</td>
+                </tr>
+                </table>
         </div>
     </form>
 </body>

@@ -34,6 +34,7 @@ namespace NoteBook
             {
                 lbl_GreetingStatus.Text = "Please Enter Greeting";
             }
+
         }
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
         {
