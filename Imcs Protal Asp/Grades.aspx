@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
         .auto-style17 {
-            width: 735px;
+            width: 681px;
         }
         .navbar {
             background-color: white;
@@ -32,38 +32,53 @@
              background-color: cornflowerblue;
              color: white;
          }
-         #pnlAssessment {
-             display: none;
-         }
+        .auto-style18 {
+            margin-left: 0px;
+        }
     </style>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js">
-        $(document).ready(function(){
-            $("#hide").click(function(){
-                $("p").hide();
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#pnlAssessment").hide();
+
+            $("#active").click(function () {
+                $("#pnlAssignment").show();
+                $("#pnlAssessment").hide();
+
+                //$("active").css({ backgroundColor: 'cornflowerblue', color: 'white' });
+                //$("active1").css({ backgroundColor: 'white', color: 'black' });
+                //$("#active").style.backgroundColor = "cornflowerblue";
+                //$("#active").style.color = "white";
+                //$("#active1").style.backgroundColor = "white";
+                //$("#active1").style.color = "black";
             });
-            $("#show").click(function(){
-                $("p").show();
+
+            $("#active1").click(function () {
+                $("#pnlAssessment").show();
+                $("#pnlAssignment").hide();
+
+                //$("active1").css({ backgroundColor: 'cornflowerblue', color: 'white' });
+                //$("active").css({ backgroundColor: 'white', color: 'black' });
+                //$("#active1").style.backgroundColor = "cornflowerblue";
+                //$("#active1").style.color = "white";
+                //$("#active").style.backgroundColor = "white";
+                //$("#active").style.color = "black";
             });
         });
-
     </script>
     <script>
         function clickAssignments() {
-            document.getElementById("pnlAssignment").style.display = "block";
             document.getElementById("active").style.backgroundColor = "cornflowerblue";
             document.getElementById("active").style.color = "white";
 
-            document.getElementById("pnlAssessment").style.display = "none";
             document.getElementById("active1").style.backgroundColor = "white";
             document.getElementById("active1").style.color = "black";
         }
 
         function clickAssessments() {
-            document.getElementById("pnlAssessment").style.display = "block";
             document.getElementById("active1").style.backgroundColor = "cornflowerblue";
             document.getElementById("active1").style.color = "white";
 
-            document.getElementById("pnlAssignment").style.display = "none";
             document.getElementById("active").style.backgroundColor = "white";
             document.getElementById("active").style.color = "black";
         }
@@ -73,33 +88,16 @@
     <form id="form1" runat="server">
         <div class="container">
             <div class="navbar">
-                <a id="active" onclick="clickAssignments();">Assignments</a>
-                <a id="active1" onclick="clickAssessments();">Assessments</a>
+                <a id="active" onclick="clickAssignments()">Assignments</a>
+                <a id="active1" onclick="clickAssessments()">Assessments</a>
             </div>
         </div>
     <table style="width:100%;">
             <tr>
-                <td class="auto-style17">&nbsp;</td>
+                <td class="auto-style17"></td>
                 <td>
-                    <%--<asp:Menu ID="menuMain" runat="server" BackColor="#B5C7DE" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="Large" ForeColor="#284E98" Orientation="Horizontal" StaticSubMenuIndent="10px">
-                        <DynamicHoverStyle BackColor="#284E98" ForeColor="White" />
-                        <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
-                        <DynamicMenuStyle BackColor="#B5C7DE" />
-                        <DynamicSelectedStyle BackColor="#507CD1" />
-                        <Items>
-                            <asp:MenuItem Text="Assignments" Value="Assignments" NavigateUrl="~/Assignments.aspx"></asp:MenuItem>
-                            <asp:MenuItem Text="Grades" Value="Grades" NavigateUrl="~/Grades.aspx">
-                                <asp:MenuItem Text="Assignments" Value="Assignments">
-                                    <asp:MenuItem Text="Assessments" Value="Assessments"></asp:MenuItem>
-                                </asp:MenuItem>
-                            </asp:MenuItem>
-                        </Items>
-                        <StaticHoverStyle BackColor="#284E98" ForeColor="White" />
-                        <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
-                        <StaticSelectedStyle BackColor="#507CD1" />
-                    </asp:Menu>--%>
                 </td>
-                <td>&nbsp;</td>
+                <td></td>
             </tr>
             <tr>
                 <td class="auto-style17">&nbsp;</td>
@@ -107,7 +105,7 @@
                     <asp:Label ID="lblGrades" runat="server" Text="Grades" Font-Size="Medium" ForeColor="#284E98" Font-Bold="True"></asp:Label>
                     <div id="pnlAssignment">
                     <asp:Panel ID="pnlAssignments" runat="server">
-                        <asp:GridView ID="gvAssignmentGrades" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
+                        <asp:GridView ID="gvAssignmentGrades" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" CssClass="auto-style18">
                             <AlternatingRowStyle BackColor="White" />
                             <EditRowStyle BackColor="#2461BF" />
                             <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
