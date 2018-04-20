@@ -35,10 +35,18 @@
          #pnlAssessment {
              display: none;
          }
-         #pnlAssignment {
-             display: none;
-         }
     </style>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js">
+        $(document).ready(function(){
+            $("#hide").click(function(){
+                $("p").hide();
+            });
+            $("#show").click(function(){
+                $("p").show();
+            });
+        });
+
+    </script>
     <script>
         function clickAssignments() {
             document.getElementById("pnlAssignment").style.display = "block";
