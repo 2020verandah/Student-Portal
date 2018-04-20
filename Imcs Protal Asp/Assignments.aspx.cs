@@ -30,20 +30,5 @@ namespace Imcs_Protal_Asp
         {
 
         }
-
-        //protected void MenuAssignment_MenuItemClick(object sender, MenuEventArgs e)
-        //{
-        //    if (MenuAssignment.SelectedItem.Text.Equals("View"))
-        //    {
-        //        pnlView.Visible = true;
-        //        pnlSubmit.Visible = false;
-        //    }
-
-        //    if (MenuAssignment.SelectedItem.Text.Equals("Submit"))
-        //    {
-        //        pnlSubmit.Visible = true;
-        //        pnlView.Visible = false;
-        //    }
-        //}
     }
 }
