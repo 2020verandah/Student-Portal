@@ -9,6 +9,11 @@ namespace Imcs_Protal_Asp
 
         }
 
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Feedbackcontentpage.aspx");
+        }
+
         protected void Button3_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/ManageUsers.aspx");
@@ -23,5 +28,7 @@ namespace Imcs_Protal_Asp
         {
             Response.Redirect("~/ManageCourses.aspx");
         }
+
+
     }
 }

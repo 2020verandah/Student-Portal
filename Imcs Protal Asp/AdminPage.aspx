@@ -16,7 +16,7 @@
             <br />
             <br />
             <div>
-                <span> <asp:Button ID="Button2" type="button" class="submenuHeadings"  runat="server" Text="View Feedback" /></span><br />
+                <span> <asp:Button ID="Button2" type="button" class="submenuHeadings"  runat="server" Text="View Feedback" OnClick="Button2_Click" /></span><br />
             </div>
             <br />
             <br />

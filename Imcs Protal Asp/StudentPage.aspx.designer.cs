@@ -10,6 +10,6 @@
 namespace Imcs_Protal_Asp {
     
     
-    public partial class StudentPage {
+    public partial class WebForm1 {
     }
 }

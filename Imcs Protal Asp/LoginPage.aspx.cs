@@ -8,6 +8,12 @@ namespace Imcs_Protal_Asp
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["username"] != null)
+            {
+                Session["username"] = null;
+                Session.Abandon();
+
+            }
             Label1.Visible = false;
         }
 
@@ -30,6 +36,7 @@ namespace Imcs_Protal_Asp
                 case 1:
                     {
                         Session["username"] = emailid.Text.Trim();
+
                         Response.Redirect("~/AdminPage.aspx");
                         break;
                     }

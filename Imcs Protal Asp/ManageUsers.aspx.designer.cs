@@ -211,15 +211,6 @@ namespace Imcs_Protal_Asp {
         protected global::System.Web.UI.WebControls.Button btn_cancel_insertuser;
         
         /// <summary>
-        /// lbl_result_insertuser control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_result_insertuser;
-        
-        /// <summary>
         /// pnl_updateuser control.
         /// </summary>
         /// <remarks>
@@ -263,24 +254,6 @@ namespace Imcs_Protal_Asp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btn_updateuser_get;
-        
-        /// <summary>
-        /// pnl_updateuser_update control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnl_updateuser_update;
-        
-        /// <summary>
-        /// grd_updateuser control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grd_updateuser;
         
         /// <summary>
         /// pnl_updateuser_tboxes control.
@@ -373,15 +346,6 @@ namespace Imcs_Protal_Asp {
         protected global::System.Web.UI.WebControls.Button btn_cancel_updateuser;
         
         /// <summary>
-        ///  lbl_result_updateuser control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label  lbl_result_updateuser;
-        
-        /// <summary>
         /// pnl_deleteuser control.
         /// </summary>
         /// <remarks>
@@ -427,12 +391,12 @@ namespace Imcs_Protal_Asp {
         protected global::System.Web.UI.WebControls.Button btn_cancel_deleteuser;
         
         /// <summary>
-        /// lbl_result_deleteuser control.
+        /// lbl_result control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_result_deleteuser;
+        protected global::System.Web.UI.WebControls.Label lbl_result;
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -10,6 +11,7 @@ namespace Imcs_Protal_Asp
         UserBLL objuserBLL = new UserBLL();
         UsersInfo usersinfo = new UsersInfo();
 
+
         protected void Page_Load(object sender, EventArgs e)
         {
             pnl_getallusers.Visible = false;
@@ -17,12 +19,7 @@ namespace Imcs_Protal_Asp
             pnl_insertuser.Visible = false;
             pnl_updateuser.Visible = false;
             pnl_deleteuser.Visible = false;
-            lbl_result_insertuser.Visible = false;
-            lbl_result_deleteuser.Visible = false;
-            lbl_result_updateuser.Visible = false;
-
-
-
+            lbl_result.Visible = false;
 
         }
 
@@ -64,7 +61,6 @@ namespace Imcs_Protal_Asp
             pnl_getuser.Visible = false;
             pnl_insertuser.Visible = false;
             pnl_updateuser.Visible = true;
-            pnl_updateuser_update.Visible = false;
             pnl_updateuser_tboxes.Visible = false;
             pnl_deleteuser.Visible = false;
         }
@@ -76,7 +72,6 @@ namespace Imcs_Protal_Asp
             pnl_insertuser.Visible = false;
             pnl_updateuser.Visible = false;
             pnl_deleteuser.Visible = true;
-            lbl_result_deleteuser.Visible = false;
 
         }
 
@@ -102,19 +97,19 @@ namespace Imcs_Protal_Asp
             usersinfo.RoleId = Convert.ToInt32(tbox_irid.Text);
             usersinfo.CourseId = Convert.ToInt32(tbox_icid.Text);
 
-            int outresult = objuserBLL.updateUser(usersinfo);
+            int outresult = objuserBLL.insertUser(usersinfo);
             switch (outresult)
             {
 
                 case 0:
                     pnl_insertuser.Visible = true;
-                    lbl_result_insertuser.Visible = true;
-                    lbl_result_insertuser.Text = "User not inserted!! Please check the role id";
+                    lbl_result.Visible = true;
+                    lbl_result.Text = "User not inserted!! Please check the role id";
                     break;
                 case 1:
                     pnl_insertuser.Visible = true;
-                    lbl_result_insertuser.Visible = true;
-                    lbl_result_insertuser.Text = "User inserted Succesfully";
+                    lbl_result.Visible = true;
+                    lbl_result.Text = "User inserted Succesfully";
                     ClearInputs(Page.Controls);
                     break;
             }
@@ -132,10 +127,26 @@ namespace Imcs_Protal_Asp
             pnl_updateuser.Visible = true;
             usersinfo.UserId = Convert.ToInt32(tbox_u_uid.Text);
             int userid = usersinfo.UserId;
-            grd_updateuser.DataSource = objuserBLL.getUser(userid);
-            grd_updateuser.DataBind();
-            pnl_updateuser_update.Visible = true;
-            pnl_updateuser_tboxes.Visible = true;
+
+            DataSet ds = objuserBLL.getUser(userid);
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                pnl_updateuser_tboxes.Visible = true;
+
+                tbox_ufname.Text = ds.Tables[0].Rows[0]["FirstName"].ToString();
+                tbox_ulname.Text = ds.Tables[0].Rows[0]["LastName"].ToString();
+                tbox_uemail.Text = ds.Tables[0].Rows[0]["Email"].ToString();
+                tbox_upwd.Text = ds.Tables[0].Rows[0]["Password"].ToString();
+                tbox_ugender.Text = ds.Tables[0].Rows[0]["Gender"].ToString();
+                tbox_urid.Text = ds.Tables[0].Rows[0]["RoleId"].ToString();
+                tbox_ucid.Text = ds.Tables[0].Rows[0]["CourseId"].ToString();
+            }
+
+            else
+            {
+                lbl_result.Visible = true;
+                lbl_result.Text = "User with id " + tbox_u_uid.Text + " doesnt exist in the database";
+            }
 
         }
 
@@ -150,19 +161,19 @@ namespace Imcs_Protal_Asp
             usersinfo.RoleId = Convert.ToInt32(tbox_urid.Text);
             usersinfo.CourseId = Convert.ToInt32(tbox_ucid.Text);
 
-            int outresult = objuserBLL.insertUser(usersinfo);
+            int outresult = objuserBLL.updateUser(usersinfo);
             switch (outresult)
             {
 
                 case 0:
                     pnl_updateuser.Visible = true;
-                    lbl_result_updateuser.Visible = true;
-                    lbl_result_updateuser.Text = "User not updated!! Please check the role id";
+                    lbl_result.Visible = true;
+                    lbl_result.Text = "User not updated!! Please check the role id";
                     break;
                 case 1:
                     pnl_updateuser.Visible = true;
-                    lbl_result_updateuser.Visible = true;
-                    lbl_result_updateuser.Text = "User updated Succesfully";
+                    lbl_result.Visible = true;
+                    lbl_result.Text = "User updated Succesfully";
                     ClearInputs(Page.Controls);
                     break;
             }
@@ -185,13 +196,13 @@ namespace Imcs_Protal_Asp
 
                 case 0:
                     pnl_deleteuser.Visible = true;
-                    lbl_result_deleteuser.Visible = true;
-                    lbl_result_deleteuser.Text = "User not deleted!! Please check the user id";
+                    lbl_result.Visible = true;
+                    lbl_result.Text = "User not deleted!! Please check the user id";
                     break;
                 case 1:
                     pnl_deleteuser.Visible = true;
-                    lbl_result_deleteuser.Visible = true;
-                    lbl_result_deleteuser.Text = "User deleted Succesfully";
+                    lbl_result.Visible = true;
+                    lbl_result.Text = "User deleted Succesfully";
                     ClearInputs(Page.Controls);
                     break;
             }
