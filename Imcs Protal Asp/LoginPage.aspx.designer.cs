@@ -13,6 +13,15 @@ namespace Imcs_Protal_Asp {
     public partial class LoginPage {
         
         /// <summary>
+        /// loginform control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlForm loginform;
+        
+        /// <summary>
         /// emailid control.
         /// </summary>
         /// <remarks>
@@ -22,13 +31,13 @@ namespace Imcs_Protal_Asp {
         protected global::System.Web.UI.WebControls.TextBox emailid;
         
         /// <summary>
-        /// passwords control.
+        /// password control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox passwords;
+        protected global::System.Web.UI.WebControls.TextBox password;
         
         /// <summary>
         /// Label1 control.

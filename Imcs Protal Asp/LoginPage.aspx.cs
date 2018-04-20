@@ -20,7 +20,7 @@ namespace Imcs_Protal_Asp
         protected void Button_LogIn_Click(object sender, EventArgs e)
         {
             string email = emailid.Text;
-            string pwd = passwords.Text;
+            string pwd = password.Text;
 
             var usersinfo = new UsersInfo();
 

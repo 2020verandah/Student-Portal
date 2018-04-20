@@ -24,14 +24,15 @@
         <li><a href="Home.aspx">Home</a></li>  
         <li><a href="About.aspx">About</a></li>  
         <li><a href="Contact.aspx">Contact</a></li>  
+         <li><a href="Assignments.aspx">Student Assignments</a></li>
+        <li><a href="Grades.aspx">Student Grades</a></li>
          <% if (Session["username"] == null){ %>
         <li><a href="LoginPage.aspx">Log In</a></li>
     <% } else  { %>
-        <li><a href="LoginPage.aspx">Log Out</a></li>
         <li><a href="AdminPage.aspx">My Profile</a></li>
+        <li><a href="LoginPage.aspx">Log Out</a></li>
     <%} %>      
-        <li><a href="Assignments.aspx">Student Assignments</a></li>
-        <li><a href="Grades.aspx">Student Grades</a></li>
+       
 
     </ul>   
     </nav>
@@ -43,7 +44,7 @@
         </asp:ContentPlaceHolder>
         
     <footer id="footer">  
-       copyright BlackBoard  
+       Copyright BlackBoard  
     </footer> 
         
     </div>                 
@@ -72,6 +73,8 @@
         
 
    <%--</form>--%>
+
+
     
 </body>
 </html>
