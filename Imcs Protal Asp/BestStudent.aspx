@@ -74,6 +74,18 @@
         .auto-style22 {
             font-size: xx-large;
         }
+        .auto-style23 {
+            font-size: medium;
+            font-family: "Times New Roman", Times, serif;
+            color: #FFFFFF;
+            font-weight: bold;
+            background-color: #339966;
+        }
+        .auto-style25 {
+            font-size: small;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #FF0000;
+        }
         </style>
     </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -98,21 +110,21 @@
                     <td class="auto-style19">&nbsp;</td>
                     <td class="auto-style4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Student ID&nbsp;&nbsp; </td>
                     <td>
-                        <asp:Label ID="lbl_StudentID" runat="server" CssClass="auto-style7"></asp:Label>
+                        <asp:Label ID="lbl_StudentID" runat="server" CssClass="auto-style25"></asp:Label>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style19">&nbsp;</td>
                     <td class="auto-style4">Student First Name</td>
                     <td>
-                        <asp:Label ID="lbl_StudentFirstName" runat="server" CssClass="auto-style7"></asp:Label>
+                        <asp:Label ID="lbl_StudentFirstName" runat="server" CssClass="auto-style25"></asp:Label>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style18">&nbsp;</td>
                     <td class="auto-style4">Student LastName</td>
                     <td>
-                        <asp:Label ID="lbl_StudentLastName0" runat="server" CssClass="auto-style7"></asp:Label>
+                        <asp:Label ID="lbl_StudentLastName0" runat="server" CssClass="auto-style25"></asp:Label>
                     </td>
                 </tr>
                 <tr>
@@ -140,7 +152,7 @@
                     <td class="auto-style21">&nbsp;</td>
                     <td>
                         <strong>
-                        <asp:Button ID="btn_SendGreeting" runat="server" OnClick="btn_SendGreeting_Click" Text="Send Greeting" CssClass="auto-style8" Height="30px" Width="150px"/>
+                        <asp:Button ID="btn_SendGreeting" runat="server" OnClick="btn_SendGreeting_Click" Text="Send Greeting" CssClass="auto-style23" Height="30px" Width="150px"/>
                         </strong>
                     </td>
                 </tr>
@@ -148,9 +160,7 @@
                     <td class="auto-style18">&nbsp;</td>
                     <td class="auto-style21">&nbsp;</td>
                     <td>
-                        <strong>
-                        <asp:Label ID="lbl_GreetingStatus" runat="server" CssClass="auto-style7"></asp:Label>
-                        </strong>
+                        <asp:Label ID="lbl_GreetingStatus" runat="server" CssClass="auto-style25"></asp:Label>
                     </td>
                 </tr>
                 <tr>

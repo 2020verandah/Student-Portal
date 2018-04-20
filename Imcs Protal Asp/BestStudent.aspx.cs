@@ -30,7 +30,10 @@ namespace NoteBook
         }
         protected void btn_SendGreeting_Click(object sender, EventArgs e)
         {
-            
+            if (txt_Greeting.Text=="")
+            {
+                lbl_GreetingStatus.Text = "Please Enter Greeting";
+            }
         }
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
         {
