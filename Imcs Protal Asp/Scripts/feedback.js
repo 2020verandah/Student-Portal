@@ -1,6 +1,7 @@
 $(document).ready(function () { });
         function Validate()
         {
+            
             if (!$("input[id='RBL1']:checked").val()) {
                 debugger;
                 alert('Nothing is checked!');
