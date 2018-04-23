@@ -58,24 +58,7 @@ function CreateAssessmentClient() {
         link: $('#FileUploadLink').val(),
         marks: $('#TxtMarks').val()
     };
-    //$.ajax({
-    //    method: 'post',
-    //    url: 'WebService1.asmx/GetData',
-    //    contentType: 'application/json; charset=utf-8',
-    //    data: JSON.stringify({ objAssess: Assessdata }),
-    //    dataType: 'json',
-    //    success: function (data) {
-    //        alert(data.d);
-
-
-    //    },
-    //    error: function (request, status, error) {
-    //        alert(request);
-    //        alert(status);
-    //        alert(error);
-    //    }
-
-    //});
+  
     $.ajax({
         type: "POST",
         url: "WebService1.asmx/HelloWorld",
