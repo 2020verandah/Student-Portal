@@ -16,3 +16,4 @@ namespace CreateAssignments.BLL
         public int TrainerID { get; set; }
     }
 }
+   

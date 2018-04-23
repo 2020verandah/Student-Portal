@@ -17,3 +17,4 @@ namespace CreateAssignments.BLL
         public string FLastName { get; set; }
     }
 }
+   
