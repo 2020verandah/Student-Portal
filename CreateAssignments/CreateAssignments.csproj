@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="BLL\AssignmentBLL.cs" />
     <Compile Include="BLL\Assignmentinfo.cs" />
+    <Compile Include="BLL\PostAssignments.cs" />
     <Compile Include="BLL\StudentFacultyinfo.cs" />
     <Compile Include="DLL\DAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
