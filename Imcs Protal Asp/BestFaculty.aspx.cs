@@ -35,5 +35,10 @@ namespace NoteBook
         {
            
         }
+
+        protected void btn_SendGreeting_Click1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -12,9 +12,6 @@
         private int _roleid;
         private int _courseid;
 
-
-
-
         public int UserId
         {
             get { return _userid; }

@@ -36,10 +36,10 @@ namespace NoteBook.DAL
 
             sqlHelper.RunSp("SP_UpdateAssignment", sqlparam);
         }
-        internal void CreateAssignment(List<Assignments> assignmentlist)
-        {
-            throw new NotImplementedException();
-        }
+        //internal void CreateAssignment(List<Assignments> assignmentlist)
+        //{
+        //    throw new NotImplementedException();
+        //}
         public DataSet ViewAssignments()
         {
             DataSet ds = sqlHelper.RunSpReturnDs("SP_ViewAssignmentData");

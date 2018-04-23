@@ -179,7 +179,7 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <body>
+    <body style="height: 758px">
         <form id="form1" runat="server">
             <div>
                 <table class="auto-style1">

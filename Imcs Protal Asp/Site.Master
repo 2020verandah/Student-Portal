@@ -11,8 +11,14 @@
         <asp:ContentPlaceHolder ID="head" runat="server">  
         </asp:ContentPlaceHolder>  
 
+        <style type="text/css">
+            .auto-style17 {
+                height: 0px;
+            }
+        </style>
+
 </head>
-<body>
+<body style="height: 758px">
 <%--<form runat="server">--%>
   <header id="header">  
     <h1>Blackboard</h1>  
@@ -33,6 +39,12 @@
         <li><a href="LoginPage.aspx">Log Out</a></li>
     <%} %>      
        
+        <li><a href="Grades.aspx">Student Grades</a></li>
+
+        <li><a href="CreateAssignments.aspx">Create Assignments</a></li>
+        <li><a href="BestStudent.aspx">Best Student</a></li>
+        <li><a href="BestFaculty.aspx">Best Faculty</a></li>
+
 
     </ul>   
     </nav>
@@ -41,9 +53,43 @@
 
         <asp:ContentPlaceHolder ID="MainContent" runat="server">  
             
+            <p>
+                <br />
+            </p>
+            <p>
+            </p>
+            <p>
+            </p>
+            <p>
+            </p>
+            <p>
+            </p>
+            <p>
+            </p>
+            <p>
+            </p>
+            <p>
+            </p>
+            <p>
+            </p>
+            <p>
+            </p>
+            <p>
+            </p>
+            <p>
+            </p>
+            <p>
+            </p>
+            <p>
+            </p>
+            <p>
+            </p>
+            <p>
+            </p>
+            
         </asp:ContentPlaceHolder>
         
-    <footer id="footer">  
+    <footer id="footer" class="auto-style17">  
        Copyright BlackBoard  
     </footer> 
         

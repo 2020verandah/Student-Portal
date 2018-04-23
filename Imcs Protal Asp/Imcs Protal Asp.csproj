@@ -129,6 +129,9 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="AdminPage.aspx" />
+    <Content Include="ajaxcall.aspx" />
+    <Content Include="BestFaculty.aspx" />
+    <Content Include="BestStudent.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\AdminStyles.css" />
     <Content Include="Content\Blackboard.css" />
@@ -136,6 +139,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="CreateAssessment.aspx" />
+    <Content Include="CreateAssignments.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Feedbackcontentpage.aspx" />
@@ -201,6 +205,13 @@
     <Compile Include="AdminPage.aspx.designer.cs">
       <DependentUpon>AdminPage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ajaxcall.aspx.cs">
+      <DependentUpon>ajaxcall.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ajaxcall.aspx.designer.cs">
+      <DependentUpon>ajaxcall.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
@@ -210,6 +221,20 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="BestFaculty.aspx.cs">
+      <DependentUpon>BestFaculty.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BestFaculty.aspx.designer.cs">
+      <DependentUpon>BestFaculty.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BestStudent.aspx.cs">
+      <DependentUpon>BestStudent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BestStudent.aspx.designer.cs">
+      <DependentUpon>BestStudent.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -224,6 +249,13 @@
     <Compile Include="CreateAssessment.aspx.designer.cs">
       <DependentUpon>CreateAssessment.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CreateAssignments.aspx.cs">
+      <DependentUpon>CreateAssignments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateAssignments.aspx.designer.cs">
+      <DependentUpon>CreateAssignments.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -231,6 +263,7 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Employee.cs" />
     <Compile Include="Feedbackcontentpage.aspx.cs">
       <DependentUpon>Feedbackcontentpage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -330,6 +363,14 @@
     <ProjectReference Include="..\Assessment\Assessment.csproj">
       <Project>{02a7b4c7-a7b3-4fbd-ab2d-efda36112c7a}</Project>
       <Name>Assessment</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CreateAssignments\CreateAssignments.csproj">
+      <Project>{cd281107-6b76-47c1-b57a-9f618486df5c}</Project>
+      <Name>CreateAssignments</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StudentAssignments\StudentAssignments.csproj">
+      <Project>{f4e6062f-eb54-4bcd-beca-8eba013a9017}</Project>
+      <Name>StudentAssignments</Name>
     </ProjectReference>
     <ProjectReference Include="..\UserInformation\UserInformation.csproj">
       <Project>{11adaa9b-f79d-442f-be92-2ac44e641065}</Project>

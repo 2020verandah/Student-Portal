@@ -1,13 +1,19 @@
-﻿using System;
+﻿using CreateAssignments.BLL;
+using NoteBook.DAL.NoteBook.BLL;
+using System;
+using System.Web.Services;
 
 namespace Imcs_Protal_Asp
 {
     public partial class LoginPage : System.Web.UI.Page
     {
-
-
+        AssignmentBLL objbll = new AssignmentBLL();
         protected void Page_Load(object sender, EventArgs e)
         {
+            //lbl_StudentID.Text = objbll.BestStudentID().Tables[0].Rows[0]["studentid"].ToString();
+            //lbl_StudentFirstName.Text = objbll.BestStudentName().Tables[0].Rows[0]["firstname"].ToString();
+            //lbl_StudentLastName0.Text = objbll.BestStudentName().Tables[0].Rows[0]["lastname"].ToString();
+
             if (Session["username"] != null)
             {
                 Session["username"] = null;
@@ -29,7 +35,6 @@ namespace Imcs_Protal_Asp
 
             UserBLL objUser = new UserBLL();
             int roleid = objUser.ValidateUser(usersinfo);
-
 
             switch (roleid)
             {
@@ -59,16 +64,6 @@ namespace Imcs_Protal_Asp
 
                     }
             }
-
-
-
-
-
-
-
-
-
-
         }
 
         protected void Button_CancelLogIn_Click(object sender, EventArgs e)
@@ -76,5 +71,24 @@ namespace Imcs_Protal_Asp
             Label1.Visible = false;
 
         }
+        [WebMethod]
+        public static StudentFacultyinfo GetBestStudentFaculty()
+        {
+            AssignmentBLL objbll = new AssignmentBLL();
+            StudentFacultyinfo sfinfo = new StudentFacultyinfo();
+            sfinfo.SID = Convert.ToInt32(objbll.BestStudentID().Tables[0].Rows[0]["studentid"].ToString());
+            sfinfo.SFirstName = objbll.BestStudentName().Tables[0].Rows[0]["firstname"].ToString();
+            sfinfo.SLastName = objbll.BestStudentName().Tables[0].Rows[0]["lastname"].ToString();
+
+
+            sfinfo.FID = Convert.ToInt32(objbll.BestFacultyID().Tables[0].Rows[0]["Trainer_id"].ToString());
+            sfinfo.FFirstName = objbll.BestfacultyName().Tables[0].Rows[0]["firstname"].ToString();
+            sfinfo.FLastName= objbll.BestfacultyName().Tables[0].Rows[0]["lastname"].ToString();
+            return sfinfo;
+
+            
+        }
+
+
     }
 }
