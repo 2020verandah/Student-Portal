@@ -157,7 +157,6 @@
     <Content Include="ManageCourses.aspx" />
     <Content Include="ManageRoles.aspx" />
     <Content Include="ManageUsers.aspx" />
-<<<<<<< .mine
     <Content Include="PostAssignment.aspx" />
 ||||||| .r153
 =======
