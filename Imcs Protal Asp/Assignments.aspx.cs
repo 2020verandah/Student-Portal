@@ -33,9 +33,9 @@ namespace Imcs_Protal_Asp
         }
 
         [WebMethod]
-        public static void btnSubmit_Click(SubmissionsInfo objSInfo)
+        public int btnSubmit_Click(SubmissionsInfo objSInfo)
         {
-            
+            return objBLL.UpdateAssignmentLink(objSInfo);
         }
     }
 }
