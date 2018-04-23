@@ -157,7 +157,12 @@
     <Content Include="ManageCourses.aspx" />
     <Content Include="ManageRoles.aspx" />
     <Content Include="ManageUsers.aspx" />
+<<<<<<< .mine
+    <Content Include="PostAssignment.aspx" />
+||||||| .r153
+=======
     <Content Include="Scripts\Assessments\Assessments.js" />
+>>>>>>> .r155
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Content\file-upload.css" />
@@ -165,7 +170,7 @@
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Scripts\respond.js" />
+    <Content Include="respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\LoginScript.js" />
     <Content Include="Scripts\AdminScript.js" />
@@ -298,6 +303,13 @@
     </Compile>
     <Compile Include="ManageUsers.aspx.designer.cs">
       <DependentUpon>ManageUsers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PostAssignment.aspx.cs">
+      <DependentUpon>PostAssignment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PostAssignment.aspx.designer.cs">
+      <DependentUpon>PostAssignment.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">

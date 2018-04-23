@@ -85,8 +85,6 @@ namespace Imcs_Protal_Asp
             sfinfo.FFirstName = objbll.BestfacultyName().Tables[0].Rows[0]["firstname"].ToString();
             sfinfo.FLastName= objbll.BestfacultyName().Tables[0].Rows[0]["lastname"].ToString();
             return sfinfo;
-
-            
         }
 
 
