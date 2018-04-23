@@ -1,4 +1,4 @@
-﻿using NoteBook.BLL;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,8 +6,9 @@ using System.Web;
 using System.Data;
 using System.Data.SqlClient;
 using Imcs_Protal_Asp.Utilities;
+using CreateAssignments.BLL;
 
-namespace NoteBook.DAL
+namespace CreateAssignments.DLL
 {
     public class DAL
     {
