@@ -17,10 +17,10 @@ namespace Imcs_Protal_Asp
             return objDAL.viewAssignments();
         }
 
-        public int submitAssignment()
-        {
-            return objDAL.submitAssignment();
-        }
+        //public int submitAssignment(List<SubmissionsInfo> subList)
+        //{
+        //    return objDAL.UpdateAssignmentLink(subList);
+        //}
 
         public DataSet viewAssignmentGrades()
         {
