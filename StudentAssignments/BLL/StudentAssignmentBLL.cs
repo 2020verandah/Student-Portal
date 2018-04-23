@@ -32,7 +32,7 @@ namespace Imcs_Protal_Asp
             return objDAL.viewAssessmentGrades();
         }
 
-        public int UpdateAssignmentLink(List<SubmissionsInfo> subList)
+        public int UpdateAssignmentLink(SubmissionsInfo subList)
         {
             return objDAL.UpdateAssignmentLink(subList);
         }
