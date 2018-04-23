@@ -42,15 +42,18 @@
         <li><a href="Grades.aspx">Student Grades</a></li>
 
         <li><a href="CreateAssignments.aspx">Create Assignments</a></li>
-        <li><a href="BestStudent.aspx">Best Student</a></li>
-        <li><a href="BestFaculty.aspx">Best Faculty</a></li>
+        <%--<li><a href="BestStudent.aspx">Best Student</a></li>
+        <li><a href="BestFaculty.aspx">Best Faculty</a></li>--%>
+        <li><a href="CreateAssessment.aspx">Create Test</a></li>
+        <li><a href="ViewAssessments.aspx">View Test</a></li>
+
+
 
 
     </ul>   
     </nav>
-    <div id="con"> 
-        
-
+   <%-- <div id="con" style="overflow: auto;height:1000px;width:1000px"> 
+        --%>
         <asp:ContentPlaceHolder ID="MainContent" runat="server">  
             
             <p>
@@ -93,7 +96,7 @@
        Copyright BlackBoard  
     </footer> 
         
-    </div>                 
+   <%-- </div> --%>                
      <%--  <asp:ScriptManager runat="server">
             <Scripts>--%>
   
