@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2026
+VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Imcs Protal Asp", "Imcs Protal Asp\Imcs Protal Asp.csproj", "{7D60ED32-CBB3-474F-8396-1EAD63C64854}"
 EndProject
