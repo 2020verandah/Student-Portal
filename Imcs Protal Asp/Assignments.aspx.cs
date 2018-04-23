@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+using System.Web.Services;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -24,7 +25,6 @@ namespace Imcs_Protal_Asp
         {
             DataSet ds = objBLL.viewAssignments();
             pnlAssignment.Visible = true;
-            //lblAName.Text = gvAssignments.Rows[0].Cells[1].Text;
             lblAName.Text = ds.Tables[0].Rows[gvAssignments.SelectedIndex]["Assignment"].ToString();
             lblAInfo.Text = ds.Tables[0].Rows[gvAssignments.SelectedIndex]["Info"].ToString();
             lblADeadline.Text = ds.Tables[0].Rows[gvAssignments.SelectedIndex]["Deadline"].ToString();
@@ -32,9 +32,10 @@ namespace Imcs_Protal_Asp
             lblAStatus.Text = ds.Tables[0].Rows[gvAssignments.SelectedIndex]["Status"].ToString();
         }
 
-        protected void btnSubmit_Click(object sender, EventArgs e)
+        [WebMethod]
+        public static void btnSubmit_Click(SubmissionsInfo objSInfo)
         {
-
+            
         }
     }
 }

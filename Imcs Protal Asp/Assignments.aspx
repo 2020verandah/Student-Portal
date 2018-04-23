@@ -1,36 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Assignments.aspx.cs" Inherits="Imcs_Protal_Asp.Assignments" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <style type="text/css">
-        .auto-style19 {
-            height: 37px;
-        }
-        .lbls {
-            text-align: right;
-        }
-        .lbl {
-            text-align: center;
-        }
-        .auto-style25 {
-            width: 698px;
-        }
-        .auto-style28 {
-            width: 890px;
-        }
-        .auto-style29 {
-            width: 219px;
-        }
-        .auto-style30 {
-            text-align: right;
-            width: 219px;
-        }
-        .auto-style31 {
-            margin-left: 493px;
-        }
-        .auto-style32 {
-            width: 721px;
-        }
-    </style>
+    <script src="Scripts/StudentAssignments/StudentAssignments.js"></script>
+    <link rel="stylesheet" type="text/css" href="Content/StudentAssignments.css" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <form id="form1" runat="server">
@@ -47,19 +19,6 @@
             <tr>
                 <td class="auto-style25">&nbsp;</td>
                 <td class="auto-style28">
-                    <%--<asp:Menu ID="MenuAssignment" runat="server" BackColor="#B5C7DE" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="Medium" ForeColor="#284E98" OnMenuItemClick="MenuAssignment_MenuItemClick" Orientation="Horizontal" StaticSubMenuIndent="10px">
-                        <DynamicHoverStyle BackColor="#284E98" ForeColor="White" />
-                        <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
-                        <DynamicMenuStyle BackColor="#B5C7DE" />
-                        <DynamicSelectedStyle BackColor="#507CD1" />
-                        <Items>
-                            <asp:MenuItem Text="View" Value="View"></asp:MenuItem>
-                            <asp:MenuItem Text="Submit" Value="Submit"></asp:MenuItem>
-                        </Items>
-                        <StaticHoverStyle BackColor="#284E98" ForeColor="White" />
-                        <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
-                        <StaticSelectedStyle BackColor="#507CD1" />
-                    </asp:Menu>--%>
                 </td>
                 <td>&nbsp;</td>
             </tr>
@@ -149,9 +108,9 @@
                                     <asp:Label ID="lblLink" runat="server" Font-Bold="True" Font-Size="Medium" ForeColor="#284E98">Submission link</asp:Label>
                                 </td>
                                 <td>
-                                    &nbsp;&nbsp;&nbsp;<asp:TextBox ID="tbALink" runat="server" ValidationGroup="vgSubmit"></asp:TextBox>
-                                    &nbsp;<asp:RequiredFieldValidator ID="rfvLink" runat="server" ErrorMessage="Please enter your submission link." ForeColor="Red" ControlToValidate="tbALink" ValidationGroup="vgSubmit"></asp:RequiredFieldValidator>
-                                </td>
+                                    &nbsp;&nbsp;&nbsp;<input id="tbALink" type="text" />
+                                    <%--<asp:TextBox ID="tbALink" runat="server" ValidationGroup="vgSubmit"></asp:TextBox>--%>
+                                    &nbsp;<%--<asp:RequiredFieldValidator ID="rfvLink" runat="server" ErrorMessage="Please enter your submission link." ForeColor="Red" ControlToValidate="tbALink" ValidationGroup="vgSubmit"></asp:RequiredFieldValidator>--%></td>
                                 <td>&nbsp;</td>
                             </tr>
                             <tr>
@@ -159,7 +118,8 @@
                                 <td>
                                     <br />
                                     &nbsp;&nbsp;&nbsp;&nbsp;
-                                    <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click" ValidationGroup="vgSubmit" />
+                                    <%--<asp:Button ID="btnSubmit" runat="server" Text="Submit" ValidationGroup="vgSubmit" />--%>
+                                    <input id="btnSubmit" type ="button" value="Submit" onclick="btnSubmit_Click();" />
                                 </td>
                                 <td>&nbsp;</td>
                             </tr>
