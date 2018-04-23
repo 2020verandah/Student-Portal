@@ -89,16 +89,9 @@
                         <div class="col-sm-9 txt">
                             <label class="file-upload btn btn-primary">
                                 Browse for file ...
-<<<<<<< .mine
-                                    <%--<input type="file" />--%>
-                                <asp:FileUpload ID="FileUploadLink" ClientIDMode="Static" CssClass="auto-style18" runat="server" />
-||||||| .r153
-                                    <%--<input type="file" />--%>
-                                <asp:FileUpload ID="FileUploadLink" ClientIDMode="Static" CssClass="btn-primary" runat="server" />
-=======
                                     <input id="FileUploadLink" class="btn-primary" type="file" />
                                 <%-- <asp:FileUpload ID="FileUploadLink" ClientIDMode="Static" CssClass="btn-primary" runat="server" />--%>
->>>>>>> .r155
+
                             </label>
                             <span class="help-block"></span>
                         </div>
