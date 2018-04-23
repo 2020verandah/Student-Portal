@@ -21,16 +21,16 @@ namespace StudentAssignments.DAL
             return ds;
         }
 
-        public int submitAssignment()
-        {
-            SqlParameter[] sqlparam = new SqlParameter[5];
-            sqlparam[0] = new SqlParameter("@StuID", 2);
-            sqlparam[0] = new SqlParameter("@AsgID", 1);
-            sqlparam[0] = new SqlParameter("@AsgLink", "");
-            sqlparam[0] = new SqlParameter("@Result", 0);
-            int result = sqlHelper.RunSp("sp_Submissions_UPDATE_Link", sqlparam);
-            return result;
-        }
+        //public int submitAssignment()
+        //{
+        //    SqlParameter[] sqlparam = new SqlParameter[5];
+        //    sqlparam[0] = new SqlParameter("@StuID", 2);
+        //    sqlparam[0] = new SqlParameter("@AsgID", 1);
+        //    sqlparam[0] = new SqlParameter("@AsgLink", "");
+        //    sqlparam[0] = new SqlParameter("@Result", 0);
+        //    int result = sqlHelper.RunSp("sp_Submissions_UPDATE_Link", sqlparam);
+        //    return result;
+        //}
 
         public DataSet viewAssignmentGrades()
         {
@@ -50,9 +50,11 @@ namespace StudentAssignments.DAL
         
         public int UpdateAssignmentLink(List<SubmissionsInfo> subList)
         {
-            SqlParameter[] sqlparam = new SqlParameter[2];
-            sqlparam[0] = new SqlParameter("@AsgLink", subList[0].AsgLink);
-            sqlparam[1] = new SqlParameter("@result", 0);
+            SqlParameter[] sqlparam = new SqlParameter[4];
+            sqlparam[0] = new SqlParameter("@StuID", 2);
+            sqlparam[1] = new SqlParameter("@AsgID", 1);
+            sqlparam[2] = new SqlParameter("@AsgLink", subList[0].AsgLink);
+            sqlparam[3] = new SqlParameter("@result", 0);
 
 
             int result = sqlHelper.RunSp("sp_Submissions_UPDATE_Link", sqlparam);
