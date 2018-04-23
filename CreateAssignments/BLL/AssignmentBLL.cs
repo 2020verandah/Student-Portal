@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Data;
-using NoteBook.BLL;
+using CreateAssignments.DLL;
 
-namespace NoteBook.DAL
+
+    namespace CreateAssignments.BLL
 {
-    namespace NoteBook.BLL
-    {
         public class AssignmentBLL
         {
             DAL objDal = new DAL();
@@ -60,5 +59,4 @@ namespace NoteBook.DAL
             }
         }
     }
-}
 

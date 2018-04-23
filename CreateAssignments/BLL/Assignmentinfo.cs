@@ -1,5 +1,4 @@
-﻿
-namespace NoteBook.BLL
+﻿namespace CreateAssignments.BLL
 {
     public class Assignmentinfo
     {
