@@ -7,10 +7,11 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="Content/bootstrap.css" rel="stylesheet" />
     <link href="Content/file-upload.css" rel="stylesheet" />
-    <%--<script src="Scripts/jquery-1.10.2.js"></script>
-    <script src="Scripts/file-upload.js"></script>--%>
+    <link href="//cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/build/css/bootstrap-datetimepicker.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
+    <script src="//cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/src/js/bootstrap-datetimepicker.js"></script>
     <script src="Scripts/Assessments/Assessments.js"></script>
 
     <style type="text/css">
@@ -40,7 +41,8 @@
                         <span style="width: 30%; float: left">
                             <label class="control-label" style="color: steelblue;">Assessment Name</label></span>
                         <div class="col-sm-9 txt">
-                            <asp:TextBox ID="TxtAssessName" CssClass="form-control" runat="server" ClientIDMode="Static" onfocusout="clientValidation_Click()"></asp:TextBox>
+                            <input id="TxtAssessName" class="form-control" type="text" />
+                            <%--<asp:TextBox ID="TxtAssessName" CssClass="form-control" runat="server" ClientIDMode="Static" onfocusout="clientValidation_Click()"></asp:TextBox>--%>
                             <span class="help-block">eg.: Web API, Database</span><%--ClientIDMode="Static"--%>
                         </div>
                     </div>
@@ -49,8 +51,13 @@
                             <label id="LblMode" class="control-label" style="color: steelblue;">Assessment Mode</label>
                         </span>
                         <div class="col-sm-9 txt">
-                            <asp:DropDownList ID="DDLAssessMode" ClientIDMode="Static" CssClass="form-control " runat="server">
-                            </asp:DropDownList>
+                            <select id="DDLAssessMode" class="form-control   active">
+                                <option value="0">--Select--</option>
+                                <option value="paper">PAPER</option>
+                                <option value="practical">PRACTICAL</option>
+                            </select>
+                            <%--<asp:DropDownList ID="DDLAssessMode" ClientIDMode="Static" CssClass="form-control " runat="server">
+                            </asp:DropDownList>--%>
                             <span class="help-block"></span>
                         </div>
                     </div>
@@ -58,11 +65,15 @@
                         <span style="width: 30%; float: left">
                             <label id="LblAssessDate" class="control-label" style="color: steelblue;">Date</label>
                         </span>
+
                         <div class="col-sm-9 txt">
-                            <asp:TextBox ID="txtAssessDate" class="form-control" ClientIDMode="Static" onfocusout="clientValidation_Click()" runat="server"></asp:TextBox>
-                            <span class="help-block"></span>
+                            <input type="date" id="txtAssessDate" class="form-control">
                         </div>
 
+                        <%--<div class="col-sm-9 txt">
+                            <asp:TextBox ID="txtAssessDate" class="form-control" ClientIDMode="Static" onfocusout="clientValidation_Click()" runat="server"></asp:TextBox>
+                            <span class="help-block"></span>
+                        </div>--%>
                     </div>
 
                     <div class="form-group">
@@ -72,8 +83,8 @@
                         <div class="col-sm-9 txt">
                             <label class="file-upload btn btn-primary">
                                 Browse for file ...
-                                    <%--<input type="file" />--%>
-                                <asp:FileUpload ID="FileUploadLink" ClientIDMode="Static" CssClass="btn-primary" runat="server" />
+                                    <input id="FileUploadLink" class="btn-primary" type="file" />
+                                <%-- <asp:FileUpload ID="FileUploadLink" ClientIDMode="Static" CssClass="btn-primary" runat="server" />--%>
                             </label>
                             <span class="help-block"></span>
                         </div>
@@ -83,15 +94,18 @@
                             <label id="LblMarks" class="control-label" style="color: steelblue;">Marks</label>
                         </span>
                         <div class="col-sm-9 txt">
-                            <asp:TextBox ID="TxtMarks" class="form-control" ClientIDMode="Static" onfocusout="clientValidation_Click()" runat="server"></asp:TextBox>
+                            <input id="TxtMarks" class="form-control" type="text"/>
+                            <%--<asp:TextBox ID="TxtMarks" class="form-control" ClientIDMode="Static" onfocusout="clientValidation_Click()" runat="server"></asp:TextBox>--%>
                             <span class="help-block"></span>
                         </div>
                     </div>
 
                     <div class="form-group topspace">
                         <div class="col-sm-6 col-sm-offset-3">
-                            <asp:Button ID="BtnCreateAssess" class="btn btn-primary btn-block" runat="server" ClientIDMode="Static"
-                                Text="Create Assessment" OnClientClick="CreateAssessmentClient()" />
+                            <input type="button" class="btn btn-primary btn-block" value="Create Assessment"
+                                onclick="CreateAssessmentClient()" />
+                           <%-- <asp:Button ID="BtnCreateAssess" class="btn btn-primary btn-block" runat="server" ClientIDMode="Static"
+                                Text="Create Assessment" OnClientClick="CreateAssessmentClient()" />--%>
                             <%--OnClick="BtnCreateAssess_Click" --%>
                         </div>
                     </div>
