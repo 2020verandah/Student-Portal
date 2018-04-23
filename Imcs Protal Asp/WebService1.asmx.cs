@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.Script.Services;
@@ -45,7 +46,7 @@ namespace Imcs_Protal_Asp
             //Response.Redirect("~/ViewAssessments.aspx");
         }
         [WebMethod]
-        public void HelloWorld(AssessmentInfo objAssess)
+        public void CreateAssessment(AssessmentInfo objAssess)
         {
             List<AssessmentInfo> AssessList = new List<AssessmentInfo>();
             AssessmentBLL objDal = new AssessmentBLL();
@@ -66,6 +67,26 @@ namespace Imcs_Protal_Asp
                 TrainerId = trainerId
             });
             objDal.CreateNewAssessment(AssessList);
+        }
+        [WebMethod]
+        public List<StudentAssessmentInfo> GetAllAssessments()
+        {
+           
+            List<StudentAssessmentInfo> AssessList = new List<StudentAssessmentInfo>();
+            AssessmentBLL objBLL = new AssessmentBLL();
+            DataSet ds = objBLL.GetAllAssessments();
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                var myData = ds.Tables[0].AsEnumerable().Select(r => new StudentAssessmentInfo
+                {
+                    AssessName = r.Field<string>("AssessmentName"),
+                    StudentName = r.Field<string>("StudentName"),
+                    AssessLink=r.Field<string>("Link")
+                   // StudentMarks=r.Field<int>("AssessmentMarks")
+                });
+                    AssessList = myData.ToList();
+            }
+            return AssessList;
         }
     }
 }
