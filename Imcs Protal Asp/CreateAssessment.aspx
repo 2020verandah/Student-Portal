@@ -22,6 +22,13 @@
         .txt {
             width: 70%;
         }
+        .auto-style18 {
+            color: #ffffff;
+            background-color: #428bca;
+            border-color: #357ebd;
+            right: -215px;
+            top: 10px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -43,8 +50,7 @@
                         <div class="col-sm-9 txt">
                             <input id="TxtAssessName" class="form-control" type="text" />
                             <%--<asp:TextBox ID="TxtAssessName" CssClass="form-control" runat="server" ClientIDMode="Static" onfocusout="clientValidation_Click()"></asp:TextBox>--%>
-                            <span class="help-block">eg.: Web API, Database</span><%--ClientIDMode="Static"--%>
-                        </div>
+                            <span class="help-block">eg.: Web API, Database</span><%--ClientIDMode="Static"--%></div>
                     </div>
                     <div class="form-group">
                         <span style="width: 30%; float: left;">
@@ -83,8 +89,16 @@
                         <div class="col-sm-9 txt">
                             <label class="file-upload btn btn-primary">
                                 Browse for file ...
+<<<<<<< .mine
+                                    <%--<input type="file" />--%>
+                                <asp:FileUpload ID="FileUploadLink" ClientIDMode="Static" CssClass="auto-style18" runat="server" />
+||||||| .r153
+                                    <%--<input type="file" />--%>
+                                <asp:FileUpload ID="FileUploadLink" ClientIDMode="Static" CssClass="btn-primary" runat="server" />
+=======
                                     <input id="FileUploadLink" class="btn-primary" type="file" />
                                 <%-- <asp:FileUpload ID="FileUploadLink" ClientIDMode="Static" CssClass="btn-primary" runat="server" />--%>
+>>>>>>> .r155
                             </label>
                             <span class="help-block"></span>
                         </div>
