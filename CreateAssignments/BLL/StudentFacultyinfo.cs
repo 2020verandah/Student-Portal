@@ -15,6 +15,11 @@ namespace CreateAssignments.BLL
         public int FID { get; set; }
         public string FFirstName { get; set; }
         public string FLastName { get; set; }
+
+
+
+
+
     }
 }
    
