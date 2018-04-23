@@ -56,6 +56,34 @@ namespace Imcs_Protal_Asp
             set { assessMode = value; }
         }
     }
+    public class StudentAssessmentInfo
+    {
+        string assessName;
+        string studName;
+        string assesslink;
+        int studMarks;
+        public string AssessName
+        {
+            get { return assessName; }
+            set { assessName = value; }
+        }
+
+        public string StudentName
+        {
+            get { return studName; }
+            set { studName = value; }
+        }
+        public string AssessLink
+        {
+            get { return assesslink; }
+            set { assesslink = value; }
+        }
+        public int StudentMarks
+        {
+            get { return studMarks; }
+            set { studMarks = value; }
+        }
+    }
 
 
 }
