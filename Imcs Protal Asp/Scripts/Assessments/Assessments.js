@@ -49,8 +49,7 @@ $(document).ready(function () {
 
 
 function CreateAssessmentClient() {
-    debugger;
-    var path = '/WebService1.asmx/GetData';
+   
     var Assessdata = {
         name: $('#TxtAssessName').val(),
         mode: $('#DDLAssessMode').val(),
@@ -58,10 +57,11 @@ function CreateAssessmentClient() {
         link: $('#FileUploadLink').val(),
         marks: $('#TxtMarks').val()
     };
-  
+
+
     $.ajax({
         type: "POST",
-        url: "WebService1.asmx/HelloWorld",
+        url: "WebService1.asmx/CreateAssessment",
         data:JSON.stringify({ objAssess: Assessdata }),
         contentType: "application/json; charset=utf-8",
         dataType: "json",
