@@ -5,8 +5,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
-using NoteBook.BLL;
-using NoteBook.DAL.NoteBook.BLL;
+using CreateAssignments.BLL;
+
 
 namespace NoteBook
 {
