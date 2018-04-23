@@ -35,7 +35,18 @@ namespace Imcs_Protal_Asp
         [WebMethod]
         public void btnSubmit_Click(SubmissionsInfo objSInfo)
         {
-            lblMessage.Text = objBLL.UpdateAssignmentLink(objSInfo).ToString();
+            int result = objBLL.UpdateAssignmentLink(objSInfo);
+            if (result == 1)
+            {
+                lblMessage.Attributes.Add("style", "color: green");
+                lblMessage.Text = "Link has been updated.";
+            }
+
+            else if (result == 0)
+            {
+                lblMessage.Attributes.Add("style", "color: red");
+                lblMessage.Text = "Link cannot be updated.";
+            }
         }
     }
 }
