@@ -16,29 +16,34 @@
         <div class="container">
             <div class="auto-style17">
                 <div class="form-group">
-                    <asp:TextBox ID="emailid" runat="server" type="text" name="emailid" placeholder="Email (example: a@a.com)" class="form-control" ClientIDMode="static"></asp:TextBox>
-                    <span id="error_email" class="error_form"></span>
+<%--                    <asp:TextBox ID="emailid" runat="server" type="text" name="emailid" placeholder="Email (example: a@a.com)" class="form-control" ClientIDMode="static"></asp:TextBox>--%>
+                    <input id="emailid" type="text" name="emailid" placeholder="Email (example: a@a.com)" class="form-control" />
+                    <span id="error_email" class="text-danger"></span>
 
                 </div>
 
                 <div class="form-group">
-                    <asp:TextBox ID="password" runat="server" type="password" name="passwords" placeholder="Password" class="form-control"  ClientIDMode="static"></asp:TextBox>
-                    <span id="error_pwd" class="error_form"></span>
+<%--                    <asp:TextBox ID="password" runat="server" type="password" name="passwords" placeholder="Password" class="form-control"  ClientIDMode="static"></asp:TextBox>--%>
+                                       <input id="password" type="password" name="passwords" placeholder="Password" class="form-control" />
+
+                    <span id="error_pwd" class="text-danger"></span>
 
                 </div>
                 <div class="col-xs-4 text-center ">
 
                     <div>
 
-                        <asp:Label ID="Label1" runat="server" class="text text-danger" Text="User with provided Email and Password doesn't exist in the database"></asp:Label>
+<%--                        <asp:Label ID="Label1" runat="server" class="text text-danger" Text="User with provided Email and Password doesn't exist in the database"></asp:Label>--%>
+                                        <span id="error_login" class="text-danger"></span>
+
                     </div>
                     <br />
-                    <asp:Button ID="Button_LogIn" runat="server" type="submit" name="submit" class="btn btn-success" Text="Log In" ClientIDMode="Static" OnClick="Button_LogIn_Click" />
-                    &nbsp;&nbsp;&nbsp;&nbsp;
+                   <%-- <asp:Button ID="Button_LogIn" runat="server" type="submit" name="submit" class="btn btn-success" Text="Log In" ClientIDMode="Static" OnClick="Button_LogIn_Click" />
+                    &nbsp;&nbsp;&nbsp;&nbsp;--%>
+                    <input id="Button_LogIn" type="button" value="Log In" class="btn btn-success" /> &nbsp;&nbsp;&nbsp;&nbsp;
 
-
-        <asp:Button ID="Button_CancelLogIn" runat="server" type="button" name="cancel" class="btn btn-danger" Text="Cancel" ClientIDMode="static" OnClick="Button_CancelLogIn_Click" />
-                    
+<%--        <asp:Button ID="Button_CancelLogIn" runat="server" type="button" name="cancel" class="btn btn-danger" Text="Cancel" ClientIDMode="static" OnClick="Button_CancelLogIn_Click" />--%>
+                    <input id="Button_CancelLogIn" type="button" value="Cancel" class="btn btn-danger"  />      
                 </div>
                 <div style="margin-top:100px; height:500px; margin-bottom:100px;">
                 <div id="bestStudent" style="height:200px; width:500px; text-align:center;background-color:lightseagreen;float:left;border-radius:10px; font-family:Cambria; padding:20px;box-shadow: 0 15px 20px -0px gray; color:black;">
@@ -57,39 +62,14 @@
             </div>
         </div>
     </form>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
     <%--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>--%>
+    <%--    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>--%>
+        
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="Scripts/jquery-1.10.2.js"></script>
-
-    <%--    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>--%>
     <script src="Scripts/jquery-1.10.2.min.js"></script>
     <script src="Scripts/jquery-1.10.2.intellisense.js"></script>
-    <script src="Scripts/LoginScript.js"></script>
-        <script>
-            $(document).ready(function () {
-                //alert('ready')
-                $.ajax({
-                    url: 'LoginPage.aspx/GetBestStudentFaculty',
-                    method: 'post',
-                    contentType: 'application/json',
-                    data: '',
-                    dataType: 'json',
-                    success: function (data) {
-                        //alert(data.d)
-                        $("#lbl_SID").text(data.d.SID);
-                        $("#lbl_SFName").text(data.d.SFirstName);
-                        $("#lbl_SLname").text(data.d.SLastName);
-
-                        $("#lbl_FID").text(data.d.FID);
-                        $("#lbl_FFName").text(data.d.FFirstName);
-                        $("#lbl_FLName").text(data.d.FLastName);
-                    },
-                    error: function (error) {
-                        alert('error');
-                    }
-                });
-            });
-    </script>
+    <script src="Scripts/loginjquery.js"></script>
 </asp:Content>

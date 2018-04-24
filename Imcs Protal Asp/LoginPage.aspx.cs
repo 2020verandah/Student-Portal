@@ -19,57 +19,71 @@ namespace Imcs_Protal_Asp
                 Session.Abandon();
 
             }
-            Label1.Visible = false;
         }
 
-        protected void Button_LogIn_Click(object sender, EventArgs e)
+        //protected void Button_LogIn_Click(object sender, EventArgs e)
+        //{
+        //    string email = emailid.Text;
+        //    string pwd = password.Text;
+
+        //    var usersinfo = new UsersInfo();
+
+        //    usersinfo.Email = email;
+        //    usersinfo.Password = pwd;
+
+        //    UserBLL objUser = new UserBLL();
+        //    int roleid = objUser.ValidateUser(usersinfo);
+
+        //    switch (roleid)
+        //    {
+        //        case 1:
+        //            {
+        //                Session["username"] = emailid.Text.Trim();
+
+        //                Response.Redirect("~/AdminPage.aspx");
+        //                break;
+        //            }
+        //        case 2:
+        //            {
+        //                Session["username"] = emailid.Text.Trim();
+        //                Response.Redirect("~/TrainerPage.aspx");
+        //                break;
+        //            }
+        //        case 3:
+        //            {
+        //                Session["username"] = emailid.Text.Trim();
+        //                Response.Redirect("~/StudentPage.aspx");
+        //                break;
+        //            }
+        //        default:
+        //            {
+        //                Label1.Visible = true;
+        //                break;
+
+        //            }
+        //    }
+        //}
+
+        //protected void Button_CancelLogIn_Click(object sender, EventArgs e)
+        //{
+        //    Label1.Visible = false;
+
+        //}
+
+
+
+        [WebMethod]
+        public static int validateUser_Click(UsersInfo usersInfo)
         {
-            string email = emailid.Text;
-            string pwd = password.Text;
-
-            var usersinfo = new UsersInfo();
-
-            usersinfo.Email = email;
-            usersinfo.Password = pwd;
-
-            UserBLL objUser = new UserBLL();
-            int roleid = objUser.ValidateUser(usersinfo);
-
-            switch (roleid)
-            {
-                case 1:
-                    {
-                        Session["username"] = emailid.Text.Trim();
-
-                        Response.Redirect("~/AdminPage.aspx");
-                        break;
-                    }
-                case 2:
-                    {
-                        Session["username"] = emailid.Text.Trim();
-                        Response.Redirect("~/TrainerPage.aspx");
-                        break;
-                    }
-                case 3:
-                    {
-                        Session["username"] = emailid.Text.Trim();
-                        Response.Redirect("~/StudentPage.aspx");
-                        break;
-                    }
-                default:
-                    {
-                        Label1.Visible = true;
-                        break;
-
-                    }
-            }
-        }
-
-        protected void Button_CancelLogIn_Click(object sender, EventArgs e)
-        {
-            Label1.Visible = false;
+            UsersInfo uif = new UsersInfo();
+            uif.Email = usersInfo.Email;
+            uif.Password = usersInfo.Password;
+            UserBLL objuserBLL = new UserBLL();
+            int outresult = objuserBLL.ValidateUser(uif);
+            return outresult;
 
         }
+
         [WebMethod]
         public static StudentFacultyinfo GetBestStudentFaculty()
         {
@@ -82,7 +96,7 @@ namespace Imcs_Protal_Asp
 
             sfinfo.FID = Convert.ToInt32(objbll.BestFacultyID().Tables[0].Rows[0]["Trainer_id"].ToString());
             sfinfo.FFirstName = objbll.BestfacultyName().Tables[0].Rows[0]["firstname"].ToString();
-            sfinfo.FLastName= objbll.BestfacultyName().Tables[0].Rows[0]["lastname"].ToString();
+            sfinfo.FLastName = objbll.BestfacultyName().Tables[0].Rows[0]["lastname"].ToString();
             return sfinfo;
         }
 
