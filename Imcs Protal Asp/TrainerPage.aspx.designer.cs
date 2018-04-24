@@ -11,5 +11,14 @@ namespace Imcs_Protal_Asp {
     
     
     public partial class TrainerPage {
+        
+        /// <summary>
+        /// hdn_trole control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hdn_trole;
     }
 }
