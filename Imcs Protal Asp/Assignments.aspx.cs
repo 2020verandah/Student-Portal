@@ -42,14 +42,14 @@ namespace Imcs_Protal_Asp
             int result = objBLL.UpdateAssignmentLink(objSInfo);
             if (result == 1)
             {
-                objA.lblMessage.Attributes.Add("style", "color: green");
                 objA.lblMessage.Text = "Link has been updated.";
+                objA.lblMessage.Attributes.Add("style", "color: green");
             }
 
             else if (result == 0)
             {
+                objA.lblMessage.Text = "Deadline has been passed. Link cannot be updated.";
                 objA.lblMessage.Attributes.Add("style", "color: red");
-                objA.lblMessage.Text = "Link cannot be updated.";
             }
         }
     }
