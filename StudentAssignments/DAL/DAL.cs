@@ -55,11 +55,12 @@ namespace StudentAssignments.DAL
             sqlparam[1] = new SqlParameter("@AsgID", objSub.AsgID);
             sqlparam[2] = new SqlParameter("@AsgLink", objSub.AsgLink);
             sqlparam[3] = new SqlParameter("@result", 0);
-
+            sqlparam[3].Direction = ParameterDirection.Output;
 
             int result = sqlHelper.RunSp("sp_Submissions_UPDATE_Link", sqlparam);
+            int resultOut = Convert.ToInt32(sqlparam[3].Value);
 
-            return result;
+            return resultOut;
         }
     }
 }
