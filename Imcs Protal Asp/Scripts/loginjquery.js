@@ -15,7 +15,6 @@ $("#Button_LogIn").click(function () {
 
     }
 
-
     if (!password.match(passwordregex) || password.length == 0) {
         $('#error_pwd').text(" Please Enter Valid Password between 6-15 length with atleast a letter, a number ");
         counter = 0;
@@ -96,3 +95,30 @@ function Button_LogIn_Click() {
 
 
 }
+
+
+
+
+$(document).ready(function () {
+    //alert('ready')
+    $.ajax({
+        url: 'LoginPage.aspx/GetBestStudentFaculty',
+        method: 'post',
+        contentType: 'application/json',
+        data: '',
+        dataType: 'json',
+        success: function (data) {
+            //alert(data.d)
+            $("#lbl_SID").text(data.d.SID);
+            $("#lbl_SFName").text(data.d.SFirstName);
+            $("#lbl_SLname").text(data.d.SLastName);
+
+            $("#lbl_FID").text(data.d.FID);
+            $("#lbl_FFName").text(data.d.FFirstName);
+            $("#lbl_FLName").text(data.d.FLastName);
+        },
+        error: function (error) {
+            alert('error');
+        }
+    });
+});
