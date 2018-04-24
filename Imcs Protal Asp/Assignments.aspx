@@ -59,7 +59,7 @@
                                 <td class="auto-style29">
                                     &nbsp;</td>
                                 <td>
-                                    &nbsp;&nbsp;&nbsp;<asp:Label ID="lblAID" runat="server" Font-Bold="True" Font-Size="Medium" ForeColor="#284E98"></asp:Label>
+                                    &nbsp;&nbsp;&nbsp;<asp:Label ID="lblAID" runat="server" ClientIDMode="Static" Font-Bold="True" Font-Size="Medium" ForeColor="#284E98"></asp:Label>
                                     &nbsp;<asp:Label ID="lblAName" runat="server" Font-Bold="True" Font-Size="Medium" ForeColor="#284E98"></asp:Label>
                                 </td>
                                 <td>&nbsp;</td>
