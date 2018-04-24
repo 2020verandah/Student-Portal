@@ -48,12 +48,12 @@ namespace StudentAssignments.DAL
             return ds;
         }
         
-        public int UpdateAssignmentLink(SubmissionsInfo objList)
+        public int UpdateAssignmentLink(SubmissionsInfo objSub)
         {
             SqlParameter[] sqlparam = new SqlParameter[4];
             sqlparam[0] = new SqlParameter("@StuID", 2);
-            sqlparam[1] = new SqlParameter("@AsgID", 1);
-            sqlparam[2] = new SqlParameter("@AsgLink", objList.AsgLink);
+            sqlparam[1] = new SqlParameter("@AsgID", objSub.AsgID);
+            sqlparam[2] = new SqlParameter("@AsgLink", objSub.AsgLink);
             sqlparam[3] = new SqlParameter("@result", 0);
 
 
