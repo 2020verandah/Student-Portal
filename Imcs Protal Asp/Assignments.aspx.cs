@@ -25,6 +25,7 @@ namespace Imcs_Protal_Asp
         {
             DataSet ds = objBLL.viewAssignments();
             pnlAssignment.Visible = true;
+            lblAID.Text = ds.Tables[0].Rows[gvAssignments.SelectedIndex]["ID"].ToString();
             lblAName.Text = ds.Tables[0].Rows[gvAssignments.SelectedIndex]["Assignment"].ToString();
             lblAInfo.Text = ds.Tables[0].Rows[gvAssignments.SelectedIndex]["Info"].ToString();
             lblADeadline.Text = ds.Tables[0].Rows[gvAssignments.SelectedIndex]["Deadline"].ToString();
