@@ -32,25 +32,5 @@ namespace Imcs_Protal_Asp
             lblAMarks.Text = ds.Tables[0].Rows[gvAssignments.SelectedIndex]["TotalMarks"].ToString();
             lblAStatus.Text = ds.Tables[0].Rows[gvAssignments.SelectedIndex]["Status"].ToString();
         }
-
-        [WebMethod]
-        public static void btnSubmit_Click(SubmissionsInfo objSInfo)
-        {
-            Assignments objA = new Assignments();
-            StudentAssignmentBLL objBLL = new StudentAssignmentBLL();
-
-            int result = objBLL.UpdateAssignmentLink(objSInfo);
-            if (result == 1)
-            {
-                objA.lblMessage.Text = "Link has been updated.";
-                objA.lblMessage.Attributes.Add("style", "color: green");
-            }
-
-            else if (result == 0)
-            {
-                objA.lblMessage.Text = "Deadline has been passed. Link cannot be updated.";
-                objA.lblMessage.Attributes.Add("style", "color: red");
-            }
-        }
     }
 }
