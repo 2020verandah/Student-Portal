@@ -121,3 +121,23 @@ button{
 .buttons:hover {
     background-color: coral;
 }
+
+
+table.tbl_dgusers {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+    table.tbl_dgusers th, table.tbl_dgusers td {
+        text-align: left;
+        padding: 8px;
+    }
+
+    table.tbl_dgusers tr:nth-child(even) {
+        background-color: #f2f2f2
+    }
+
+table.tbl_dgusers th {
+    background-color: black;
+    color: white;
+}
