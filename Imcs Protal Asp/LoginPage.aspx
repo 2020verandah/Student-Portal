@@ -1,12 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="LoginPage.aspx.cs" Inherits="Imcs_Protal_Asp.LoginPage" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <style type="text/css">
-    .auto-style17 {
-        left: 0px;
-        top: 0px;
-    }
-</style>
+ 
  
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -14,7 +9,6 @@
         <h1 class="text-info text-center">Login Page</h1>
         <br />
         <div class="container">
-            <div class="auto-style17">
                 <div class="form-group">
 <%--                    <asp:TextBox ID="emailid" runat="server" type="text" name="emailid" placeholder="Email (example: a@a.com)" class="form-control" ClientIDMode="static"></asp:TextBox>--%>
                     <input id="emailid" type="text" name="emailid" placeholder="Email (example: a@a.com)" class="form-control" />
@@ -29,18 +23,20 @@
                     <span id="error_pwd" class="text-danger"></span>
 
                 </div>
-                <div class="col-xs-4 text-center ">
 
                     <div>
 
 <%--                        <asp:Label ID="Label1" runat="server" class="text text-danger" Text="User with provided Email and Password doesn't exist in the database"></asp:Label>--%>
                                         <span id="error_login" class="text-danger"></span>
+                                            <br />
 
                     </div>
-                    <br />
+                        <div class="col-xs-4 text-center ">
+
                    <%-- <asp:Button ID="Button_LogIn" runat="server" type="submit" name="submit" class="btn btn-success" Text="Log In" ClientIDMode="Static" OnClick="Button_LogIn_Click" />
                     &nbsp;&nbsp;&nbsp;&nbsp;--%>
-                    <input id="Button_LogIn" type="button" value="Log In" class="btn btn-success" /> &nbsp;&nbsp;&nbsp;&nbsp;
+                   
+            <input id="Button_LogIn" type="button" value="Log In" class="btn btn-success" /> &nbsp;&nbsp;&nbsp;&nbsp;
 
 <%--        <asp:Button ID="Button_CancelLogIn" runat="server" type="button" name="cancel" class="btn btn-danger" Text="Cancel" ClientIDMode="static" OnClick="Button_CancelLogIn_Click" />--%>
                     <input id="Button_CancelLogIn" type="button" value="Cancel" class="btn btn-danger"  />      
@@ -59,7 +55,6 @@
                     <h4>Faculty Last Name:<b><label id="lbl_FLName"></label></b></h4>
                 </div>
                     </div>
-            </div>
         </div>
     </form>
     <%--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

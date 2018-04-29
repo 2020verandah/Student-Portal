@@ -3,18 +3,134 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-  <form runat="server">
-    <div id="container">      
-        <div id="leftdiv">  
-            <div><span class="menuheadings">Overview</span><br /></div><br /><br />
-            <div><span><asp:Button ID="btn_gau" type="button" class="submenuHeadings" runat="server" Text="Get All Users" OnClick="btn_gau_Click" /></span><br /></div><br /><br />
+    <form runat="server">
+        <div id="container">
+            <div id="leftdiv">
+                <div>
+                    <span class="menuheadings">Overview</span><br />
+                </div>
+                <br />
+                <br />
+                <%-- <div><span><asp:Button ID="btn_gau" type="button" class="submenuHeadings" runat="server" Text="Get All Users" OnClick="btn_gau_Click" /></span><br /></div><br /><br />
            <div><span><asp:Button ID="btn_gu" type="button" class="submenuHeadings" runat="server" Text="Get User" OnClick="btn_gu_Click" /></span><br /></div><br /><br />
            <div><span><asp:Button ID="btn_iu" type="button" class="submenuHeadings" runat="server" Text="Insert Users" OnClick="btn_iu_Click" /></span><br /></div><br /><br />
            <div><span><asp:Button ID="btn_uu" type="button" class="submenuHeadings" runat="server" Text="Update Users" OnClick="btn_uu_Click" /></span><br /></div><br /><br />
-           <div><span><asp:Button ID="btn_du" type="button" class="submenuHeadings" runat="server" Text="Delete Users" OnClick="btn_du_Click" /></span></div><br /><br />
-     </div>       
-        <div id="rightdiv">
-            <asp:Panel ID="pnl_getallusers" runat="server"> 
+           <div><span><asp:Button ID="btn_du" type="button" class="submenuHeadings" runat="server" Text="Delete Users" OnClick="btn_du_Click" /></span></div><br /><br />--%>
+
+                <div>
+                    <span>
+                        <input id="Button_GetAllUsers" type="button" value="Get All Users" class="submenuHeadings" /></span><br />
+                </div>
+                <br />
+                <br />
+                <div>
+                    <span>
+                        <input id="Button_GetUserDiv" type="button" value="Get User" class="submenuHeadings" /></span><br />
+                </div>
+                <br />
+                <br />
+                <div>
+                    <span>
+                        <input id="Button_InsertUserDiv" type="button" value="Insert Users" class="submenuHeadings" /></span><br />
+                </div>
+                <br />
+                <br />
+                <div>
+                    <span>
+                        <input id="Button_UpdateUserDiv" type="button" value="Update Users" class="submenuHeadings" /></span><br />
+                </div>
+                <br />
+                <br />
+                <div>
+                    <span>
+                        <input id="Button_DeleteUserDiv" type="button" value="Delete Users" class="submenuHeadings" /></span><br />
+                </div>
+                <br />
+                <br />
+
+            </div>
+            <div id="rightdiv">
+
+
+                <div id="div_get_user">
+                    <input id="tbox_i_uid" type="text" placeholder="Enter User Id: " class="form-control" /><br />
+                    <input id="btn_getuser" type="button" value="Ok" class="btn btn-success" /><br />
+                    <br />
+                </div>
+
+
+                <div id="div_getall_users">
+                    <div id="div_tbl_getall_users">
+                    </div>
+                    <br />
+                </div>
+
+
+                <div id="div_insert_user">
+                    <div id="div_textboxes_insert">
+                        <input id="tbox_fname" type="text" placeholder="First Name" class="form-control" /><br />
+                        <input id="tbox_lname" type="text" placeholder="Last Name" class="form-control" /><br />
+                        <input id="tbox_email" type="text" placeholder="Email (example: a@a.com)" class="form-control" /><br />
+                        <input id="tbox_password" type="password" placeholder="Password" class="form-control" /><br />
+                        <input id="tbox_gender" type="text" placeholder="Gender" class="form-control" /><br />
+                        <input id="tbox_rid" type="text" placeholder="Role Id" class="form-control" /><br />
+                        <input id="tbox_cid" type="text" placeholder="Course Id" class="form-control" /><br />
+                    </div>
+
+                    <div style="float: left">
+                        <div id="div_btn_insert">
+                            <input id="btn_insertuser" type="button" value="Insert" class="btn btn-success" />
+                        </div>
+
+                    </div>
+                    <div id="div_btn_cancel_insert">
+                        &nbsp; &nbsp; &nbsp; &nbsp;
+                        <input id="btn_cancelinsert" type="button" value="Cancel" class="btn btn-danger" /><br />
+                    </div>
+
+                </div>
+
+                <div id="div_update_user">
+                    <div id="div_get_user_update">
+                        <input id="tbox_u_uid" type="text" placeholder="Enter User Id to get the details of the User to update: " class="form-control" /><br />
+                        <div id="div_btn_getuser_u">
+                            <input id="btn_getuser_u" type="button" value="Ok" class="btn btn-success" /><br />
+                        </div>
+                         </div>
+                        <div id="div_update_userblock">
+
+                          
+                        </div>
+                    
+                    </div>
+                <div id="div_btns_updateblock">
+                      <div style="float: left">
+                                <div id="div_btn_update">
+                                    <input id="btn_updateuser" type="button" value="Update" class="btn btn-success" />
+                                </div>
+                            </div>
+
+                            <div id="div_btn_cancel_update">
+                                &nbsp; &nbsp; &nbsp; &nbsp;
+                        <input id="btn_cancelupdate" type="button" value="Cancel" class="btn btn-danger" /><br />
+                            </div>
+                        </div>
+               
+
+
+                <div id="div_delete_user">
+                    <input id="tbox_d_uid" type="text" placeholder="Enter User Id to delete the User: " class="form-control" /><br />
+                    <input id="btn_deleteuser" type="button" value="Delete" class="btn btn-danger" />&nbsp; &nbsp; &nbsp; &nbsp;
+                    <input id="btn_canceldelete" type="button" value="Cancel" class="btn btn-success" /><br />
+                </div>
+
+
+                <div>
+                    <br />
+                    <span id="error_id" class="text-danger"></span>
+                </div>
+
+                <%--<asp:Panel ID="pnl_getallusers" runat="server"> 
                 <div><asp:GridView ID="grd_getallusers" runat="server" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" Width="511px">
                     <EmptyDataTemplate>
                           No record found
@@ -92,15 +208,19 @@
                  <asp:Button ID="btn_cancel_deleteuser" runat="server" class="btn btn-success" Text="Cancel" OnClick="btn_cancel_deleteuser_Click" /><br /><br />
                 </asp:Panel>
 
-            <asp:Label ID="lbl_result" class="text-danger" runat="server" Text=""></asp:Label>
-
+            <asp:Label ID="lbl_result" class="text-danger" runat="server" Text=""></asp:Label>--%>
+            </div>
         </div>
-    </div>
-      </form>
-    <script src="Scripts/AdminScript.js"></script>
-    <link href="Content/AdminStyles.css" rel="stylesheet" />
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    </form>
+
+
+    <%--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>--%>
+    <%--    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>--%>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" />
+    <script src="Scripts/jquery-1.10.2.js"></script>
+    <script src="Scripts/jquery-1.10.2.min.js"></script>
+    <link href="Content/AdminStyles.css" rel="stylesheet" />
+    <script src="Scripts/usersjquery.js"></script>
 </asp:Content>
