@@ -62,9 +62,8 @@
     <%--    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>--%>
         
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<%--    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>--%>
     <script src="Scripts/jquery-1.10.2.js"></script>
     <script src="Scripts/jquery-1.10.2.min.js"></script>
-    <script src="Scripts/jquery-1.10.2.intellisense.js"></script>
     <script src="Scripts/loginjquery.js"></script>
 </asp:Content>
